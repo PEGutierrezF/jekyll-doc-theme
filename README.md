@@ -64,7 +64,7 @@ gem "github-pages", group: :jekyll_plugins
 ```
 # Configure the remote_theme plugin with the gh-pages branch
 # or the specific tag
-remote_theme: /TropicalStreamsEcology/  
+remote_theme: /TropicalFreshwaterEcology/  
 ```
 
 ### Theme Assets
