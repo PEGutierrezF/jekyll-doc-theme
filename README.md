@@ -11,7 +11,7 @@ You need Ruby and gem before starting, then:
 gem install bundler
 
 # clone the project
-git clone https://github.com/aksakalli/jekyll-doc-theme.git
+git clone https://pegutierrezf.github.io/TropcialStreams/
 cd jekyll-doc-theme
 
 # install dependencies
@@ -64,7 +64,7 @@ gem "github-pages", group: :jekyll_plugins
 ```
 # Configure the remote_theme plugin with the gh-pages branch
 # or the specific tag
-remote_theme: aksakalli/jekyll-doc-theme@gh-pages   
+remote_theme: /TropcialStreams/  
 ```
 
 ### Theme Assets
