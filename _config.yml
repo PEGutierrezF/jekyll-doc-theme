@@ -55,3 +55,5 @@ collections:
   posts:
     permalink: /blog/:year/:month/:day/:title/
     output: true
+    
+    google_analytics: UA-130477932-1
