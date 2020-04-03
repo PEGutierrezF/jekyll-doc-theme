@@ -1,7 +1,8 @@
 # Site settings
 title: Tropical Freshwater Ecology
 email: pabloe.gutierrezfonseca@gmail.com
-description: "Pablo' website"
+description: >
+            Pablo' website
 lang: en-US
 
 baseurl: "TropicalFreshwaterEcology/" # the subpath of your site, e.g. /blog/
