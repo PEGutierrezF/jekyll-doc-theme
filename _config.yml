@@ -41,7 +41,7 @@ defaults:
     
 - scope:
     path:
-    type: About
+    type:
   values:
     layout: About
     sectionid: About

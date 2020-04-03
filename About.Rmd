@@ -1,4 +1,5 @@
 ---
+layout: About
 title: "Guti"
 output: html_document
 ---
