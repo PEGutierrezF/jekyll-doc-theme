@@ -1,17 +1,11 @@
-docs_list_title: someName
-docs:
+- title: Getting Started
+  docs:
+  - home
+  - themes
+  - customization
 
-- title: publications
-  url: PublicationList.html
-
-- title: About
-  url: About.html
-  
-- title: About me
-  url: /About.html
-  
-- title: Publications
-  url: /PublicationList.html
-  
-  - title: "publications"
-  href: "PublicationList.html"
+- title: Examples
+  docs:
+  - cheatsheet
+  - font-awesome
+  - bootstrap
