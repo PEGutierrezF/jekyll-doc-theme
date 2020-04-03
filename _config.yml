@@ -1,9 +1,7 @@
 # Site settings
-title: Tropical Freshwater Ecology
-email: your-email@domain.com
-description: >
-  Jekyll Template for Project Websites
-  providing documentation and blog post pages.
+title: Home
+email: pabloe.gutierrezfonseca@gmail.com
+description: Pablo' website
 lang: en-US
 
 baseurl: "TropicalFreshwaterEcology/" # the subpath of your site, e.g. /blog/
