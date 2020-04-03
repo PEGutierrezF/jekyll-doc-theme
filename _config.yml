@@ -48,16 +48,6 @@ defaults:
     seo:
       type: "WebPage"
       
-- scope:
-    path: ""
-    type: "pages"
-  values:
-    layout: "Publications"
-    sectionid: "Publications"
-    comments: true
-    search: true
-    topnav: topnav
-    
 collections:
   docs:
     permalink: /:collection/:path/
