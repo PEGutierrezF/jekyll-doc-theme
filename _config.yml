@@ -43,8 +43,8 @@ defaults:
     path:
     type:
   values:
-    layout: About
-    sectionid: About
+    layout: about
+    sectionid: about
 
 - scope:
     path: _docs
