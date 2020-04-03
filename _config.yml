@@ -35,11 +35,11 @@ defaults:
     path: _posts
     type: posts
   values:
-    layout: post
-    sectionid: blog
+    layout: About
+    sectionid: About
 
 - scope:
-    path: 
+    path: PublicationList.html
     type: publications
   values:
     layout: publications
@@ -59,5 +59,7 @@ collections:
   url: /About.html
 - title: Publications
   url: /PublicationList.html
+  - title: Configuration
+  url: configuration.html
   
   
