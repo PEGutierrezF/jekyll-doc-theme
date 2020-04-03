@@ -1,3 +1,17 @@
+docs_list_title: someName
 docs:
-  - About.html
-  - PublicationList.html
+
+- title: publications
+  url: PublicationList.html
+
+- title: About
+  url: About.html
+  
+- title: About me
+  url: /About.html
+  
+- title: Publications
+  url: /PublicationList.html
+  
+  - title: "Publications"
+  href: "PublicationList.html"
