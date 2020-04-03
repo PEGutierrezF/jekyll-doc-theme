@@ -40,7 +40,7 @@ defaults:
     sectionid: blog
     
 - scope:
-    path: _documents
+    path:
     type: About
   values:
     layout: About
