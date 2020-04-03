@@ -9,5 +9,10 @@
     <link rel="shortcut icon" href="{{ "/assets/img/stonefly.png" | relative_url }}">
     {% seo %}
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}" 
+    
+    {% if jekyll.environment == 'production' %}
+{% include analytics.html %}
+{% endif %}
+    />
 </head>
