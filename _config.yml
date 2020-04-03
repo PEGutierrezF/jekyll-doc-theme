@@ -36,15 +36,15 @@ defaults:
     path: _posts
     type: posts
   values:
-    layout: About
-    sectionid: About
+    layout: post
+    sectionid: blog
 
 - scope:
-    path: /PublicationList.html
-    type: publications
+    path: _docs
+    type: docs
   values:
-    layout: publications
-    sectionid: publications
+    layout: docs
+    sectionid: docs
     seo:
       type: "WebPage"
 
@@ -55,11 +55,3 @@ collections:
   posts:
     permalink: /blog/:year/:month/:day/:title/
     output: true
-    
-- title: About me
-  url: /About.html
-- title: Publications
-  url: /PublicationList.html
-
-  
-  
