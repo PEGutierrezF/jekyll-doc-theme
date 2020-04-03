@@ -38,6 +38,13 @@ defaults:
   values:
     layout: post
     sectionid: blog
+    
+- scope:
+    path: _documents
+    type: About
+  values:
+    layout: About
+    sectionid: About
 
 - scope:
     path: _docs
