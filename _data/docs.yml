@@ -1,9 +1,6 @@
-- title: Other publications
-  docs:
-  - non-Peer Review publications
-  - Book Chapter
-  - Outreach Material
-
-  - title: Publications
-  docs:
-  - Publications
+- title: Configuration
+  url: configuration.html
+  
+  
+  - title: About me
+  url: About.html
