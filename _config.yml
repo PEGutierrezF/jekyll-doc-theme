@@ -39,11 +39,11 @@ defaults:
     sectionid: blog
 
 - scope:
-    path: _docs
-    type: docs
+    path: 
+    type: publications
   values:
-    layout: docs
-    sectionid: docs
+    layout: publications
+    sectionid: publications
     seo:
       type: "WebPage"
 
