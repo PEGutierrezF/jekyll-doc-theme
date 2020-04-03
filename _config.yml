@@ -38,7 +38,17 @@ defaults:
   values:
     layout: post
     sectionid: blog
-  scope:
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+      
+- scope:
     path: ""
     type: "pages"
   values:
@@ -48,15 +58,6 @@ defaults:
     search: true
     topnav: topnav
     
-- scope:
-    path: _docs
-    type: docs
-  values:
-    layout: docs
-    sectionid: docs
-    seo:
-      type: "WebPage"
-
 collections:
   docs:
     permalink: /:collection/:path/
