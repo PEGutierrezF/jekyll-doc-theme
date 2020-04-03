@@ -54,3 +54,10 @@ collections:
   posts:
     permalink: /blog/:year/:month/:day/:title/
     output: true
+    
+- title: About me
+  url: /About.html
+- title: Publications
+  url: /PublicationList.html
+  
+  
