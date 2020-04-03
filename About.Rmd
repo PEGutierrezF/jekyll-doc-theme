@@ -5,7 +5,7 @@ output: html_document
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
 <br>
 
-<div style="text-align: left"><img src="./assets/img/Profile2.jpg" class="w3-border w3-padding"width="250" /></div>
+<div style="text-align: left"><img src="./assets/img/Profile2.jpg" class="w3-border w3-padding"width="220" /></div>
 
 
 ### __Pablo E. Gutiérrez-Fonseca, PhD__  
