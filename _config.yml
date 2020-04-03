@@ -47,7 +47,15 @@ defaults:
     sectionid: docs
     seo:
       type: "WebPage"
-
+  scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "Publications"
+    comments: true
+    search: true
+    topnav: topnav
+    
 collections:
   docs:
     permalink: /:collection/:path/
