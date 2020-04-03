@@ -13,7 +13,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-<li {% if page.sectionid=='About' %} class="active" {% endif %}><a href="{{ "About.html" | relative_url }}">About me</a></li>
+<li {% if page.sectionid=='About' %} class="active" {% endif %}><a href="{{ "/documents/About.html" | relative_url }}">About me</a></li>
 <li {% if page.sectionid=='Publications' %} class="active" {% endif %}><a href="{{ "PublicationList.html" | relative_url }}">Publications</a></li>
 <li {% if page.sectionid=='blog' %} class="active" {% endif %}><a href="{{ site.posts.first.url | relative_url }}">Blog</a></li>
             </ul>
