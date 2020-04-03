@@ -2,10 +2,13 @@
 title: "Guti"
 output: html_document
 ---
+### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
+<br>
 
-<img src="./assets/img/Profile.jpg" style="display: block; margin: auto;" />
+<img align="left" width="" height="" src="./assets/img/Profile.jpg">
 
-### __Pablo E. GutiÃ©rrez-Fonseca, PhD__  
+
+### __Pablo E. Gutiérrez-Fonseca, PhD__  
 Department of Biology &  
 Center for Research in Marine Science and Limnology  
 University of Costa Rica  
