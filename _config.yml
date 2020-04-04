@@ -37,11 +37,6 @@ defaults:
       layout: "index"
       
 collections:
-  docs:
-    permalink: /:collection/:path/
-    output: true
-  posts:
-    permalink: /blog/:year/:month/:day/:title/
-    output: true
+- entries
     
     google_analytics: UA-130477932-1
