@@ -39,8 +39,8 @@ defaults:
     layout: post
     sectionid: blog
     
-  - title: About me
-  url: About.html
+- title: About me
+    url: About.html
 
 - scope:
     path: _docs
