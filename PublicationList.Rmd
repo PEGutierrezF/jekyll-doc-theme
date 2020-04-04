@@ -7,8 +7,6 @@ output: html_document
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
 <br>
 
-#### __2021__
-
 #### __2020__
 
 ***Gutiérrez-Fonseca, P.E.***, Ramirez, A., Pringle, C.M., Torres, P.J., Crowl, T., Covich, A., Pérez, O. & W.H., McDowell. 2020.  When the rainforest dries up: drought effects on a tropical rainforest stream in Puerto Rico. Freshwater Sciences. [PDF](https://www.journals.uchicago.edu/doi/pdfplus/10.1086/708808) 
