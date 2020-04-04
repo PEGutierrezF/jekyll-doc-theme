@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: pages
 title: "Rpackages"
-permalink: /Rpackages/home
+permalink: /Rpackages/home/
 redirect_from: /otherdocs/index.html
 output: html_document
 ---
 
+This is  packahes to leaf litter decomposition analysis
