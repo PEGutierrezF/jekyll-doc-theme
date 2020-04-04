@@ -1,12 +1,12 @@
 ---
 layout: default
-title:
+title: ""
 output: html_document
 ---
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
 <br>
 
-### _Pablo E. Gutiérrez-Fonseca_
+### __Pablo E. GutiÃ©rrez-Fonseca__
 <br>
 <div style="text-align: left"><img src="./assets/img/Profile.jpg" class="w3-border w3-padding"width="" /></div>
 <br>
