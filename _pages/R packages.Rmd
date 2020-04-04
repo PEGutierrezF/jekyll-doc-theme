@@ -1,8 +1,0 @@
----
-layout: page
-title: "R packages"
-permalink: /R-packages/home
-output: html_document
----
-
-Packages to leaf litter decomposition analysis
