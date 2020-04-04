@@ -1,7 +1,7 @@
 ---
 layout: pages
 title: "Rpackages"
-permalink: /Rpackages/home/
+permalink: /pages/home/
 redirect_from: /otherdocs/index.html
 output: html_document
 ---
