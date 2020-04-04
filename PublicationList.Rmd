@@ -1,5 +1,4 @@
 ---
-layout: index
 title: "Publications"
 output: html_document
 ---
@@ -7,6 +6,8 @@ output: html_document
 
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
 <br>
+
+#### __2021__
 
 #### __2020__
 
