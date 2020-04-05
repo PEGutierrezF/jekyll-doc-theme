@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "R packages"
+title: "More"
 permalink: /otherdocs/Rpackages/
 sectionid: pages
 ---
