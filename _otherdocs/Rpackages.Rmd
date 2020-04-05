@@ -1,6 +1,6 @@
 ---
-title: Welcome
-permalink: /otherdocs/home/
+title: Rpackages
+permalink: /otherdocs/Rpackages/
 redirect_from: /otherdocs/index.html
 ---
 
