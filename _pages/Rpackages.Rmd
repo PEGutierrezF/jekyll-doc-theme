@@ -1,6 +1,6 @@
 ---
 title: "Rpackages"
-permalink: /pages/Rpackages/
+permalink: /pages/Rpackages.html
 ---
 
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
