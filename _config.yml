@@ -67,8 +67,4 @@ collections:
     permalink: /blog/:year/:month/:day/:title/
     output: true
     
-relative_links:
-  enabled:     true
-  collections: true
-    
     google_analytics: UA-130477932-1
