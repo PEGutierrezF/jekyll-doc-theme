@@ -1,6 +1,7 @@
 ---
 title: "Rpackages"
 permalink: /pages/Rpackages.html
+sectionid: pages
 ---
 
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
