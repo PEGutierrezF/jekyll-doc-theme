@@ -53,6 +53,7 @@ defaults:
   values:
     layout: default
     sectionid: pages
+    
       type: "WebPage"
 
 collections:
