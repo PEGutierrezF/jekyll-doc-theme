@@ -2,7 +2,6 @@
 layout: pages
 title: "Rpackages"
 permalink: /pages/Rpackages/
-redirect_from: /otherdocs/index.html
 output: html_document
 ---
 
