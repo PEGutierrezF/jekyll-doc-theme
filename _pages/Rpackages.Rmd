@@ -1,8 +1,6 @@
 ---
-layout: pages
 title: "Rpackages"
 permalink: /pages/Rpackages/
-output: html_document
 ---
 
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
