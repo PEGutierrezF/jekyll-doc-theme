@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "More"
-permalink: /otherdocs/Rpackages/
+permalink: /otherdocs/home/
 sectionid: pages
 ---
 
