@@ -51,7 +51,7 @@ defaults:
     path: _pages
     type: pages
   values:
-    layout: docs
+    layout: pages
     sectionid: pages
     seo:
       type: "WebPage"
