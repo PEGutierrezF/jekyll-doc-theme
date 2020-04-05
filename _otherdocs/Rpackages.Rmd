@@ -1,8 +1,0 @@
----
-title: Rpackages
-permalink: /otherdocs/Rpackages/
-redirect_from: /otherdocs/index.html
----
-
-### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
-<br>
