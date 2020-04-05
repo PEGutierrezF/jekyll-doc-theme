@@ -60,7 +60,7 @@ collections:
   docs:
     permalink: /:collection/:path/
     output: true
-  otherdocs:
+  assignments:
     permalink: /:collection/:path/
     output: true
   posts:
