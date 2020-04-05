@@ -48,11 +48,11 @@ defaults:
     seo:
     
 - scope:
-    path: _pages
-    type: pages
+    path: _otherdocs
+    type: otherdocs
   values:
     layout: docs
-    sectionid: pages
+    sectionid: otherdocs
     seo:
       type: "WebPage"
 

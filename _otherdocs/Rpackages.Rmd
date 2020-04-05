@@ -1,6 +1,7 @@
 ---
-title: "More"
-permalink: /otherdocs/Rpackages/
+title: Welcome
+permalink: /otherdocs/home/
+redirect_from: /otherdocs/index.html
 ---
 
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 

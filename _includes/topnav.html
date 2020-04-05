@@ -15,7 +15,7 @@
             <ul class="nav navbar-nav">
 <li {% if page.sectionid=='About' %} class="active" {% endif %}><a href="{{ "About.html" | relative_url }}">About me</a></li>
 <li {% if page.sectionid=='Publications' %} class="active" {% endif %}><a href="{{ "PublicationList.html" | relative_url }}">Publications</a></li>
-  <li {% if page.sectionid=='pages' %} class="active" {% endif %}><a href="{{ "/otherdocs/Rpackages/" | prepend: site.baseurl }}">Other Docs</a></li>
+<li {% if page.sectionid=='otherdocs' %} class="active" {% endif %}><a href="{{ "/otherdocs/home/" | prepend: site.baseurl }}">OtherDocs</a></li>
             </ul>
               </ul>
             <div class="navbar-right">
