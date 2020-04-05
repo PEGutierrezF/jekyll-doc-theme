@@ -49,9 +49,9 @@ defaults:
     
 - scope:
     path: _pages
-    type: docs
+    type: pages
   values:
-    layout: default
+    layout: docs
     sectionid: pages
     seo:
       type: "WebPage"
