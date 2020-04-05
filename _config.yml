@@ -49,7 +49,7 @@ defaults:
     
 - scope:
     path: _pages
-    type: pages
+    type: docs
   values:
     layout: default
     sectionid: pages
