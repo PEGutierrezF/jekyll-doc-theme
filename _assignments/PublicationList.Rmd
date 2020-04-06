@@ -10,7 +10,7 @@ permalink: /assignments/Publications/
        
 <h5><strong>2020</strong></h5>
 
-<p><strong>Gutierrez-Fonseca, P.E.</strong>, Ramirez, A., Pringle, C.M., Torres, P.J., Crowl, T., Covich, A., Pérez, O. & W.H., McDowell. 2020.  When the rainforest dries up: drought effects on a tropical rainforest stream in Puerto Rico. Freshwater Sciences. [PDF](https://www.journals.uchicago.edu/doi/pdfplus/10.1086/708808)</p>
+<p><strong>Gutierrez-Fonseca, P.E.</strong>, Ramirez, A., Pringle, C.M., Torres, P.J., Crowl, T., Covich, A., Pérez, O. & W.H., McDowell. 2020.  When the rainforest dries up: drought effects on a tropical rainforest stream in Puerto Rico. Freshwater Sciences. <a href="https://www.journals.uchicago.edu/doi/pdfplus/10.1086/708808">PDF</a></p>
 </div>
 <div class="container">
 <h5><strong>2019</strong></h5>
@@ -54,29 +54,29 @@ Ramirez, A., & ***P.E., Gutiérrez-Fonseca***. 2016. Sobre ensambles y ensamblaj
 <p><strong>Gutierrez-Fonseca, P.E.</strong>, & A., Ramirez. 2016. Evaluacion de la calidad ecologica de los rios en Puerto Rico: principales amenazas y herramientas de evaluacion. Hidrobiologica, 26(3), 433-441.  [PDF](http://www.scielo.org.mx/scielo.php?pid=S0188-88972016000300433&script=sci_arttext&tlng=en)</p>
 </div>
 
-#### __2015__
+<div class="container">
+<h5><strong>2015</strong></h5>
 
-***Gutiérrez-Fonseca, P.E.***, P. E., & M., Springer. 2015. A new species of Anacroneuria Klapalek 1909 (Plecoptera: Perlidae) and notes on the altitudinal distribution of the genus in Costa Rica. Zootaxa, 4058(4), 595-600. [PDF](https://cecb7f23-7089-45fb-b01c-28fecf16b375.filesusr.com/ugd/9d5d38_95160e47778247fb87c399116098129b.pdf)
+<p><strong>Gutierrez-Fonseca, P.E.</strong>, P. E., & M., Springer. 2015. A new species of Anacroneuria Klapalek 1909 (Plecoptera: Perlidae) and notes on the altitudinal distribution of the genus in Costa Rica. Zootaxa, 4058(4), 595-600. [PDF](https://cecb7f23-7089-45fb-b01c-28fecf16b375.filesusr.com/ugd/9d5d38_95160e47778247fb87c399116098129b.pdf)</p>
+</div>
+<div class="container">
+<p><strong>Gutiérrez-Fonseca, P.E.</strong>, A. M. Alonso-Rodriguez, A. Cornejo, A. C. Bailey, J. M. Maes & A. Ramirez. 2015. New records of Anacroneuria Klapalek, 1909 (Plecoptera: Perlidae) for Central America. Zootaxa, 3994(3), 445-448. [PDF](https://cecb7f23-7089-45fb-b01c-28fecf16b375.filesusr.com/ugd/9d5d38_55980cc178a0460693b0e131eda7faf7.pdf)</p>
+</div>
+<div class="container">
+<p><strong>Gutierrez-Fonseca, P.E.</strong>. 2015. Three new species of Anacroneuria Klapalek (Plecoptera: Perlidae) from Panama. Zootaxa, 3957(1), 69-76. [PDF](https://cecb7f23-7089-45fb-b01c-28fecf16b375.filesusr.com/ugd/9d5d38_daf4e7701e9a4e7e978657531d5b8486.pdf)</p>
+</div>
 
+<div class="container">
+<h5><strong>2014</strong></h5>
 
-***Gutiérrez-Fonseca, P.E.***, A. M. Alonso-Rodriguez, A. Cornejo, A. C. Bailey, J. M. Maes & A. Ramirez. 2015. New records of Anacroneuria Klapalek, 1909 (Plecoptera: Perlidae) for Central America. Zootaxa, 3994(3), 445-448. [PDF](https://cecb7f23-7089-45fb-b01c-28fecf16b375.filesusr.com/ugd/9d5d38_55980cc178a0460693b0e131eda7faf7.pdf)
-
-
-***Gutiérrez-Fonseca, P.E.***. 2015. Three new species of Anacroneuria Klapalek (Plecoptera: Perlidae) from Panama. Zootaxa, 3957(1), 69-76. [PDF](https://cecb7f23-7089-45fb-b01c-28fecf16b375.filesusr.com/ugd/9d5d38_daf4e7701e9a4e7e978657531d5b8486.pdf)
-<br>
-<br>
-
-#### __2014__
-
-Ramirez, A. & ***P.E., Gutiérrez-Fonseca***. Estudios sobre macroinvertebrados acuaticos en America Latina: avances recientes y direcciones futuras. Revista de Biologia Tropical. 62(Suppl2):9-20. [PDF](https://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=s0034-77442014000600001)
-
-
-Ramirez, A. & ***P.E., Gutiérrez-Fonseca***. 2014. Functional feeding groups of aquatic insect families in Latin America. Revista de Biológia Tropical. 62(Suppl2):155-167. [PDF](https://www.scielo.sa.cr/scielo.php?pid=S0034-77442014000600011&script=sci_arttext)
-
-
-***Gutiérrez-Fonseca, P.E.***, & C.M. Lorion. 2014. Application of the BMWP-Costa Rica biotic index in aquatic biomonitoring: sensitivity to collection method and sampling intensity. Revista de Biológia Tropical. 62(Suppl2): 275-289. [PDF](https://www.scielo.sa.cr/scielo.php?pid=S0034-77442014000600018&script=sci_arttext&tlng=en)
-<br>
-<br>
+<p>Ramirez, A. & <strong>P.E., Gutiérrez-Fonseca</strong>. Estudios sobre macroinvertebrados acuaticos en America Latina: avances recientes y direcciones futuras. Revista de Biologia Tropical. 62(Suppl2):9-20. [PDF](https://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=s0034-77442014000600001)</p>
+</div>
+<div class="container">
+Ramirez, A. & <strong>P.E., Gutiérrez-Fonseca</strong>. 2014. Functional feeding groups of aquatic insect families in Latin America. Revista de Biologia Tropical. 62(Suppl2):155-167. [PDF](https://www.scielo.sa.cr/scielo.php?pid=S0034-77442014000600011&script=sci_arttext)</p>
+</div>
+<div class="container">
+<p><strong>Gutierrez-Fonseca, P.E.</strong>, & C.M. Lorion. 2014. Application of the BMWP-Costa Rica biotic index in aquatic biomonitoring: sensitivity to collection method and sampling intensity. Revista de Biológia Tropical. 62(Suppl2): 275-289. [PDF](https://www.scielo.sa.cr/scielo.php?pid=S0034-77442014000600018&script=sci_arttext&tlng=en)</p>
+</div>
 
 #### __2013__
 
