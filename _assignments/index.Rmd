@@ -2,7 +2,6 @@
 layout: default
 title: "Welcome"
 permalink: /assignments/home/
-redirect_from: /assignments/index.html
 ---
 
 ```{r setup, include=FALSE}
