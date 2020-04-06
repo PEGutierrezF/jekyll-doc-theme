@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Publications"
+permalink: /assignments/Publications/
 output: html_document
 ---
 
@@ -8,6 +9,18 @@ output: html_document
 ### [**$\leftarrow$ Home**](https://pegutierrezf.github.io/TropicalFreshwaterEcology/) 
 <br>
 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header-light regular-pad">Overview</h2>
+              <p class="lead">My research seeks to understand how tropical 
+              freshwater ecosystems respond to natural extreme events, 
+              but also how anthropogenic activities risk aquatic ecosystem 
+              function in the tropics.</p>
+        </div>
+              
+              
 #### __2020__
 
 ***Gutiérrez-Fonseca, P.E.***, Ramirez, A., Pringle, C.M., Torres, P.J., Crowl, T., Covich, A., Pérez, O. & W.H., McDowell. 2020.  When the rainforest dries up: drought effects on a tropical rainforest stream in Puerto Rico. Freshwater Sciences. [PDF](https://www.journals.uchicago.edu/doi/pdfplus/10.1086/708808) 
