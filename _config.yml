@@ -51,7 +51,7 @@ defaults:
     path: _assignments
     type: assignments
   values:
-    layout: docs
+    layout: default
     sectionid: assignments
     seo:
       type: "WebPage"
