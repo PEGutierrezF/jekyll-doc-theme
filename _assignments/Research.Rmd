@@ -4,4 +4,28 @@ title: "Research"
 permalink: /assignments/Research/
 ---
 
-My research page
+<div class="header-container jumbotron">
+    <div class="container">
+        <h1>Tropical Freshwater Ecology</h1>
+        <p>Pablo E. GutiÃ©rrez-Fonseca</p>
+        <p><a class="btn btn-primary btn-lg" href="{{ "PublicationList.html" | relative_url }}" role="button">Learn more</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header-light regular-pad">Overview</h2>
+              <p class="lead">My research seeks to understand how tropical 
+              freshwater ecosystems respond to natural extreme events, 
+              but also how anthropogenic activities risk aquatic ecosystem 
+              function in the tropics.
+              I am broadly interested in understanding:
+              What is the natural variability of tropical aquatic ecosystems, 
+              and how do they respond to extreme climatic events 
+              (e.g., ENSO, floods, hurricanes)?
+              What are the effects of urban expansion on 
+              aquatic ecosystems?.</p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{{ "/assets/img/Parismina.jpg" | relative_url }}" alt="Jekyll logo" class="img-responsive">
