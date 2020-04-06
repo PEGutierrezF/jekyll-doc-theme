@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: default
 title: "Publications"
 output: html_document
 ---
