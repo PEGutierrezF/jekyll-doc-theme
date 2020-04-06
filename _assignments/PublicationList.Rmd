@@ -6,8 +6,7 @@ permalink: /assignments/Publications/
 </div>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
+       
        
 <h5><strong>2020</strong></h5>
 
