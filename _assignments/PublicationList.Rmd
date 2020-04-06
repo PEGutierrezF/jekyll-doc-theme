@@ -6,17 +6,18 @@ permalink: /assignments/Publications/
 </div>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
- <h4><strong>2020</strong></h4>
+  <div class="row">
+       
+<h4><strong>2020</strong></h4>
 
-<p><strong>Gutierrez-Fonseca, P.E.</strong>, Ramirez, A., Pringle, C.M., Torres, P.J., Crowl, T., Covich, A., Pérez, O. & W.H., McDowell. 2020.  When the rainforest dries up: drought effects on a tropical rainforest stream in Puerto Rico. Freshwater Sciences.</p> [PDF](https://www.journals.uchicago.edu/doi/pdfplus/10.1086/708808) 
+<p><strong>Gutierrez-Fonseca, P.E.</strong>, Ramirez, A., Pringle, C.M., Torres, P.J., Crowl, T., Covich, A., Pérez, O. & W.H., McDowell. 2020.  When the rainforest dries up: drought effects on a tropical rainforest stream in Puerto Rico. Freshwater Sciences. [PDF](https://www.journals.uchicago.edu/doi/pdfplus/10.1086/708808)</p>
 </div>
 </div>
 
-#### __2019__
+<h5><strong>2019</strong></h5>
 
-Classen-Rodriguez, L., ***Gutiérrez-Fonseca, P.E.*** & A., Ramirez. 2019. Leaf-litter decomposition and macroinvertebrate assemblages along an urban stream gradient in Puerto Rico. Biotropica, 51, 641-651. [PDF](https://onlinelibrary.wiley.com/doi/full/10.1111/btp.12685?casa_token=SxRbcSedCnYAAAAA%3Ag-Xbuq6QzhwjpqJoNTLVGi9x9fpHaZnSbnGFXbBwWufOB9gATSKh7KJcAbfF3MyFZPoMvUh--5JAoMjd7w)
+<p>Classen-Rodriguez, L., <strong>Gutierrez-Fonseca, P.E.<strong> & A., Ramirez. 2019. Leaf-litter decomposition and macroinvertebrate assemblages along an urban stream gradient in Puerto Rico. Biotropica, 51, 641-651.</p> [PDF](https://onlinelibrary.wiley.com/doi/full/10.1111/btp.12685?casa_token=SxRbcSedCnYAAAAA%3Ag-Xbuq6QzhwjpqJoNTLVGi9x9fpHaZnSbnGFXbBwWufOB9gATSKh7KJcAbfF3MyFZPoMvUh--5JAoMjd7w)
+</div>
 
 Bravo, F., Romero, D., ***Gutiérrez-Fonseca, P.E.*** & S., Echeverria-Saenz. 2019. The description of Anacroneuria suerre sp. nov. from Costa Rica (Plecoptera: Perlidae) and using nymphs in ecotoxicological studies. Zootaxa, 4608(2), 357-364. [PDF](https://www.biotaxa.org/Zootaxa/article/view/zootaxa.4608.2.9)
 
