@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Publications"
-permalink: /assignments/Publications.html
 output: html_document
 ---
 
