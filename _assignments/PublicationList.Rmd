@@ -12,18 +12,19 @@ permalink: /assignments/Publications/
 
 <p><strong>Gutierrez-Fonseca, P.E.</strong>, Ramirez, A., Pringle, C.M., Torres, P.J., Crowl, T., Covich, A., Pérez, O. & W.H., McDowell. 2020.  When the rainforest dries up: drought effects on a tropical rainforest stream in Puerto Rico. Freshwater Sciences. [PDF](https://www.journals.uchicago.edu/doi/pdfplus/10.1086/708808)</p>
 </div>
-</div>
 
+<div class="container">
+<div class="row">
 <h5><strong>2019</strong></h5>
 
-<p>Classen-Rodriguez, L., <strong>Gutierrez-Fonseca, P.E.<strong> & A., Ramirez. 2019. Leaf-litter decomposition and macroinvertebrate assemblages along an urban stream gradient in Puerto Rico. Biotropica, 51, 641-651.</p> [PDF](https://onlinelibrary.wiley.com/doi/full/10.1111/btp.12685?casa_token=SxRbcSedCnYAAAAA%3Ag-Xbuq6QzhwjpqJoNTLVGi9x9fpHaZnSbnGFXbBwWufOB9gATSKh7KJcAbfF3MyFZPoMvUh--5JAoMjd7w)
+<p>Classen-Rodriguez, L., <strong>Gutierrez-Fonseca, P.E.<strong> & A., Ramirez. 2019. Leaf-litter decomposition and macroinvertebrate assemblages along an urban stream gradient in Puerto Rico. Biotropica, 51, 641-651. [PDF](https://onlinelibrary.wiley.com/doi/full/10.1111/btp.12685?casa_token=SxRbcSedCnYAAAAA%3Ag-Xbuq6QzhwjpqJoNTLVGi9x9fpHaZnSbnGFXbBwWufOB9gATSKh7KJcAbfF3MyFZPoMvUh--5JAoMjd7w)</p>
 </div>
 
-Bravo, F., Romero, D., ***Gutiérrez-Fonseca, P.E.*** & S., Echeverria-Saenz. 2019. The description of Anacroneuria suerre sp. nov. from Costa Rica (Plecoptera: Perlidae) and using nymphs in ecotoxicological studies. Zootaxa, 4608(2), 357-364. [PDF](https://www.biotaxa.org/Zootaxa/article/view/zootaxa.4608.2.9)
+<p>Bravo, F., Romero, D., <strong>Gutierrez-Fonseca, P.E.</strong> & S., Echeverria-Saenz. 2019. The description of Anacroneuria suerre sp. nov. from Costa Rica (Plecoptera: Perlidae) and using nymphs in ecotoxicological studies. Zootaxa, 4608(2), 357-364. [PDF](https://www.biotaxa.org/Zootaxa/article/view/zootaxa.4608.2.9)</p>
+</div>
 
-Wohl, E., Hinshaw, S.K., Scamardo, J.E., & ***P.E. Gutiérrez-Fonseca***. 2019. Transient Organic Jams in Puerto Rican Mountain Streams After Hurricanes. River Research and Applications, 35:280-289. [PDF](https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3405)
-<br>
-<br>
+<p>Wohl, E., Hinshaw, S.K., Scamardo, J.E., & <strong>P.E. Gutiérrez-Fonseca</strong>. 2019. Transient Organic Jams in Puerto Rican Mountain Streams After Hurricanes. River Research and Applications, 35:280-289. [PDF](https://onlinelibrary.wiley.com/doi/full/10.1002/rra.3405)</p>
+</div>
 
 #### __2018__
 
