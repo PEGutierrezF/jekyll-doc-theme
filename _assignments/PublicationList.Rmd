@@ -109,7 +109,6 @@ permalink: /assignments/Publications/
 </div>
 <div class="container">
 <p><font size="3">López, L.I., <strong>Gutiérrez-Fonseca, P.E.</strong>, & J.M. Mora. 2010. Macrofauna Acuatica de la Quebrada Santa Ines, Subcuenca del Rio Yeguare, Honduras. Ceiba 51:17-28. <a href="https://www.researchgate.net/publication/273027501_Macrofauna_Acuatica_de_la_Quebrada_Santa_Ines_Subcuenca_del_Rio_Yeguare_Honduras">PDF</a></font></p>
-</div>
-</div>
-</div>
+        </div>
+    </div>
 </div>
