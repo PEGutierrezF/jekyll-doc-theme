@@ -22,9 +22,9 @@ organizations and universities.</p>
 </div>
 
 <div class="social">
-  <div class="contacticon center">
+  <span class="contacticon center">
   <a href="mailto:pabloe.gutierrezfonseca@gmal.com"><i class="fa fa-envelope fa-2x"></i></a>
-  <a href="https://www.researchgate.net/profile/Pablo_Gutierrez-Fonseca2"><i class="fab fa-researchgate"></i></a>
-    </div><!-- .iconbar__more -->
+{% if site.research_gate_profile %}<a href="https://www.researchgate.net/profile/Pablo_Gutierrez-Fonseca2{{site.research_gate_profile}}/" target="_blank" title="ResearchGate"><i class="ai ai-researchgate"></i></a>{% endif %}
+    </span><!-- .iconbar__more -->
   </div><!-- .iconbar__container -->
 
