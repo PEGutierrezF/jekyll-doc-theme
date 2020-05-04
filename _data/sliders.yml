@@ -1,0 +1,15 @@
+
+
+
+- selector: example_slider
+  captions: true
+  images:
+    - src: /img/LaSelva.jpg
+      alt: image one
+    - src: /img/LaSelva1.jpg
+      alt: image two
+    - src: /img/Taconazo.jpg
+      alt: image three
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
