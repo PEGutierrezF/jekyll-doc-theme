@@ -2,6 +2,7 @@
 
 
 - selector: example_slider
+  bullets: false
   captions: true
   images:
     - src: /img/LaSelva.jpg
