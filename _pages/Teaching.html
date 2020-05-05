@@ -12,9 +12,25 @@ permalink: /pages/Teaching/
             Sizes="(max-width: 300px) 100px, 30vw" alt="image" class="img-responsive">
             </div>
             
+<button class="prev">Prev</button>
+<button class="next">Next</button>
+
 <script src="siema.min.js"></script>
 <script>
-  new Siema();
+  new Siema(new Siema({
+  selector: '.siema',
+  duration: 200,
+  easing: 'ease-out',
+  perPage: 1,
+  startIndex: 0,
+  draggable: true,
+  multipleDrag: true,
+  threshold: 20,
+  loop: false,
+  rtl: false,
+  onInit: () => {},
+  onChange: () => {},
+}));
 </script>
             
             
