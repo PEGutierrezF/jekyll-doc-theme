@@ -1,9 +1,9 @@
 - selector: example_slider
   captions: true
   images:
-    - src: /img/StreamEcology1.jpg
+    - src: /assets/img/StreamEcology1.jpg
       alt: image one
-    - src: /img/StreamEcology2.jpg
+    - src: /assets/img/StreamEcology2.jpg
       alt: image two
   settings:
     height: "'auto'"
