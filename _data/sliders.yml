@@ -9,7 +9,7 @@
       title: This slider uses the fade effect
       alt: Instead of the default slide effect
   settings:
-    height: 400
+    height: 50
     initialHeight:
     maxHeight:
     interval:
