@@ -3,11 +3,11 @@
   captions: true
   images:
     - src: /assets/img/StreamEcology1.jpg
-      title: Group
-      alt: This slider has caption titles
+      title:
+      alt:
     - src: /assets/img/StreamEcology2.jpg
-      title: Group
-      alt: This slider has caption titles
+      title:
+      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
