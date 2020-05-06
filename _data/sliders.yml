@@ -1,10 +1,18 @@
-- selector: example_slider
+- selector: slider2
+  bullets: true
   captions: true
   images:
     - src: /assets/img/StreamEcology1.jpg
-      alt: image one
-    - src: /assets/img/StreamEcology1.jpg
-      alt: image two
+      title: Group
+      alt: This slider has caption titles
+    - data-src: /assets/img/StreamEcology1.jpg
+      title: This slider uses the fade effect
+      alt: Instead of the default slide effect
+    - data-src: /img/3.jpg
+      data-src-2x: /img/3@2x.jpg
+    - src: /img/4.jpg
+      title: Last image had no caption!
+      alt: Also, this image has no link
   settings:
     height: "'auto'"
     effect: "'fade'"
