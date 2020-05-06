@@ -8,6 +8,21 @@
     - src: /assets/img/StreamEcology2.jpg
       title:
       alt:
+    - src: /assets/img/StreamEcology3.jpg
+      title:
+      alt:
+    - src: /assets/img/StreamEcology4.jpg
+      title:
+      alt:
+    - src: /assets/img/StreamEcology5.jpg
+      title:
+      alt:
+    - src: /assets/img/StreamEcology6.jpg
+      title:
+      alt:
+    - src: /assets/img/StreamEcology7.jpg
+      title:
+      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
