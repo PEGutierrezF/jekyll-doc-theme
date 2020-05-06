@@ -9,13 +9,5 @@
       title: Group
       alt: This slider has caption titles
   settings:
-    height: 50
-    initialHeight:
-    maxHeight:
-    interval:
-    transitionDuration:
-    effect:
-    disableNav:
-    keyboardNav:
-    previousNavSelector:
-    nextNavSelector:
+    height: "'auto'"
+    effect: "'fade'"
