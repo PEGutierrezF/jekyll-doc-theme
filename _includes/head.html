@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="{{"/assets/academicons/css/academicons.min.css"| relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+{% if page.image_sliders or layout.image_sliders or page.image_sliders_load_all -%}
+<link rel="stylesheet" href="{{ "/assets/css/slider/ideal-image-slider.css" | relative_url }}">
+<link rel="stylesheet" href="{{ "/assets/css/slider/themes/default.css" | relative_url }}">
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | absolute_url }}"/>
 </head>
