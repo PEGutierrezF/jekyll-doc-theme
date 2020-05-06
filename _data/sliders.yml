@@ -2,7 +2,7 @@
   bullets: true
   captions: true
   images:
-    - src: "{{ "/assets/img/StreamEcology1.jpg" | relative_url }}"
+    - src: /assets/img/StreamEcology1.jpg
       title: Group
       alt: This slider has caption titles
     - data-src: /assets/img/StreamEcology2.jpg
