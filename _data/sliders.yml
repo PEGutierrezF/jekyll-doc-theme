@@ -5,9 +5,9 @@
     - src: /assets/img/StreamEcology1.jpg
       title: Group
       alt: This slider has caption titles
-    - data-src: /assets/img/StreamEcology2.jpg
-      title: This slider uses the fade effect
-      alt: Instead of the default slide effect
+    - src: /assets/img/StreamEcology1.jpg
+      title: Group
+      alt: This slider has caption titles
   settings:
     height: 50
     initialHeight:
