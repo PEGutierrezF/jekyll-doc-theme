@@ -50,7 +50,7 @@
     height: "'auto'"
     effect: "'fade'"
     
-- selector: slider2
+- selector: slider3
   bullets: true
   captions: true
   images:
