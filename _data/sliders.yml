@@ -24,8 +24,8 @@
       title:
       alt:
   settings:
-    height: "'auto'"
-    effect:
+    height:
+    effect: "'fade'"
     
 - selector: slider2
   bullets: true
@@ -48,7 +48,7 @@
       alt:
   settings:
     height: "'auto'"
-    effect:
+    effect: "'fade'"
     
 - selector: slider3
   bullets: true
@@ -65,4 +65,4 @@
       alt:
   settings:
     height: "'auto'"
-    effect:
+    effect: "'fade'"
