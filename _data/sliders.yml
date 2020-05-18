@@ -17,14 +17,8 @@
     - src: /assets/img/StreamEcology5.jpg
       title:
       alt:
-    - src: /assets/img/StreamEcology6.jpg
-      title:
-      alt:
-    - src: /assets/img/StreamEcology7.jpg
-      title:
-      alt:
   settings:
-    height:
+    height: "'auto'"
     effect: "'fade'"
     
 - selector: slider2
