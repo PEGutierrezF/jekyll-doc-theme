@@ -49,3 +49,20 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
+    
+- selector: slider2
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/Limnology.jpg
+      title:
+      alt:
+    - src: /assets/img/Limnology1.jpg
+      title:
+      alt:
+    - src: /assets/img/Limnology2.jpg
+      title:
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
