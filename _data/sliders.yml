@@ -32,14 +32,14 @@
       title:
       alt:
     - src: /assets/img/Entomology2.jpg
-      title:
+      title: Megaloptera
       alt:
     - src: /assets/img/Entomology3.jpg
-      title:
+      title: Capture net of Philopotamidae 
       alt:
     - src: /assets/img/Entomology4.jpg
       title: Dobsonfly egg-masses
-      alt: Dobsonfly egg-masses
+      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
