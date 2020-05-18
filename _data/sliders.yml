@@ -26,3 +26,26 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
+    
+- selector: slider2
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/Entomology.jpg
+      title:
+      alt:
+    - src: /assets/img/Entomology1.jpg
+      title:
+      alt:
+    - src: /assets/img/Entomology2.jpg
+      title:
+      alt:
+    - src: /assets/img/Entomology3.jpg
+      title:
+      alt:
+    - src: /assets/img/Entomology4.jpg
+      title:
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
