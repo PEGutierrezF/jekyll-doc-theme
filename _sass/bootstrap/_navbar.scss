@@ -425,7 +425,7 @@
       &,
       &:hover,
       &:focus {
-        color: $navbar-default-link-active-color;
+        color: #FFE000;
         background-color: $navbar-default-link-active-bg;
       }
     }
@@ -482,7 +482,7 @@
           &,
           &:hover,
           &:focus {
-            color: #FFE000;
+            color: $navbar-default-link-active-color;
             background-color: $navbar-default-link-active-bg;
           }
         }
