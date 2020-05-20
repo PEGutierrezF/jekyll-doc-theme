@@ -1,5 +1,5 @@
-- title: Documentation
-  url:  "/documentation/"
+- title: Publications
+  url:  "/Publications/"
   side: left
   dropdown:
   - title: "Book chapter"
