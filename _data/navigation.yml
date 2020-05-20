@@ -1,0 +1,8 @@
+- title: Documentation
+  url:  "/documentation/"
+  side: left
+  dropdown:
+  - title: "Book chapter"
+    url:  "/Book chapter/"
+  - title: "Non-peer review"
+    url:  "/Non-peer review/"
