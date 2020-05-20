@@ -8,22 +8,14 @@
         <span class="icon-bar"></span>
       </button>
             <a class="navbar-brand" href="{{ "index.html" | relative_url }}">
-                <span><img src="{{ "/assets/img/stonefly.png" | relative_url }}" alt="Logo"></span> {{ site.title }}
+<span><img src="{{ "/assets/img/stonefly.png" | relative_url }}" alt="Logo"></span> {{ site.title }}
             </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
 <li><a href="/TropicalFreshwaterEcology/pages/about/"{% if page.sectionid == 'pages' %} class="active"{% endif %}>About me</a></li>
 <li><a href="/TropicalFreshwaterEcology/pages/Research/"{% if page.sectionid == 'pages' %} class="active"{% endif %}>Research</a></li>
-<ul>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="/TropicalFreshwaterEcology/pages/Publications/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publications</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-  <a class="dropdown-item" href="#">Outreach</a>
-  <a class="dropdown-item" href="#">Book Chapter</a>
-  </div>
-  </li>
-</ul>
+<li><a href="/TropicalFreshwaterEcology/pages/Publications/"{% if page.active == /pages/Publications/ %} class="active"{% endif %}>Publications</a></li>
 <li><a href="/TropicalFreshwaterEcology/pages/Teaching/"{% if page.sectionid == 'pages' %} class="active"{% endif %}>Teaching</a></li>
           </ul>
             <div class="navbar-right">
