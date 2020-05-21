@@ -120,7 +120,7 @@
 .iis-caption .iis-caption-content a:active {
 	color: #fff;
 }
-.nav .current a {
+.nav .current {
         background: none;
         color: #FFE000;
 }
