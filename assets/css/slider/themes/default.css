@@ -120,6 +120,6 @@
 .iis-caption .iis-caption-content a:active {
 	color: #fff;
 }
-a:active {
-  color: blue;
+.active {
+  background-color: blue;
 }
