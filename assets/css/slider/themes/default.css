@@ -127,5 +127,5 @@ a:visited {
   color: blue;
 }
 a.current:visited {
-  color: white
+  color: blue;
 }
