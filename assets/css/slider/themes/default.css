@@ -121,8 +121,8 @@
 	color: #fff;
 }
 .nav .current {
-  color: blue;
+  color: red;
 }
 .nav .active {
-  color: #FFE000;
+  color: red;
 }
