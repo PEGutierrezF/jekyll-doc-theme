@@ -123,3 +123,9 @@
 .current {
    color: #45ADA8;
 }
+a:visited {
+  color: blue;
+}
+a.current:visited {
+  color: white
+}
