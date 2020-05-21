@@ -121,5 +121,6 @@
 	color: #fff;
 }
 .current {
-  color: blue;
+   color: #45ADA8;
+   background-color: #FFFFFF;
 }
