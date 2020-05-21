@@ -124,11 +124,3 @@
    color: #45ADA8;
    background-color: #FFFFFF;
 }
-a:link, a:visited {
-  color: blue;
-}
-
-a.current:link, a.current:visited {
-  color: white;
-  background-color: blue;
-}
