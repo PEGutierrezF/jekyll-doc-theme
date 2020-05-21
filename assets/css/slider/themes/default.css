@@ -123,3 +123,6 @@
 .current {
   color: blue;
 }
+.active {
+  color: red;
+}
