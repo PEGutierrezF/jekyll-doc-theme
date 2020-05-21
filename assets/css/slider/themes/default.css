@@ -123,3 +123,6 @@
 .nav .current {
   color: blue;
 }
+.nav .active {
+  color: #FFE000;
+}
