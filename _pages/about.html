@@ -11,6 +11,17 @@ output:
 ---
 <br/>
 <br/>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
+
 
 <div class="container">
     <div class="row">
@@ -42,10 +53,6 @@ organizations and universities.</p>
     </span><!-- .iconbar__more -->
   </div><!-- .iconbar__container -->
 </div>
-#nav_bar ul li a.active-page
-{
-  background-color:blue;
-}
 <br/>
 <br/>
 <br/>
