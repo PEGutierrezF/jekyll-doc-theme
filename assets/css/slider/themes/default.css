@@ -120,15 +120,6 @@
 .iis-caption .iis-caption-content a:active {
 	color: #fff;
 }
-nav ul {
-    list-style-type: none;
-}
-nav li {
-    line-height: 30px;
-}
-nav a {
-    text-decoration: none;
-}
-nav li.active a {
-    color: #FFE000;
+.nav .current {
+   color: #45ADA8;
 }
