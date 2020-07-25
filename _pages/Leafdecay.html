@@ -231,4 +231,78 @@ devtools::install_github("PEGutierrezF/leafdecay")
 </div></div>
 </div>
 
+<div class="container">
+<h4 class="header-light regular-pad">Step 3: Calculating the decomposition rate (k)</h4>
+
+<div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"> <span class="hl kwd">slope.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## # A tibble: 12 x 7
+## # Groups:   Treatment, Replicate [6]
+##    Treatment Replicate term        estimate std.error statistic  p.value
+##    &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+##  1 CC                1 (Intercept)  4.57     0.00848     539.   4.18e-13
+##  2 CC                1 Day         -0.00202  0.000391     -5.16 3.58e- 3
+##  3 CC                2 (Intercept)  4.46     0.0426      105.   1.51e- 9
+##  4 CC                2 Day         -0.00331  0.00196      -1.69 1.53e- 1
+##  5 CC                3 (Intercept)  4.40     0.0701       62.8  1.93e- 8
+##  6 CC                3 Day         -0.00423  0.00323      -1.31 2.47e- 1
+##  7 hp                1 (Intercept)  4.57     0.0196      233.   2.75e-11
+##  8 hp                1 Day         -0.00196  0.000903     -2.17 8.25e- 2
+##  9 hp                2 (Intercept)  4.50     0.0330      136.   4.04e-10
+## 10 hp                2 Day         -0.00830  0.00152      -5.46 2.81e- 3
+## 11 hp                3 (Intercept)  4.06     0.244        16.7  1.42e- 5
+## 12 hp                3 Day         -0.0437   0.0112       -3.90 1.14e- 2
+</pre></div>
+</div></div>
+</div>
+
+<div class="container">
+<h4 class="header-light regular-pad">Step 4: Calculating the r-Squared</h4>
+
+<div class="chunk" id="unnamed-chunk-5"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">rsquared.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## # A tibble: 6 x 13
+## # Groups:   Treatment, Replicate [6]
+##   Treatment Replicate r.squared adj.r.squared  sigma statistic p.value    df
+##   &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;         &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt;
+## 1 CC                1     0.842         0.810 0.0161     26.7  0.00358     2
+## 2 CC                2     0.363         0.235 0.0808      2.84 0.153       2
+## 3 CC                3     0.256         0.107 0.133       1.72 0.247       2
+## 4 hp                1     0.484         0.381 0.0372      4.69 0.0825      2
+## 5 hp                2     0.856         0.828 0.0626     29.8  0.00281     2
+## 6 hp                3     0.752         0.703 0.462      15.2  0.0114      2
+## # ... with 5 more variables: logLik &lt;dbl&gt;, AIC &lt;dbl&gt;, BIC &lt;dbl&gt;,
+## #   deviance &lt;dbl&gt;, df.residual &lt;int&gt;
+</pre></div>
+</div></div>
+</div>
+
+<div class="container">
+<h4 class="header-light regular-pad">Step 5: Plotting the data </h4>
+<div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">plot.A</span><span class="hl std">(remaining)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
+<div class="source"><pre class="knitr r"><span class="hl kwd">plot.B</span><span class="hl std">(remaining)</span>
+</pre></div>
+<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-6-2.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
+<div class="source"><pre class="knitr r"><span class="hl kwd">plot.C</span><span class="hl std">(remaining)</span>
+</pre></div>
+<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-6-3.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
+<div class="source"><pre class="knitr r"><span class="hl kwd">plot.D</span><span class="hl std">(remaining)</span>
+</pre></div>
+<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-6-4.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
+<div class="source"><pre class="knitr r"><span class="hl kwd">plot.E</span><span class="hl std">(remaining)</span>
+</pre></div>
+<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-6-5.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div></div>
+</div>
+
+
       <br/>
