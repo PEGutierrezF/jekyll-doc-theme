@@ -47,77 +47,79 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <h4 class="header-light regular-pad">Structure of the input files</h4>
 
 <div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">control</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">data.frame</span><span class="hl std">(</span><span class="hl kwc">Day</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">0</span><span class="hl std">,</span><span class="hl num">0</span><span class="hl std">,</span><span class="hl num">0</span><span class="hl std">,</span><span class="hl num">0</span><span class="hl std">,</span><span class="hl num">0</span><span class="hl std">,</span><span class="hl num">0</span><span class="hl std">),</span>
-              <span class="hl kwc">Replica</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">),</span>
-              <span class="hl kwc">Initial_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">),</span>
-              <span class="hl kwc">Final_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">4.990</span><span class="hl std">,</span><span class="hl num">4.940</span><span class="hl std">,</span><span class="hl num">4.840</span><span class="hl std">,</span><span class="hl num">4.820</span><span class="hl std">,</span><span class="hl num">4.960</span><span class="hl std">,</span><span class="hl num">4.970</span><span class="hl std">),</span>
-              <span class="hl kwc">InitiaFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1.1071</span><span class="hl std">,</span><span class="hl num">1.1964</span><span class="hl std">,</span><span class="hl num">1.0647</span><span class="hl std">,</span><span class="hl num">1.0005</span><span class="hl std">,</span><span class="hl num">1.0453</span><span class="hl std">,</span><span class="hl num">1.1212</span><span class="hl std">),</span>
-              <span class="hl kwc">FinalFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">0.3858</span><span class="hl std">,</span><span class="hl num">0.3504</span><span class="hl std">,</span><span class="hl num">0.4248</span><span class="hl std">,</span><span class="hl num">0.3333</span><span class="hl std">,</span><span class="hl num">0.3417</span><span class="hl std">,</span><span class="hl num">0.3467</span><span class="hl std">),</span>
-              <span class="hl kwc">Treatment</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">))</span>
+                      <span class="hl kwc">Treatment</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">,</span><span class="hl str">&quot;Control&quot;</span><span class="hl std">),</span>
+                      <span class="hl kwc">Replica</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">),</span>
+                      <span class="hl kwc">Initial_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.010</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">),</span>
+                      <span class="hl kwc">Final_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">4.990</span><span class="hl std">,</span><span class="hl num">4.940</span><span class="hl std">,</span><span class="hl num">4.840</span><span class="hl std">,</span><span class="hl num">4.820</span><span class="hl std">,</span><span class="hl num">4.960</span><span class="hl std">,</span><span class="hl num">4.970</span><span class="hl std">),</span>
+                      <span class="hl kwc">InitialFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1.1071</span><span class="hl std">,</span><span class="hl num">1.1964</span><span class="hl std">,</span><span class="hl num">1.0647</span><span class="hl std">,</span><span class="hl num">1.0005</span><span class="hl std">,</span><span class="hl num">1.0453</span><span class="hl std">,</span><span class="hl num">1.1212</span><span class="hl std">),</span>
+                      <span class="hl kwc">FinalFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">0.3858</span><span class="hl std">,</span><span class="hl num">0.3504</span><span class="hl std">,</span><span class="hl num">0.4248</span><span class="hl std">,</span><span class="hl num">0.3333</span><span class="hl std">,</span><span class="hl num">0.3417</span><span class="hl std">,</span><span class="hl num">0.3467</span><span class="hl std">))</span>
+
 <span class="hl std">sites</span> <span class="hl kwb">&lt;-</span><span class="hl kwd">data.frame</span><span class="hl std">(</span><span class="hl kwc">Day</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">4</span><span class="hl std">,</span><span class="hl num">8</span><span class="hl std">,</span><span class="hl num">16</span><span class="hl std">,</span><span class="hl num">32</span><span class="hl std">,</span><span class="hl num">44</span><span class="hl std">),</span>
-               <span class="hl kwc">Replica</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">),</span>
-               <span class="hl kwc">Initial_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span>
+                  <span class="hl kwc">Treatment</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span>
+                      <span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">),</span>
+                  <span class="hl kwc">Replica</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">),</span>
+                  <span class="hl kwc">Initial_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span>
                                     <span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">),</span>
-               <span class="hl kwc">Final_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">4.65</span><span class="hl std">,</span><span class="hl num">4.63</span><span class="hl std">,</span><span class="hl num">4.67</span><span class="hl std">,</span><span class="hl num">4.64</span><span class="hl std">,</span><span class="hl num">4.37</span><span class="hl std">,</span><span class="hl num">4.37</span><span class="hl std">,</span><span class="hl num">4.17</span><span class="hl std">,</span><span class="hl num">3.72</span><span class="hl std">,</span><span class="hl num">4.12</span><span class="hl std">,</span><span class="hl num">4</span><span class="hl std">,</span><span class="hl num">3.99</span><span class="hl std">,</span><span class="hl num">3.64</span><span class="hl std">,</span>
-                                  <span class="hl num">4.26</span><span class="hl std">,</span><span class="hl num">3.3</span><span class="hl std">,</span><span class="hl num">3.47</span><span class="hl std">,</span><span class="hl num">3.7</span><span class="hl std">,</span><span class="hl num">3.75</span><span class="hl std">,</span><span class="hl num">3.3</span><span class="hl std">),</span>
-            <span class="hl kwc">InitiaFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1.0081</span><span class="hl std">,</span><span class="hl num">1.0972</span><span class="hl std">,</span><span class="hl num">1.1307</span><span class="hl std">,</span><span class="hl num">1.0898</span><span class="hl std">,</span><span class="hl num">1.075</span><span class="hl std">,</span><span class="hl num">1.0295</span><span class="hl std">,</span><span class="hl num">1.0956</span><span class="hl std">,</span><span class="hl num">1.042</span><span class="hl std">,</span><span class="hl num">1.0876</span><span class="hl std">,</span>
-             <span class="hl num">1.006</span><span class="hl std">,</span><span class="hl num">1.1052</span><span class="hl std">,</span><span class="hl num">1.0922</span><span class="hl std">,</span><span class="hl num">1.0472</span><span class="hl std">,</span><span class="hl num">1.0843</span><span class="hl std">,</span><span class="hl num">1.0177</span><span class="hl std">,</span><span class="hl num">1.0143</span><span class="hl std">,</span><span class="hl num">1.1112</span><span class="hl std">,</span><span class="hl num">1.0061</span><span class="hl std">),</span>
-            <span class="hl kwc">FinalFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">0.3229</span><span class="hl std">,</span><span class="hl num">0.3605</span><span class="hl std">,</span><span class="hl num">0.3304</span><span class="hl std">,</span><span class="hl num">0.3489</span><span class="hl std">,</span><span class="hl num">0.3181</span><span class="hl std">,</span><span class="hl num">0.2948</span><span class="hl std">,</span><span class="hl num">0.4098</span><span class="hl std">,</span><span class="hl num">0.3762</span><span class="hl std">,</span><span class="hl num">0.3787</span><span class="hl std">,</span>
-            <span class="hl num">0.3345</span><span class="hl std">,</span><span class="hl num">0.3595</span><span class="hl std">,</span><span class="hl num">0.3511</span><span class="hl std">,</span><span class="hl num">0.3921</span><span class="hl std">,</span><span class="hl num">0.3908</span><span class="hl std">,</span><span class="hl num">0.3385</span><span class="hl std">,</span><span class="hl num">0.347</span><span class="hl std">,</span><span class="hl num">0.3366</span><span class="hl std">,</span><span class="hl num">0.3318</span><span class="hl std">),</span>
-            <span class="hl kwc">Treatment</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span>
-                <span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">))</span>
+                  <span class="hl kwc">Final_Dry_Weight</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">4.65</span><span class="hl std">,</span><span class="hl num">4.63</span><span class="hl std">,</span><span class="hl num">4.67</span><span class="hl std">,</span><span class="hl num">4.64</span><span class="hl std">,</span><span class="hl num">4.37</span><span class="hl std">,</span><span class="hl num">4.37</span><span class="hl std">,</span><span class="hl num">4.17</span><span class="hl std">,</span><span class="hl num">3.72</span><span class="hl std">,</span><span class="hl num">4.12</span><span class="hl std">,</span><span class="hl num">4</span><span class="hl std">,</span><span class="hl num">3.99</span><span class="hl std">,</span><span class="hl num">3.64</span><span class="hl std">,</span>
+                          <span class="hl num">4.26</span><span class="hl std">,</span><span class="hl num">3.3</span><span class="hl std">,</span><span class="hl num">3.47</span><span class="hl std">,</span><span class="hl num">3.7</span><span class="hl std">,</span><span class="hl num">3.75</span><span class="hl std">,</span><span class="hl num">3.3</span><span class="hl std">),</span>
+                  <span class="hl kwc">InitialFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1.0081</span><span class="hl std">,</span><span class="hl num">1.0972</span><span class="hl std">,</span><span class="hl num">1.1307</span><span class="hl std">,</span><span class="hl num">1.0898</span><span class="hl std">,</span><span class="hl num">1.075</span><span class="hl std">,</span><span class="hl num">1.0295</span><span class="hl std">,</span><span class="hl num">1.0956</span><span class="hl std">,</span><span class="hl num">1.042</span><span class="hl std">,</span><span class="hl num">1.0876</span><span class="hl std">,</span>
+                          <span class="hl num">1.006</span><span class="hl std">,</span><span class="hl num">1.1052</span><span class="hl std">,</span><span class="hl num">1.0922</span><span class="hl std">,</span><span class="hl num">1.0472</span><span class="hl std">,</span><span class="hl num">1.0843</span><span class="hl std">,</span><span class="hl num">1.0177</span><span class="hl std">,</span><span class="hl num">1.0143</span><span class="hl std">,</span><span class="hl num">1.1112</span><span class="hl std">,</span><span class="hl num">1.0061</span><span class="hl std">),</span>
+                  <span class="hl kwc">FinalFraction</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">0.3229</span><span class="hl std">,</span><span class="hl num">0.3605</span><span class="hl std">,</span><span class="hl num">0.3304</span><span class="hl std">,</span><span class="hl num">0.3489</span><span class="hl std">,</span><span class="hl num">0.3181</span><span class="hl std">,</span><span class="hl num">0.2948</span><span class="hl std">,</span><span class="hl num">0.4098</span><span class="hl std">,</span><span class="hl num">0.3762</span><span class="hl std">,</span><span class="hl num">0.3787</span><span class="hl std">,</span>
+                          <span class="hl num">0.3345</span><span class="hl std">,</span><span class="hl num">0.3595</span><span class="hl std">,</span><span class="hl num">0.3511</span><span class="hl std">,</span><span class="hl num">0.3921</span><span class="hl std">,</span><span class="hl num">0.3908</span><span class="hl std">,</span><span class="hl num">0.3385</span><span class="hl std">,</span><span class="hl num">0.347</span><span class="hl std">,</span><span class="hl num">0.3366</span><span class="hl std">,</span><span class="hl num">0.3318</span><span class="hl std">))</span>
+
 <span class="hl std">total</span> <span class="hl kwb">&lt;-</span> <span class="hl std">dplyr</span><span class="hl opt">::</span><span class="hl kwd">bind_rows</span><span class="hl std">(control,sites)</span>
 <span class="hl std">total</span>
 </pre></div>
-<div class="output"><pre class="knitr r">##    Day Replica Initial_Dry_Weight Final_Dry_Weight InitiaFraction FinalFraction
-## 1    0       1               5.01             4.99         1.1071        0.3858
-## 2    0       1               5.01             4.94         1.1964        0.3504
-## 3    0       1               5.01             4.84         1.0647        0.4248
-## 4    0       1               5.01             4.82         1.0005        0.3333
-## 5    0       1               5.01             4.96         1.0453        0.3417
-## 6    0       1               5.00             4.97         1.1212        0.3467
-## 7    2       1               5.00             4.65         1.0081        0.3229
-## 8    4       1               5.00             4.63         1.0972        0.3605
-## 9    8       1               5.00             4.67         1.1307        0.3304
-## 10  16       1               5.00             4.64         1.0898        0.3489
-## 11  32       1               5.01             4.37         1.0750        0.3181
-## 12  44       1               5.00             4.37         1.0295        0.2948
-## 13   2       2               5.00             4.17         1.0956        0.4098
-## 14   4       2               5.00             3.72         1.0420        0.3762
-## 15   8       2               5.00             4.12         1.0876        0.3787
-## 16  16       2               5.00             4.00         1.0060        0.3345
-## 17  32       2               5.00             3.99         1.1052        0.3595
-## 18  44       2               5.01             3.64         1.0922        0.3511
-## 19   2       3               5.01             4.26         1.0472        0.3921
-## 20   4       3               5.01             3.30         1.0843        0.3908
-## 21   8       3               5.00             3.47         1.0177        0.3385
-## 22  16       3               5.00             3.70         1.0143        0.3470
-## 23  32       3               5.00             3.75         1.1112        0.3366
-## 24  44       3               5.00             3.30         1.0061        0.3318
-##    Treatment
-## 1    Control
-## 2    Control
-## 3    Control
-## 4    Control
-## 5    Control
-## 6    Control
-## 7         CC
-## 8         CC
-## 9         CC
-## 10        CC
-## 11        CC
-## 12        CC
-## 13        CC
-## 14        CC
-## 15        CC
-## 16        CC
-## 17        CC
-## 18        CC
-## 19        CC
-## 20        CC
-## 21        CC
-## 22        CC
-## 23        CC
-## 24        CC
+<div class="output"><pre class="knitr r">##    Day Treatment Replica Initial_Dry_Weight Final_Dry_Weight InitialFraction
+## 1    0   Control       1               5.01             4.99          1.1071
+## 2    0   Control       1               5.01             4.94          1.1964
+## 3    0   Control       1               5.01             4.84          1.0647
+## 4    0   Control       1               5.01             4.82          1.0005
+## 5    0   Control       1               5.01             4.96          1.0453
+## 6    0   Control       1               5.00             4.97          1.1212
+## 7    2        CC       1               5.00             4.65          1.0081
+## 8    4        CC       1               5.00             4.63          1.0972
+## 9    8        CC       1               5.00             4.67          1.1307
+## 10  16        CC       1               5.00             4.64          1.0898
+## 11  32        CC       1               5.01             4.37          1.0750
+## 12  44        CC       1               5.00             4.37          1.0295
+## 13   2        CC       2               5.00             4.17          1.0956
+## 14   4        CC       2               5.00             3.72          1.0420
+## 15   8        CC       2               5.00             4.12          1.0876
+## 16  16        CC       2               5.00             4.00          1.0060
+## 17  32        CC       2               5.00             3.99          1.1052
+## 18  44        CC       2               5.01             3.64          1.0922
+## 19   2        CC       3               5.01             4.26          1.0472
+## 20   4        CC       3               5.01             3.30          1.0843
+## 21   8        CC       3               5.00             3.47          1.0177
+## 22  16        CC       3               5.00             3.70          1.0143
+## 23  32        CC       3               5.00             3.75          1.1112
+## 24  44        CC       3               5.00             3.30          1.0061
+##    FinalFraction
+## 1         0.3858
+## 2         0.3504
+## 3         0.4248
+## 4         0.3333
+## 5         0.3417
+## 6         0.3467
+## 7         0.3229
+## 8         0.3605
+## 9         0.3304
+## 10        0.3489
+## 11        0.3181
+## 12        0.2948
+## 13        0.4098
+## 14        0.3762
+## 15        0.3787
+## 16        0.3345
+## 17        0.3595
+## 18        0.3511
+## 19        0.3921
+## 20        0.3908
+## 21        0.3385
+## 22        0.3470
+## 23        0.3366
+## 24        0.3318
 </pre></div>
 </div></div>
 
