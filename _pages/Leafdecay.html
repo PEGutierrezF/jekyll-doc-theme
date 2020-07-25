@@ -280,34 +280,27 @@ devtools::install_github("PEGutierrezF/leafdecay")
 
 <div class="container">
 <h4 class="header-light regular-pad">Step 5: Plotting the data </h4>
-<table>
-   <tr>
-      <td align='center'>
-<div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">plot.A</span><span class="hl std">(remaining)</span>
+<div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">plot.A</span> <span class="hl kwb">&lt;-</span> <span class="hl kwa">function</span><span class="hl std">(</span><span class="hl kwc">data</span><span class="hl std">)</span>
+<span class="hl std">{</span>
+  <span class="hl std">data</span><span class="hl opt">%&gt;%</span> <span class="hl com"># the names of the new data frame and the data frame to be summarised</span>
+    <span class="hl kwd">group_by</span><span class="hl std">(Treatment, Day)</span> <span class="hl opt">%&gt;%</span>   <span class="hl com"># the grouping variable</span>
+    <span class="hl std">dplyr</span><span class="hl opt">::</span><span class="hl kwd">summarise</span><span class="hl std">(</span><span class="hl kwc">mean</span> <span class="hl std">=</span> <span class="hl kwd">mean</span><span class="hl std">(AFDMrem),</span>  <span class="hl com"># calculates the mean of each group</span>
+                     <span class="hl kwc">sd</span> <span class="hl std">=</span> <span class="hl kwd">sd</span><span class="hl std">(AFDMrem),</span> <span class="hl com"># calculates the standard deviation of each group</span>
+                     <span class="hl kwc">n</span> <span class="hl std">=</span> <span class="hl kwd">n</span><span class="hl std">(),</span>  <span class="hl com"># calculates the sample size per group</span>
+                     <span class="hl kwc">SE</span> <span class="hl std">=</span> <span class="hl kwd">sd</span><span class="hl std">(AFDMrem)</span><span class="hl opt">/</span><span class="hl kwd">sqrt</span><span class="hl std">(</span><span class="hl kwd">n</span><span class="hl std">())</span> <span class="hl com"># calculates the standard error of each group</span>
+    <span class="hl std">)</span> <span class="hl opt">%&gt;%</span>
+    <span class="hl kwd">ggplot</span><span class="hl std">(</span><span class="hl kwd">aes</span><span class="hl std">(</span><span class="hl kwc">x</span> <span class="hl std">= Day ,</span> <span class="hl kwc">y</span><span class="hl std">= mean,</span> <span class="hl kwc">group</span> <span class="hl std">= Treatment,</span><span class="hl kwc">color</span><span class="hl std">=Treatment))</span><span class="hl opt">+</span>
+    <span class="hl kwd">geom_line</span><span class="hl std">(</span><span class="hl kwc">size</span><span class="hl std">=</span><span class="hl num">1</span><span class="hl std">)</span><span class="hl opt">+</span> <span class="hl kwd">geom_point</span><span class="hl std">(</span><span class="hl kwc">size</span><span class="hl std">=</span><span class="hl num">2</span><span class="hl std">)</span>  <span class="hl opt">+</span>
+    <span class="hl com">#    geom_smooth(method = &quot;lm&quot;, se=FALSE, color=&quot;blue&quot;, formula = y ~ x)+</span>
+    <span class="hl kwd">geom_errorbar</span><span class="hl std">(</span><span class="hl kwd">aes</span><span class="hl std">(</span><span class="hl kwc">ymax</span><span class="hl std">=mean</span><span class="hl opt">+</span><span class="hl std">SE,</span> <span class="hl kwc">ymin</span><span class="hl std">=mean</span><span class="hl opt">-</span><span class="hl std">SE),</span> <span class="hl kwc">width</span><span class="hl std">=</span><span class="hl num">0.5</span><span class="hl std">)</span> <span class="hl opt">+</span>
+    <span class="hl kwd">xlab</span><span class="hl std">(</span><span class="hl str">'Day'</span><span class="hl std">)</span> <span class="hl opt">+</span> <span class="hl kwd">ylab</span><span class="hl std">(</span><span class="hl str">'AFDM remaining'</span><span class="hl std">)</span> <span class="hl opt">+</span>
+    <span class="hl kwd">facet_wrap</span><span class="hl std">(</span><span class="hl opt">~</span> <span class="hl std">Treatment)</span>
+<span class="hl std">}</span>
+<span class="hl kwd">plot.A</span><span class="hl std">(remaining)</span>
 </pre></div>
-</div><div class="rimage default"><img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
-<div class="source"><pre class="knitr r"><span class="hl kwd">plot.B</span><span class="hl std">(remaining)</span>
+<div class="message"><pre class="knitr r">## `summarise()` regrouping output by 'Treatment' (override with `.groups` argument)
 </pre></div>
-<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
-</pre></div>
-</div><div class="rimage default"><img src="figure/unnamed-chunk-6-2.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
-<div class="source"><pre class="knitr r"><span class="hl kwd">plot.C</span><span class="hl std">(remaining)</span>
-</pre></div>
-<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
-</pre></div>
-</div><div class="rimage default"><img src="figure/unnamed-chunk-6-3.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
-<div class="source"><pre class="knitr r"><span class="hl kwd">plot.D</span><span class="hl std">(remaining)</span>
-</pre></div>
-<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
-</pre></div>
-</div><div class="rimage default"><img src="figure/unnamed-chunk-6-4.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
-<div class="source"><pre class="knitr r"><span class="hl kwd">plot.E</span><span class="hl std">(remaining)</span>
-</pre></div>
-<div class="message"><pre class="knitr r">## `geom_smooth()` using formula 'y ~ x'
-</pre></div>
-</div><div class="rimage default"><img src="figure/unnamed-chunk-6-5.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div></div>
-      </td>
-   </tr>
-</table>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div></div>
+
 </div>
       <br/>
