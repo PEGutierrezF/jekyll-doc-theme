@@ -50,9 +50,11 @@ devtools::install_github("PEGutierrezF/leafdecay")
 devtools::install_github("PEGutierrezF/leafdecay")
 library(leafdecay)
 library(dplyr)
+library(tidyr)
+library(tidyverse)
 control <- data.frame(Day=c(0,0,0,0,0,0),
                       Treatment=c("Control","Control","Control","Control","Control","Control"),
-                      Replica=c(1,1,1,1,1,1),
+                      Replicate=c(1,1,1,1,1,1),
                       InitialWt=c(5.010,5.010,5.010,5.010,5.010,5.000),
                       FinalWt=c(4.990,4.940,4.840,4.820,4.960,4.970),
                       InitialFraction=c(1.1071,1.1964,1.0647,1.0005,1.0453,1.1212),
@@ -60,16 +62,23 @@ control <- data.frame(Day=c(0,0,0,0,0,0),
               
 sites <-data.frame(Day=c(2,4,8,16,32,44),
                   Treatment=c("CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC",
-                      "CC","CC","CC","CC","CC"),
-                  Replica=c(1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3),
+                      "CC","CC","CC","CC","CC","hp","hp","hp","hp","hp","hp","hp","hp","hp","hp",
+                      "hp","hp","hp","hp","hp","hp","hp","hp"),
+                  Replicate=c(1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3),
                   InitialWt=c(5.000,5.000,5.000,5.000,5.01,5.000,5.000,5.000,
-                                    5.000,5.000,5.000,5.01,5.01,5.01,5.000,5.000,5.000,5.000),
+                              5.000,5.000,5.000,5.01,5.01,5.01,5.000,5.000,5.000,5.000,
+                              5.01,5,5.01,5,5.01,5,5.01,5,5.01,5,5,5,5,5,5.01,5.01,5,5.01),
                   FinalWt=c(4.65,4.63,4.67,4.64,4.37,4.37,4.17,3.72,4.12,4,3.99,3.64,
-                          4.26,3.3,3.47,3.7,3.75,3.3),
+                          4.26,3.3,3.47,3.7,3.75,3.3,4.91,4.66,4.68,4.52,4.25,4.58,4.54,4.02,
+                          4.02,3.66,3.33,3.21,2.46,2.29,0.9,1.82,0.9,0.37),
                   InitialFraction=c(1.0081,1.0972,1.1307,1.0898,1.075,1.0295,1.0956,1.042,1.0876,
-                          1.006,1.1052,1.0922,1.0472,1.0843,1.0177,1.0143,1.1112,1.0061),
+                          1.006,1.1052,1.0922,1.0472,1.0843,1.0177,1.0143,1.1112,1.0061,
+                          1.1301,1.1228,1.1719,1,1.0606,1.1156,1.0449,1.0922,1.1061,1.042,1.0006,1.0003,
+                          1.0661,1.1265,1.03,1.084,0.6735,0.177),
                   FinalFraction=c(0.3229,0.3605,0.3304,0.3489,0.3181,0.2948,0.4098,0.3762,0.3787,
-                          0.3345,0.3595,0.3511,0.3921,0.3908,0.3385,0.347,0.3366,0.3318))
+                          0.3345,0.3595,0.3511,0.3921,0.3908,0.3385,0.347,0.3366,0.3318,
+                          0.2833,0.3676,0.3842,0.2189,0.3627,0.3237,0.3299,0.3539,0.3903,0.3175,0.3414,
+                          0.311,0.3336,0.4577,0.2147,0.2582,0.2734,0.0671))
 
 RioPriedras <- dplyr::bind_rows(control,sites)
 RioPriedras
@@ -86,6 +95,23 @@ control <- manipulation(data= RioPriedras,
                         Treatment= Control)
 control
 end.rcode-->
+</div>
 
+<div class="container">
+<h4 class="header-light regular-pad">Step 2: Percentage of AFDM Remaining</h4>
+
+<!--begin.rcode
+remaining <- AFDM(data      =  RioPriedras,
+                InitialWt  =  InitialWt,
+                FinalWt =  FinalWt,
+                Frac.InitialWt =  InitialFraction,
+                Frac.FinalWt =  FinalFraction,
+                Treatment =  Treatment,
+                Day       =  Day,
+                Replicate =  Replicate)
+
+remaining
+end.rcode-->
+</div>
 
       <br/>
