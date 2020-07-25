@@ -47,6 +47,9 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <h4 class="header-light regular-pad">Structure of the input files</h4>
 
 <!--begin.rcode
+devtools::install_github("PEGutierrezF/leafdecay")
+library(leafdecay)
+library(dplyr)
 control <- data.frame(Day=c(0,0,0,0,0,0),
                       Treatment=c("Control","Control","Control","Control","Control","Control"),
                       Replica=c(1,1,1,1,1,1),
@@ -68,9 +71,21 @@ sites <-data.frame(Day=c(2,4,8,16,32,44),
                   FinalFraction=c(0.3229,0.3605,0.3304,0.3489,0.3181,0.2948,0.4098,0.3762,0.3787,
                           0.3345,0.3595,0.3511,0.3921,0.3908,0.3385,0.347,0.3366,0.3318))
 
-total <- dplyr::bind_rows(control,sites)
-total
+RioPriedras <- dplyr::bind_rows(control,sites)
+RioPriedras
+end.rcode-->
+</div>
+
+<div class="container">
+<h4 class="header-light regular-pad">Step 1: Calculating the loss of litter mass by handling</h4>
+
+<!--begin.rcode
+control <- manipulation(data= RioPriedras,
+                        InitialWt= InitialWt,
+                        FinalWt= FinalWt,
+                        Treatment= Control)
+control
 end.rcode-->
 
-</div>
+
       <br/>
