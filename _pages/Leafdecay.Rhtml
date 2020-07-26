@@ -139,7 +139,10 @@ end.rcode-->
 <div class="container">
 <h4 class="header-light regular-pad">Step 5: Plotting the data </h4>
 <!--begin.rcode results='hide'
-  plot.A(remaining)
+library(knitr)
+opts_chunk$set(echo = TRUE)
+plot.A(remaining)
+include_graphics('../figure/unnamed-chunk-6-1.png')
 end.rcode-->
 <img src="{{ "/assets/img/PlotA.jpg" | relative_url }}">
 </div>
