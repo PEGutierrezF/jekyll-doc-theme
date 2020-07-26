@@ -46,13 +46,16 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <div class="container">
 <h4 class="header-light regular-pad">Structure of the input files</h4>
 
-<!--begin.rcode
+<!--begin.rcode include=FALSE
+library(tidyverse)
+end.rcode-->
+
+<!--begin.rcode message=FALSE
 devtools::install_github("PEGutierrezF/leafdecay")
 library(leafdecay)
-library(dplyr)
-library(tidyr)
-library(tidyverse)
-library(ggplot2)
+end.rcode-->
+
+<!--begin.rcode
 control <- data.frame(Day=c(0,0,0,0,0,0),
                       Treatment=c("Control","Control","Control","Control","Control","Control"),
                       Replicate=c(1,1,1,1,1,1),
