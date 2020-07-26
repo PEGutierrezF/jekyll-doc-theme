@@ -89,8 +89,8 @@ devtools::install_github("PEGutierrezF/leafdecay")
 
 <span class="hl std">sites</span> <span class="hl kwb">&lt;-</span><span class="hl kwd">data.frame</span><span class="hl std">(</span><span class="hl kwc">Day</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">4</span><span class="hl std">,</span><span class="hl num">8</span><span class="hl std">,</span><span class="hl num">16</span><span class="hl std">,</span><span class="hl num">32</span><span class="hl std">,</span><span class="hl num">44</span><span class="hl std">),</span>
                   <span class="hl kwc">Treatment</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span>
-                      <span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span>
-                      <span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">,</span><span class="hl str">&quot;hp&quot;</span><span class="hl std">),</span>
+                      <span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;CC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span>
+                      <span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">,</span><span class="hl str">&quot;QLC&quot;</span><span class="hl std">),</span>
                   <span class="hl kwc">Replicate</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">),</span>
                   <span class="hl kwc">InitialWt</span><span class="hl std">=</span><span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span>
                               <span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.01</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span><span class="hl num">5.000</span><span class="hl std">,</span>
@@ -135,24 +135,24 @@ devtools::install_github("PEGutierrezF/leafdecay")
 ## 22  16        CC         3      5.00    3.70          1.0143        0.3470
 ## 23  32        CC         3      5.00    3.75          1.1112        0.3366
 ## 24  44        CC         3      5.00    3.30          1.0061        0.3318
-## 25   2        hp         1      5.01    4.91          1.1301        0.2833
-## 26   4        hp         1      5.00    4.66          1.1228        0.3676
-## 27   8        hp         1      5.01    4.68          1.1719        0.3842
-## 28  16        hp         1      5.00    4.52          1.0000        0.2189
-## 29  32        hp         1      5.01    4.25          1.0606        0.3627
-## 30  44        hp         1      5.00    4.58          1.1156        0.3237
-## 31   2        hp         2      5.01    4.54          1.0449        0.3299
-## 32   4        hp         2      5.00    4.02          1.0922        0.3539
-## 33   8        hp         2      5.01    4.02          1.1061        0.3903
-## 34  16        hp         2      5.00    3.66          1.0420        0.3175
-## 35  32        hp         2      5.00    3.33          1.0006        0.3414
-## 36  44        hp         2      5.00    3.21          1.0003        0.3110
-## 37   2        hp         3      5.00    2.46          1.0661        0.3336
-## 38   4        hp         3      5.00    2.29          1.1265        0.4577
-## 39   8        hp         3      5.01    0.90          1.0300        0.2147
-## 40  16        hp         3      5.01    1.82          1.0840        0.2582
-## 41  32        hp         3      5.00    0.90          0.6735        0.2734
-## 42  44        hp         3      5.01    0.37          0.1770        0.0671
+## 25   2       QLC         1      5.01    4.91          1.1301        0.2833
+## 26   4       QLC         1      5.00    4.66          1.1228        0.3676
+## 27   8       QLC         1      5.01    4.68          1.1719        0.3842
+## 28  16       QLC         1      5.00    4.52          1.0000        0.2189
+## 29  32       QLC         1      5.01    4.25          1.0606        0.3627
+## 30  44       QLC         1      5.00    4.58          1.1156        0.3237
+## 31   2       QLC         2      5.01    4.54          1.0449        0.3299
+## 32   4       QLC         2      5.00    4.02          1.0922        0.3539
+## 33   8       QLC         2      5.01    4.02          1.1061        0.3903
+## 34  16       QLC         2      5.00    3.66          1.0420        0.3175
+## 35  32       QLC         2      5.00    3.33          1.0006        0.3414
+## 36  44       QLC         2      5.00    3.21          1.0003        0.3110
+## 37   2       QLC         3      5.00    2.46          1.0661        0.3336
+## 38   4       QLC         3      5.00    2.29          1.1265        0.4577
+## 39   8       QLC         3      5.01    0.90          1.0300        0.2147
+## 40  16       QLC         3      5.01    1.82          1.0840        0.2582
+## 41  32       QLC         3      5.00    0.90          0.6735        0.2734
+## 42  44       QLC         3      5.01    0.37          0.1770        0.0671
 </pre></div>
 </div></div>
 </div>
@@ -207,27 +207,27 @@ devtools::install_github("PEGutierrezF/leafdecay")
 ## 19   3  16         3        CC 75.328294   4.321856
 ## 20   3  32         3        CC 76.346244   4.335279
 ## 21   3  44         3        CC 67.184695   4.207445
-## 22   4   0         1        hp 98.236660   4.587379
-## 23   4   2         1        hp 99.763156   4.602799
-## 24   4   4         1        hp 94.872932   4.552538
-## 25   4   8         1        hp 95.089932   4.554823
-## 26   4  16         1        hp 92.022673   4.522035
-## 27   4  32         1        hp 86.353037   4.458444
-## 28   4  44         1        hp 93.244212   4.535222
-## 29   5   0         2        hp 98.236660   4.587379
-## 30   5   2         2        hp 92.245362   4.524452
-## 31   5   4         2        hp 81.843173   4.404805
-## 32   5   8         2        hp 81.679814   4.402807
-## 33   5  16         2        hp 74.513934   4.310986
-## 34   5  32         2        hp 67.795465   4.216495
-## 35   5  44         2        hp 65.352385   4.179794
-## 36   6   0         3        hp 98.236660   4.587379
-## 37   6   2         3        hp 50.083136   3.913684
-## 38   6   4         3        hp 46.622106   3.842075
-## 39   6   8         3        hp 18.286525   2.906164
-## 40   6  16         3        hp 36.979418   3.610361
-## 41   6  32         3        hp 18.323099   2.908162
-## 42   6  44         3        hp  7.517794   2.017273
+## 22   4   0         1       QLC 98.236660   4.587379
+## 23   4   2         1       QLC 99.763156   4.602799
+## 24   4   4         1       QLC 94.872932   4.552538
+## 25   4   8         1       QLC 95.089932   4.554823
+## 26   4  16         1       QLC 92.022673   4.522035
+## 27   4  32         1       QLC 86.353037   4.458444
+## 28   4  44         1       QLC 93.244212   4.535222
+## 29   5   0         2       QLC 98.236660   4.587379
+## 30   5   2         2       QLC 92.245362   4.524452
+## 31   5   4         2       QLC 81.843173   4.404805
+## 32   5   8         2       QLC 81.679814   4.402807
+## 33   5  16         2       QLC 74.513934   4.310986
+## 34   5  32         2       QLC 67.795465   4.216495
+## 35   5  44         2       QLC 65.352385   4.179794
+## 36   6   0         3       QLC 98.236660   4.587379
+## 37   6   2         3       QLC 50.083136   3.913684
+## 38   6   4         3       QLC 46.622106   3.842075
+## 39   6   8         3       QLC 18.286525   2.906164
+## 40   6  16         3       QLC 36.979418   3.610361
+## 41   6  32         3       QLC 18.323099   2.908162
+## 42   6  44         3       QLC  7.517794   2.017273
 </pre></div>
 </div></div>
 </div>
@@ -247,12 +247,12 @@ devtools::install_github("PEGutierrezF/leafdecay")
 ##  4 CC                2 Day         -0.00331  0.00196      -1.69 1.53e- 1
 ##  5 CC                3 (Intercept)  4.40     0.0701       62.8  1.93e- 8
 ##  6 CC                3 Day         -0.00423  0.00323      -1.31 2.47e- 1
-##  7 hp                1 (Intercept)  4.57     0.0196      233.   2.75e-11
-##  8 hp                1 Day         -0.00196  0.000903     -2.17 8.25e- 2
-##  9 hp                2 (Intercept)  4.50     0.0330      136.   4.04e-10
-## 10 hp                2 Day         -0.00830  0.00152      -5.46 2.81e- 3
-## 11 hp                3 (Intercept)  4.06     0.244        16.7  1.42e- 5
-## 12 hp                3 Day         -0.0437   0.0112       -3.90 1.14e- 2
+##  7 QLC               1 (Intercept)  4.57     0.0196      233.   2.75e-11
+##  8 QLC               1 Day         -0.00196  0.000903     -2.17 8.25e- 2
+##  9 QLC               2 (Intercept)  4.50     0.0330      136.   4.04e-10
+## 10 QLC               2 Day         -0.00830  0.00152      -5.46 2.81e- 3
+## 11 QLC               3 (Intercept)  4.06     0.244        16.7  1.42e- 5
+## 12 QLC               3 Day         -0.0437   0.0112       -3.90 1.14e- 2
 </pre></div>
 </div></div>
 </div>
@@ -269,9 +269,9 @@ devtools::install_github("PEGutierrezF/leafdecay")
 ## 1 CC                1     0.842         0.810 0.0161     26.7  0.00358     2
 ## 2 CC                2     0.363         0.235 0.0808      2.84 0.153       2
 ## 3 CC                3     0.256         0.107 0.133       1.72 0.247       2
-## 4 hp                1     0.484         0.381 0.0372      4.69 0.0825      2
-## 5 hp                2     0.856         0.828 0.0626     29.8  0.00281     2
-## 6 hp                3     0.752         0.703 0.462      15.2  0.0114      2
+## 4 QLC               1     0.484         0.381 0.0372      4.69 0.0825      2
+## 5 QLC               2     0.856         0.828 0.0626     29.8  0.00281     2
+## 6 QLC               3     0.752         0.703 0.462      15.2  0.0114      2
 ## # ... with 5 more variables: logLik &lt;dbl&gt;, AIC &lt;dbl&gt;, BIC &lt;dbl&gt;,
 ## #   deviance &lt;dbl&gt;, df.residual &lt;int&gt;
 </pre></div>
@@ -284,8 +284,7 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">plot.A</span><span class="hl std">(remaining)</span>
 </pre></div>
 </div><div class="rimage default"><img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div></div>
-
-        <img src="{{ "/assets/img/PlotA.jpg" | relative_url }}">
+<img src="{{ "/assets/img/PlotA.jpg" | relative_url }}">
         </div>
 
 </div>
