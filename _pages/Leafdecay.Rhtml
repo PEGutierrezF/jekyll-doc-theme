@@ -45,7 +45,7 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <p><font size="3">To use the <font color='1F618D'><b><i>leafdecay</i></b></font> package, leaf litter decomposition experiments must be designed with an appropriate number of replicates, must include controls due to manipulation, and be sampled over time.</font></p>
 </div>
 <div class="container">
-<h4 class="header-light regular-pad">Structure of the input files</h4>
+<h4 class="header-light regular-pad">Data Structure</h4>
 
 <!--begin.rcode include=FALSE
 library(tidyverse)
@@ -80,6 +80,13 @@ sites <-data.frame(Day=c(2,4,8,16,32,44),
                                   0.3842,0.3237,0.3903,0.311,0.2147,0.0671))
 
 RioPriedras <- dplyr::bind_rows(control,sites)
+end.rcode-->
+</div>
+
+</div>
+<div class="container">
+<h4 class="header-light regular-pad">Structure of the input files</h4>
+<!--begin.rcode
 RioPriedras
 end.rcode-->
 </div>
@@ -131,11 +138,11 @@ end.rcode-->
 
 <div class="container">
 <h4 class="header-light regular-pad">Step 5: Plotting the data </h4>
-<!--begin.rcode message=FALSE
+<!--begin.rcode results='hide'
   plot.A(remaining)
 end.rcode-->
 <img src="{{ "/assets/img/PlotA.jpg" | relative_url }}">
-        </div>
+</div>
 
 </div>
       <br/>

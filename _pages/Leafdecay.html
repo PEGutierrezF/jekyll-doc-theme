@@ -45,7 +45,7 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <p><font size="3">To use the <font color='1F618D'><b><i>leafdecay</i></b></font> package, leaf litter decomposition experiments must be designed with an appropriate number of replicates, must include controls due to manipulation, and be sampled over time.</font></p>
 </div>
 <div class="container">
-<h4 class="header-light regular-pad">Structure of the input files</h4>
+<h4 class="header-light regular-pad">Data Structure</h4>
 
 
 
@@ -77,7 +77,14 @@ devtools::install_github("PEGutierrezF/leafdecay")
                                   <span class="hl num">0.3842</span><span class="hl std">,</span><span class="hl num">0.3237</span><span class="hl std">,</span><span class="hl num">0.3903</span><span class="hl std">,</span><span class="hl num">0.311</span><span class="hl std">,</span><span class="hl num">0.2147</span><span class="hl std">,</span><span class="hl num">0.0671</span><span class="hl std">))</span>
 
 <span class="hl std">RioPriedras</span> <span class="hl kwb">&lt;-</span> <span class="hl std">dplyr</span><span class="hl opt">::</span><span class="hl kwd">bind_rows</span><span class="hl std">(control,sites)</span>
-<span class="hl std">RioPriedras</span>
+</pre></div>
+</div></div>
+</div>
+
+</div>
+<div class="container">
+<h4 class="header-light regular-pad">Structure of the input files</h4>
+<div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">RioPriedras</span>
 </pre></div>
 <div class="output"><pre class="knitr r">##    Day Treatment Replicate InitialWt FinalWt InitialFraction FinalFraction
 ## 1    0   Control         1      5.01    4.99          1.1071        0.3858
@@ -129,7 +136,7 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <div class="container">
 <h4 class="header-light regular-pad">Step 1: Calculating the loss of litter mass by handling</h4>
 
-<div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">control</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">manipulation</span><span class="hl std">(</span><span class="hl kwc">data</span><span class="hl std">= RioPriedras,</span>
+<div class="chunk" id="unnamed-chunk-5"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">control</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">manipulation</span><span class="hl std">(</span><span class="hl kwc">data</span><span class="hl std">= RioPriedras,</span>
                         <span class="hl kwc">InitialWt</span><span class="hl std">= InitialWt,</span>
                         <span class="hl kwc">FinalWt</span><span class="hl std">= FinalWt,</span>
                         <span class="hl kwc">Treatment</span><span class="hl std">= Control)</span>
@@ -143,7 +150,7 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <div class="container">
 <h4 class="header-light regular-pad">Step 2: Percentage of AFDM Remaining</h4>
 
-<div class="chunk" id="unnamed-chunk-5"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">remaining</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">AFDM</span><span class="hl std">(</span><span class="hl kwc">data</span>      <span class="hl std">=  RioPriedras,</span>
+<div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">remaining</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">AFDM</span><span class="hl std">(</span><span class="hl kwc">data</span>      <span class="hl std">=  RioPriedras,</span>
                 <span class="hl kwc">InitialWt</span>  <span class="hl std">=  InitialWt,</span>
                 <span class="hl kwc">FinalWt</span> <span class="hl std">=  FinalWt,</span>
                 <span class="hl kwc">Frac.InitialWt</span> <span class="hl std">=  InitialFraction,</span>
@@ -204,7 +211,7 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <div class="container">
 <h4 class="header-light regular-pad">Step 3: Calculating the decomposition rate (k)</h4>
 
-<div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"> <span class="hl kwd">slope.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
+<div class="chunk" id="unnamed-chunk-7"><div class="rcode"><div class="source"><pre class="knitr r"> <span class="hl kwd">slope.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
 </pre></div>
 <div class="output"><pre class="knitr r">## # A tibble: 12 x 7
 ## # Groups:   Treatment, Replicate [6]
@@ -229,7 +236,7 @@ devtools::install_github("PEGutierrezF/leafdecay")
 <div class="container">
 <h4 class="header-light regular-pad">Step 4: Calculating the r-Squared</h4>
 
-<div class="chunk" id="unnamed-chunk-7"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">rsquared.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
+<div class="chunk" id="unnamed-chunk-8"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">rsquared.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
 </pre></div>
 <div class="output"><pre class="knitr r">## # A tibble: 6 x 13
 ## # Groups:   Treatment, Replicate [6]
@@ -249,11 +256,11 @@ devtools::install_github("PEGutierrezF/leafdecay")
 
 <div class="container">
 <h4 class="header-light regular-pad">Step 5: Plotting the data </h4>
-<div class="chunk" id="unnamed-chunk-8"><div class="rcode"><div class="source"><pre class="knitr r">  <span class="hl kwd">plot.A</span><span class="hl std">(remaining)</span>
+<div class="chunk" id="unnamed-chunk-9"><div class="rcode"><div class="source"><pre class="knitr r">  <span class="hl kwd">plot.A</span><span class="hl std">(remaining)</span>
 </pre></div>
-</div><div class="rimage default"><img src="figure/unnamed-chunk-8-1.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" class="plot" /></div></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-9-1.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" class="plot" /></div></div>
 <img src="{{ "/assets/img/PlotA.jpg" | relative_url }}">
-        </div>
+</div>
 
 </div>
       <br/>
