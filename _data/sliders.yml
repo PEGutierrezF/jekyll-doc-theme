@@ -60,3 +60,20 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
+    
+- selector: slider4
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/Leaf.jpg
+      title: 
+      alt:
+    - src: /assets/img/Leaf1.jpg
+      title:
+      alt:
+    - src: /assets/img/Leaf2.jpg
+      title: Insects
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
