@@ -75,5 +75,5 @@
       title: Insects
       alt:
   settings:
-    height: 300
+    height: "'auto'"
     effect: "'fade'"
