@@ -67,7 +67,11 @@ devtools::install_github("PEGutierrezF/leafdecay")</font></p>
 
 
 <div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">devtools</span><span class="hl opt">::</span><span class="hl kwd">install_github</span><span class="hl std">(</span><span class="hl str">&quot;PEGutierrezF/leafdecay&quot;</span><span class="hl std">)</span>
-<span class="hl kwd">library</span><span class="hl std">(leafdecay)</span>
+</pre></div>
+<div class="error"><pre class="knitr r">## Error: Failed to install 'leafdecay' from GitHub:
+##   Timeout was reached: [api.github.com] Resolving timed out after 10000 milliseconds
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl kwd">library</span><span class="hl std">(leafdecay)</span>
 </pre></div>
 </div></div>
 
@@ -101,6 +105,17 @@ devtools::install_github("PEGutierrezF/leafdecay")</font></p>
 </div>
 <div class="container">
 <h4 class="header-light regular-pad">Structure of the input files</h4>
+<p><font size="3"><font color='1F618D'><b><i>leafdecay</i></b></font> requires 7 input objects:
+<br/><b>Day</b>: Time in which a leaf pack is collected.
+<br/><b>Treatment</b>: Group evaluated.
+<br/><b>Replicate</b>: Number of independent samples deployed in different pools.
+<br/><b>InitialWt</b>: Initial mass of the leaf packs.
+<br/><b>FinalWt</b>: Final mass of the leaf packs.
+<br/><b>Frac.InitialWt</b>: Initial mass of a fraction of the leaf pack that has been burned.
+<br/><b>Frac.FinalWt </b>: Final mass of a fraction of the leaf pack that has been burned.
+<br/>
+<br/>The easiest way to get these objects into <font color='1F618D'><b><i>leafdecay</i></b></font> is to create an Excel file or similar, and then copying it across as in the following example:
+</font></p>
 <div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">RioPriedras</span>
 </pre></div>
 <div class="output"><pre class="knitr r">##    Day Treatment Replicate InitialWt FinalWt InitialFraction FinalFraction
@@ -152,7 +167,9 @@ devtools::install_github("PEGutierrezF/leafdecay")</font></p>
 
 <div class="container">
 <h4 class="header-light regular-pad">Step 1: Calculating the loss of litter mass by handling</h4>
+<p><font size="3">Dried leaves are easily broken in handling. Therefore, extra leaf packs are necessary to account for losses during fashioning, transporting, and placing the packs in the stream. The extra leaf packs will be used to correct by "handling losses", and are often called <b>Control</b>.</font></p>
 
+<p><font size="3">To load the data into <font color='1F618D'><b><i>leafdecay</i></b></font> use: </font></p>
 <div class="chunk" id="unnamed-chunk-5"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">control</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">manipulation</span><span class="hl std">(</span><span class="hl kwc">data</span><span class="hl std">= RioPriedras,</span>
                         <span class="hl kwc">InitialWt</span><span class="hl std">= InitialWt,</span>
                         <span class="hl kwc">FinalWt</span><span class="hl std">= FinalWt,</span>
@@ -162,6 +179,8 @@ devtools::install_github("PEGutierrezF/leafdecay")</font></p>
 <div class="output"><pre class="knitr r">## [1] 98.23666
 </pre></div>
 </div></div>
+<p><font size="3">This means that we lost 1.76334% due to handling.</font></p>
+
 </div>
 
 <div class="container">
