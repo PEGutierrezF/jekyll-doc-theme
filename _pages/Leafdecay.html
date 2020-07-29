@@ -67,11 +67,7 @@ devtools::install_github("PEGutierrezF/leafdecay")</font></p>
 
 
 <div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">devtools</span><span class="hl opt">::</span><span class="hl kwd">install_github</span><span class="hl std">(</span><span class="hl str">&quot;PEGutierrezF/leafdecay&quot;</span><span class="hl std">)</span>
-</pre></div>
-<div class="error"><pre class="knitr r">## Error: Failed to install 'leafdecay' from GitHub:
-##   Timeout was reached: [api.github.com] Resolving timed out after 10000 milliseconds
-</pre></div>
-<div class="source"><pre class="knitr r"><span class="hl kwd">library</span><span class="hl std">(leafdecay)</span>
+<span class="hl kwd">library</span><span class="hl std">(leafdecay)</span>
 </pre></div>
 </div></div>
 
@@ -110,10 +106,10 @@ devtools::install_github("PEGutierrezF/leafdecay")</font></p>
 <br/><b>Day</b>: Time in which a leaf pack is collected.
 <br/><b>Treatment</b>: Group evaluated.
 <br/><b>Replicate</b>: Number of independent samples deployed in different pools.
-<br/><b>InitialWt</b>: Initial mass of the leaf packs.
-<br/><b>FinalWt</b>: Final mass of the leaf packs.
-<br/><b>Frac.InitialWt</b>: Initial mass of a fraction of the leaf pack that has been burned.
-<br/><b>Frac.FinalWt </b>: Final mass of a fraction of the leaf pack that has been burned.
+<br/><b>InitialWt</b>: Initial mass (dry mass) of the leaf packs.
+<br/><b>FinalWt</b>: Final mass (dry mass) of the leaf packs.
+<br/><b>Frac.InitialWt</b>: Initial mass of a fraction of the leaf pack to be burned (AFDM).
+<br/><b>Frac.FinalWt </b>: Final mass of a fraction of the leaf pack that has been burned (AFDM).
 <br/>
 <br/>The easiest way to get these objects into <font color='1F618D'><b><i>leafdecay</i></b></font> is to create an Excel file or similar, and then copying it across as in the following example:
 </font></p>
