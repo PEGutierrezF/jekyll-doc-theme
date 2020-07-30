@@ -253,7 +253,7 @@ For an appropriate design of a litter decomposition experiment, we strongly reco
 <br/>
 <div class="container">
 <h4 class="header-light regular-pad">Step 3: Calculating the decomposition rate (<i>k</i>)</h4>
-<p><font size="3"> The <i>slope.k()</i> function relates the LN.AFDM values against time to obtain the slope that is equal to the decomposition rate  (<i>-k</i>). This procedure is run for each of the replicas, which allows subsequent analysis with the different <i>-k</i>. </font></p>
+<p><font size="3"> The <i>slope.k()</i> function relates the LN.AFDM values against time to obtain the slope that is equal to the decomposition rate  (<i>-k</i>). This procedure is run for each replica, which allows subsequent analyzes using the different <i>-k</i>. </font></p>
 <div class="chunk" id="unnamed-chunk-7"><div class="rcode"><div class="source"><pre class="knitr r"> <span class="hl kwd">slope.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
 </pre></div>
 <div class="output"><pre class="knitr r">## # A tibble: 12 x 7
@@ -301,7 +301,7 @@ For an appropriate design of a litter decomposition experiment, we strongly reco
 <br>
 <div class="container">
 <h4 class="header-light regular-pad">Step 5: Plotting the data </h4>
-<p><font size="3"> Now, we show 5 plots that can be used to explore your data. However, we strongly suggest using improved graphics presentation for publications. </font></p>
+<p><font size="3"> Now, we show 5 plots that can be used to explore your data. However, we strongly suggest improving the plots for publications according to the requirements of journals. </font></p>
 
 <br><p><font size="3">Plot of mean (SD) by treatment. </font></p>
 <div class="chunk" id="unnamed-chunk-9"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">plot.A</span><span class="hl std">(remaining)</span>
