@@ -69,7 +69,15 @@ For an appropriate design of a litter decomposition experiment, we strongly reco
 </div>
 <br/>
 <div class="container">
-<h4 class="header-light regular-pad">Data Structure</h4>
+<h4 class="header-light regular-pad">Installation of the <font color='1F618D'><b><i>leafdecay</i></b></font> package</h4>
+<p><font size="3"> The package offers functions to:
+<br/>- Quantify  mass loss due to handling.
+<br/>- Determine the leaf mass remaining.
+<br/>- Calculate the decomposition rate (<i>-k</i>).
+<br/>- Calculate the regression fit of leaf mass vs. time.
+<br/>- Visually explore data using 5 types of graphs.</font></p>
+<br/>
+
 <p><font size="3"> Install <font color='1F618D'><b><i>leafdecay</i></b></font> package </font></p>
 
 
@@ -228,7 +236,7 @@ For an appropriate design of a litter decomposition experiment, we strongly reco
 
 <br/>
 <div class="container">
-<h4 class="header-light regular-pad">Step 3: Calculating the decomposition rate (<i>k</i>)</h4>
+<h4 class="header-light regular-pad">Step 3: Calculating the decomposition rate (<i>-k</i>)</h4>
 <p><font size="3"> The <i>slope.k()</i> function relates the LN.AFDM values against time to obtain the slope that is equal to the decomposition rate  (<i>-k</i>). This procedure is run for each replica, which allows subsequent analyzes using the different <i>-k</i>. </font></p>
 <div class="chunk" id="unnamed-chunk-7"><div class="rcode"><div class="source"><pre class="knitr r"> <span class="hl kwd">slope.k</span><span class="hl std">(</span><span class="hl kwc">data</span>  <span class="hl std">= remaining)</span>
 </pre></div>
