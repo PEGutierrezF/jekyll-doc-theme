@@ -81,6 +81,9 @@ For an appropriate design of a litter decomposition experiment, we strongly reco
 <p><font size="3"> Install <font color='1F618D'><b><i>leafdecay</i></b></font> package </font></p>
 <!--begin.rcode include=FALSE
 library(tidyverse)
+library(dplyr)
+library(broom)
+library(tidyr)
 end.rcode-->
 
 <!--begin.rcode message=FALSE
@@ -157,14 +160,14 @@ end.rcode-->
 <h4 class="header-light regular-pad">Step 2: Percentage of AFDM Remaining</h4>
 <p><font size="3">The <i>AFDM()</i> function convert leaf pack dry mass to AFDM remaining (AFDMrem) as percentage. Also, this function converts the values of AFDMrem to LN (Ln.AFDMrem), which makes it easy to compare the remaining leaf mass against time in the following function (<i>slope.k()</i>).</font></p>
 <!--begin.rcode
-remaining <- AFDM(data      =  RioPriedras,
-                InitialWt  =  InitialWt,
-                FinalWt =  FinalWt,
-                Frac.InitialWt =  InitialFraction,
-                Frac.FinalWt =  FinalFraction,
-                Treatment =  Treatment,
-                Day       =  Day,
-                Replicate =  Replicate)
+remaining <- AFDM(data= RioPriedras,
+                InitialWt= InitialWt,
+                FinalWt= FinalWt,
+                Frac.InitialWt= InitialFraction,
+                Frac.FinalWt= FinalFraction,
+                Treatment= Treatment,
+                Day= Day,
+                Replicate= Replicate)
 
 remaining
 end.rcode-->
@@ -175,7 +178,7 @@ end.rcode-->
 <h4 class="header-light regular-pad">Step 3: Calculating the decomposition rate (<i>-k</i>)</h4>
 <p><font size="3"> The <i>slope.k()</i> function relates the LN.AFDM values against time to obtain the slope that is equal to the decomposition rate  (<i>-k</i>). This procedure is run for each replica, which allows subsequent analyzes using the different <i>-k</i>. </font></p>
 <!--begin.rcode
- slope.k(data  = remaining)
+slope.k(remaining,Treatment, Replicate, Day, Ln.AFDMrem)
 end.rcode-->
 </div>
 
@@ -184,7 +187,7 @@ end.rcode-->
 <h4 class="header-light regular-pad">Step 4: Calculating the r-Squared</h4>
 <p><font size="3"> The <i>rsquared.k()</i> function shows the regression fit (LN.AFDM vs time) and the <i>p</i>-value for each replica. </font></p>
 <!--begin.rcode
-rsquared.k(data  = remaining)
+rsquared.k(remaining,Treatment, Replicate, Day, Ln.AFDMrem)
 end.rcode-->
 </div>
 
