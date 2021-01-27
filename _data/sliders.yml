@@ -65,13 +65,16 @@
   bullets: true
   captions: true
   images:
-    - src: /assets/img/Leaf.jpg
+    - src: /assets/img/Biomonitoring1.jpg
       title: 
       alt:
-    - src: /assets/img/Leaf1.jpg
+    - src: /assets/img/Biomonitoring2.jpg
       title:
       alt:
-    - src: /assets/img/Leaf2.jpg
+    - src: /assets/img/Biomonitoring3.jpg
+      title: Insects
+      alt:
+    - src: /assets/img/Biomonitoring4.jpg
       title: Insects
       alt:
   settings:
