@@ -80,3 +80,17 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
+
+- selector: slider5
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/PCA.jpeg
+      title: 
+      alt:
+    - src: /assets/img/FA.jpeg
+      title:
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
