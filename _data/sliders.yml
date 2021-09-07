@@ -20,8 +20,22 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
-    
+
 - selector: slider2
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/PCA.jpg
+      title: 
+      alt:
+    - src: /assets/img/FA.jpg
+      title:
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+    
+- selector: slider3
   bullets: true
   captions: true
   images:
@@ -44,7 +58,7 @@
     height: "'auto'"
     effect: "'fade'"
     
-- selector: slider3
+- selector: slider4
   bullets: true
   captions: true
   images:
@@ -61,7 +75,7 @@
     height: "'auto'"
     effect: "'fade'"
     
-- selector: slider4
+- selector: slider5
   bullets: true
   captions: true
   images:
@@ -80,18 +94,3 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
-
-- selector: slider5
-  bullets: true
-  captions: true
-  images:
-    - src: /assets/img/PCA.jpg
-      title: 
-      alt:
-    - src: /assets/img/FA.jpg
-      title:
-      alt:
-  settings:
-    height: "'auto'"
-    effect: "'fade'"
-    
