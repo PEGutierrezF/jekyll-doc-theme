@@ -245,7 +245,7 @@
       float: none;
       width: auto;
       margin-top: 0;
-      background-color: red;
+      background-color: transparent;
       border: 0;
       box-shadow: none;
       > li > a,
@@ -395,7 +395,7 @@
 
 // Default navbar
 .navbar-default {
-  background-color: $navbar-default-bg;
+  background-color: red;
   border-color: $navbar-default-border;
 
   .navbar-brand {
@@ -403,22 +403,22 @@
     &:hover,
     &:focus {
       color: $navbar-default-brand-hover-color;
-      background-color: $navbar-default-brand-hover-bg;
+      background-color: red;
     }
   }
 
   .navbar-text {
-    color: $navbar-default-color;
+    color: red;
   }
 
   .navbar-nav {
     > li > a {
-      color: $navbar-default-link-color;
+      color: red;
 
       &:hover,
       &:focus {
-        color: $navbar-default-link-hover-color;
-        background-color: $navbar-default-link-hover-bg;
+        color: red;
+        background-color: red;
       }
     }
     > .active > a {
