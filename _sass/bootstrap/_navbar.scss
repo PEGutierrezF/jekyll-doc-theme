@@ -245,7 +245,7 @@
       float: none;
       width: auto;
       margin-top: 0;
-      background-color: transparent;
+      background-color: red;
       border: 0;
       box-shadow: none;
       > li > a,
@@ -659,7 +659,4 @@
       }
     }
   }
-}
-.nav .current{
-  background-color: red;
 }
