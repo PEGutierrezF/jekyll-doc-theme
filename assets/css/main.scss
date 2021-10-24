@@ -1,4 +1,21 @@
-#sub-header ul li:hover{ background-color: #000;}
-#sub-header ul li:hover a{ color: #fff; }
-#sub-header ul li.active{ background-color: #000; }
-#sub-header ul li.active a{ color: #fff; }
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+
+@import
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/variables",
+  {% endif %}
+
+  "bootstrap",
+
+  {% if site.bootwatch %}
+    "bootswatch/{{site.bootwatch | downcase}}/bootswatch",
+  {% endif %}
+
+  "syntax-highlighting",
+  "jekyll-doc-theme"
+;
