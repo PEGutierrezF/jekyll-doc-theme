@@ -389,6 +389,15 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
 //    VOY A CAMBIAR TODO DE ACA PARA ABAJO
 // Alternate navbars
 // --------------------------------------------------
@@ -413,12 +422,12 @@
 
   .navbar-nav {
     > li > a {
-      color: $navbar-default-link-color;
+      color: #252525; // $navbar-default-link-color
 
       &:hover,
       &:focus {
         color: #f7f7f7; // $navbar-default-link-hover-color  // ESTA CAMBIA LA LETRA CUANDO PASA EL CURSOR
-        background-color: #737373; //$navbar-default-link-hover-bg  // ESTA CAMBIA EL BG CUANDO PASA EL CURSOR
+        background-color: #969696; //$navbar-default-link-hover-bg  // ESTA CAMBIA EL BG CUANDO PASA EL CURSOR
       }
     }
     > .active > a {
