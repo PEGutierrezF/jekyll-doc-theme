@@ -417,8 +417,8 @@
 
       &:hover,
       &:focus {
-        color: #ffff00; // ACA CUANDO PASA EL CURSOR SE RESALTA DE ESTE COLOR
-        background-color: #252525;
+        color: #f7f7f7; // $navbar-default-link-hover-color
+        background-color: #737373; //$navbar-default-link-hover-bg
       }
     }
     > .active > a {
