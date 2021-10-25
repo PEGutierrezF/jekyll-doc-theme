@@ -417,8 +417,8 @@
 
       &:hover,
       &:focus {
-        color: #f7f7f7; // $navbar-default-link-hover-color
-        background-color: #737373; //$navbar-default-link-hover-bg
+        color: #f7f7f7; // $navbar-default-link-hover-color  // ESTA CAMBIA LA LETRA CUANDO PASA EL CURSOR
+        background-color: #737373; //$navbar-default-link-hover-bg  // ESTA CAMBIA EL BG CUANDO PASA EL CURSOR
       }
     }
     > .active > a {
