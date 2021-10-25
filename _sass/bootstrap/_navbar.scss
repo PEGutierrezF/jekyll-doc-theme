@@ -408,17 +408,17 @@
   }
 
   .navbar-text {
-    color: #b10026;  // ESTO PARECE QUE NO CAMBIA NADA
+    color: $navbar-default-color;  // ESTO PARECE QUE NO CAMBIA NADA
   }
 
   .navbar-nav {
     > li > a {
-      color: #b10026;
+      color: $navbar-default-link-color;
 
       &:hover,
       &:focus {
-        color: #b10026;
-        background-color: #737373; 
+        color: #6baed6;
+        background-color: $navbar-default-link-hover-bg;
       }
     }
     > .active > a {
