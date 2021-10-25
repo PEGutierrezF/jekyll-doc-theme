@@ -425,8 +425,8 @@
       &,
       &:hover,
       &:focus {
-        color: #bdbdbd;
-        background-color: #bdbdbd;
+        color: $navbar-default-link-active-color;
+        background-color: $navbar-default-link-active-bg;
       }
     }
     > .disabled > a {
@@ -462,8 +462,8 @@
       &,
       &:hover,
       &:focus {
-        background-color: #bdbdbd;
-        color: #bdbdbd;
+        background-color: $navbar-default-link-active-bg;
+        color: $navbar-default-link-active-color;
       }
     }
 
@@ -482,8 +482,8 @@
           &,
           &:hover,
           &:focus {
-            color: #bdbdbd;
-            background-color: #bdbdbd;
+            color: $navbar-default-link-active-color;
+            background-color: $navbar-default-link-active-bg;
           }
         }
         > .disabled > a {
@@ -559,8 +559,8 @@
       &,
       &:hover,
       &:focus {
-        color: #bdbdbd;
-        background-color: #bdbdbd;
+        color: $navbar-inverse-link-active-color;
+        background-color: $navbar-inverse-link-active-bg;
       }
     }
     > .disabled > a {
@@ -596,8 +596,8 @@
       &,
       &:hover,
       &:focus {
-        background-color: #bdbdbd;
-        color: #bdbdbd;
+        background-color: $navbar-inverse-link-active-bg;
+        color: $navbar-inverse-link-active-color;
       }
     }
 
@@ -622,8 +622,8 @@
           &,
           &:hover,
           &:focus {
-            color: #bdbdbd;
-            background-color: #bdbdbd;
+            color: $navbar-inverse-link-active-color;
+            background-color: $navbar-inverse-link-active-bg;
           }
         }
         > .disabled > a {
