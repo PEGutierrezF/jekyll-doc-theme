@@ -389,26 +389,26 @@
   }
 }
 
-
+//  VOY A CAMBIAR COSAS DE ACA PARA ABAJO
 // Alternate navbars
 // --------------------------------------------------
 
 // Default navbar
 .navbar-default {
-  background-color: $navbar-default-bg;
-  border-color: $navbar-default-border;
+  background-color: #252525;
+  border-color: #252525;
 
   .navbar-brand {
-    color: $navbar-default-brand-color;
+    color: #252525;
     &:hover,
     &:focus {
-      color: $navbar-default-brand-hover-color;
-      background-color: $navbar-default-brand-hover-bg;
+      color: #252525;
+      background-color: #252525g;
     }
   }
 
   .navbar-text {
-    color: $navbar-default-color;
+    color: #252525;
   }
 
   .navbar-nav {
