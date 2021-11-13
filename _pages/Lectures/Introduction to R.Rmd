@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Introduction to R"
-permalink: /pages/Lectures/Introduction to R/
 author: "Pablo E. Gutiérrez-Fonseca"
 date: "11/13/2021"
+permalink: /pages/Lectures/Introduction to R/
 ---
