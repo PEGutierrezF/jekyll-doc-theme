@@ -9,9 +9,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Pablo E. Gutiérrez-Fonseca" />
 
-<meta name="date" content="2021-11-13" />
 
 <title>Introduction to R</title>
 
@@ -166,13 +164,177 @@ pre code {
 
 
 <h1 class="title toc-ignore">Introduction to R</h1>
-<h4 class="author">Pablo E. Gutiérrez-Fonseca</h4>
-<h4 class="date">11/13/2021</h4>
 
 </div>
 
 
-
+<div id="what-is-r" class="section level3">
+<h3>What is R?</h3>
+</div>
+<div id="is-a-computer-language-that-allows-the-user-to-program-algorithms-and-use-tools" class="section level3">
+<h3>Is a computer language that allows the user to program algorithms and use tools</h3>
+</div>
+<div id="that-have-been-programmed-by-others." class="section level3">
+<h3>that have been programmed by others.</h3>
+</div>
+<div id="r-is-based-on-the-computer-language-s-which-was-developed-by-john" class="section level3">
+<h3>R is based on the computer language S, which was developed by John</h3>
+</div>
+<div id="chambers-and-others-at-bell-laboratories-in-1976.-in-the-early-1990s-ross" class="section level3">
+<h3>Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross</h3>
+</div>
+<div id="ihaka-and-robert-gentleman-university-of-auckland-in-auckland-new" class="section level3">
+<h3>Ihaka and Robert Gentleman (University of Auckland, in Auckland, New</h3>
+</div>
+<div id="zealand-experimented-with-the-language-and-called-their-product-r.-note" class="section level3">
+<h3>Zealand) experimented with the language and called their product R. Note</h3>
+</div>
+<div id="that-both-their-first-names-begin-with-the-letter-r.-also-when-modifying-a" class="section level3">
+<h3>that both their first names begin with the letter R. Also when modifying a</h3>
+</div>
+<div id="language-called-s-it-is-tempting-to-call-it-t-or-r." class="section level3">
+<h3>language called S, it is tempting to call it T or R.</h3>
+</div>
+<div id="r-comes-with-a-series-of-default-packages.-a-package-is-a-collection-of-pre-" class="section level3">
+<h3>R comes with a series of default packages. A package is a collection of pre-</h3>
+</div>
+<div id="viously-programmed-functions-often-including-functions-for-specific-tasks.-it-is" class="section level3">
+<h3>viously programmed functions, often including functions for specific tasks. It is</h3>
+</div>
+<div id="tempting-to-call-this-a-library-but-the-r-community-refers-to-it-as-a-package." class="section level3">
+<h3>tempting to call this a library, but the R community refers to it as a package.</h3>
+<p>###Ambientar #Edit #GUI (Graphical User Interface) preferences #Font #Size</p>
+</div>
+<div id="significa-what-now" class="section level3">
+<h3>&gt; Significa “What now?”</h3>
+</div>
+<div id="the-screen-prompt-is-an-invitation-to-put-r-to-work." class="section level3">
+<h3>The screen prompt &gt; is an invitation to put R to work.</h3>
+</div>
+<div id="each-line-can-have-at-most-128-characters-when-continuation-is-expected-the-prompt-changes-from-to" class="section level3">
+<h3>Each line can have at most 128 characters, When continuation is expected, the prompt changes from &gt; to +</h3>
+</div>
+<div id="note-that-the-continuation-prompt-does-not-carry-out-arithmetic-plus." class="section level3">
+<h3>Note that the + continuation prompt does not carry out arithmetic plus.</h3>
+<p>###Como citar R?</p>
+<p>citation()</p>
+</div>
+<div id="como-citar-un-especifica-packages" class="section level3">
+<h3>Como citar un especifica packages?</h3>
+<p>citation(‘car’) citation(‘Kendall’) citation(‘randomForest’)</p>
+<p>###Ayuda</p>
+<p>?lm</p>
+<p>#Posible packages find(‘lm’)</p>
+</div>
+<div id="posible-lista" class="section level1">
+<h1>Posible lista</h1>
+<p>apropos(‘lm’)</p>
+<div id="simbolos-p-22" class="section level3">
+<h3>Simbolos (P: 22)</h3>
+<ul>
+<li><ul>
+<li><ul>
+<li>/ ^ arithmetic &gt; &gt;= &lt; &lt;= == != relational ! &amp; logical ~ model formulae &lt;- -&gt; assignment $ list indexing (the ‘element name’ operator) : create a sequence</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>#Equality TRUE==TRUE ‘HELLO’==‘GOOBYE’ ‘HELLO’==‘HELLO’ 3==2 3==3</p>
+<p>##Inequality TRUE!=TRUE ‘HELLO’!=‘GOOBYE’</p>
+</div>
+<div id="changes-directory" class="section level3">
+<h3>Changes directory</h3>
+<p>setwd (“C:/users/Pablo Guti/desktop/”)</p>
+</div>
+<div id="if-you-want-to-find-out-the-name-of-the-current-working-directory-use" class="section level3">
+<h3>If you want to find out the name of the current working directory, use:</h3>
+<p>getwd()</p>
+</div>
+<div id="instalar-packages" class="section level3">
+<h3>Instalar packages</h3>
+<p>install.packages() install.packages() install.packages()</p>
+</div>
+<div id="instalar-librerias" class="section level3">
+<h3>Instalar librerias</h3>
+<p>library( ) library( ) library( )</p>
+</div>
+<div id="it-exits-r." class="section level3">
+<h3>It exits R.</h3>
+<p>q()</p>
+<hr />
+<hr />
+</div>
+<div id="algunas-practicas" class="section level3">
+<h3>Algunas practicas</h3>
+<p>5+6+3+6+4+2+4+8+3+2+7 2+3; 5*7; 3-7</p>
+<p>pi sin(pi/2) cos(pi/2)</p>
+</div>
+<div id="exponentes" class="section level3">
+<h3>Exponentes</h3>
+<p>1.2e3 1e4 3e4</p>
+</div>
+<div id="redondear" class="section level3">
+<h3>Redondear</h3>
+<p>floor(5.7) ceiling(5.7)</p>
+</div>
+<div id="cfunction-where-c-stands-for-concatenate" class="section level3">
+<h3>c()function, where c stands for concatenate</h3>
+<p>Wingcrd &lt;- c(59, 55, 53.5, 55, 52.5, 57.5, 53, 55) Wingcrd Wingcrd [3] Wingcrd [1 : 5] Wingcrd [-2]</p>
+<p>sum(Wingcrd) s.win &lt;- sum(Wingcrd) s.win</p>
+<p>Tarsus &lt;- c(22.3, 19.7, 20.8, 20.3, 20.8, 21.5, 20.6,21.5) Head &lt;- c(31.2, 30.4, 30.6, 30.3, 30.3, 30.8, 32.5,NA) Wt &lt;- c(9.5, 13.8, 14.8, 15.2, 15.5, 15.6, 15.6,15.7)</p>
+<p>Bird&lt;-c(Tarsus,Head,Wt) Bird</p>
+</div>
+<div id="cbindfunction-combines-the-variables-in-such-a-way-that-the-output" class="section level3">
+<h3>cbind()function, combines the variables in such a way that the output</h3>
+</div>
+<div id="contains-the-original-variables-in-columns." class="section level3">
+<h3>contains the original variables in columns.</h3>
+<p>Bird1 &lt;- cbind(Tarsus, Head, Wt) Bird1</p>
+</div>
+<div id="similar-to-the-cbind-function-to-arrange-the-variables-in-columns" class="section level3">
+<h3>similar to the cbind function to arrange the variables in columns,</h3>
+</div>
+<div id="the-rbind-function-combines-the-data-in-rows." class="section level3">
+<h3>the rbind function combines the data in rows.</h3>
+<p>Bird2 &lt;- rbind(Tarsus, Head, Wt) Bird2</p>
+<hr />
+<hr />
+</div>
+<div id="remover-na" class="section level3">
+<h3>Remover NA</h3>
+<p>x&lt;-c(1:8,NA) mean(x) x</p>
+<p>Head &lt;-c(31.2,30.4,30.6,30.3,30.8,NA,32.5,NA) Head sum(Head) sum(Head, na.rm=TRUE)</p>
+</div>
+</div>
+<div id="na.rmtrue" class="section level1">
+<h1>na.rm=TRUE</h1>
+<p>mean(x,na.rm=T)</p>
+<div id="convertir-na-en-ceros" class="section level3">
+<h3>Convertir NA en Ceros</h3>
+<p>vmv&lt;-c(1:6,NA,NA,9:12) vmv</p>
+<p>which(is.na(vmv))</p>
+<p>vmv[is.na(vmv)]&lt;- 0 vmv</p>
+</div>
+<div id="asigna-un-determinado-elemento" class="section level3">
+<h3>Asigna un determinado elemento</h3>
+<p>&lt;-</p>
+<p>A&lt;-1:10 A</p>
+<p>B&lt;-c(2,4,8) B</p>
+<p>mean(A) mean(B) max(B) min(A) sum(A)</p>
+</div>
+<div id="if-you-want-to-begin-a-new-analysis-on-a-different-dataset-it-may-be-useful-to" class="section level3">
+<h3>If you want to begin a new analysis on a different dataset, it may be useful to</h3>
+</div>
+<div id="remove-all-variables.-one-option-is-to-quit-r-and-restart-it.-alternatively" class="section level3">
+<h3>remove all variables. One option is to quit R and restart it. Alternatively,</h3>
+<p>rm(list = ls(all = TRUE))</p>
+</div>
+<div id="input-data" class="section level3">
+<h3>Input data</h3>
+<p>xxx.frm=read.table(“xxx.txt”,header=T) attach(xxx.frm) xxx.frm</p>
+<p>xxx.frm=read.csv(“xxx.csv”) attach(xxx.frm) xxx.frm</p>
+<p>data&lt;-read.table(file.choose(),header=T)</p>
+</div>
+</div>
 
 
 
