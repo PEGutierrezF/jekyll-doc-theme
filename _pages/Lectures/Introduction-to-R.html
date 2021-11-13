@@ -168,43 +168,11 @@ pre code {
 </div>
 
 
-<div id="what-is-r" class="section level3">
-<h3>What is R?</h3>
-</div>
-<div id="is-a-computer-language-that-allows-the-user-to-program-algorithms-and-use-tools" class="section level3">
-<h3>Is a computer language that allows the user to program algorithms and use tools</h3>
-</div>
-<div id="that-have-been-programmed-by-others." class="section level3">
-<h3>that have been programmed by others.</h3>
-</div>
-<div id="r-is-based-on-the-computer-language-s-which-was-developed-by-john" class="section level3">
-<h3>R is based on the computer language S, which was developed by John</h3>
-</div>
-<div id="chambers-and-others-at-bell-laboratories-in-1976.-in-the-early-1990s-ross" class="section level3">
-<h3>Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross</h3>
-</div>
-<div id="ihaka-and-robert-gentleman-university-of-auckland-in-auckland-new" class="section level3">
-<h3>Ihaka and Robert Gentleman (University of Auckland, in Auckland, New</h3>
-</div>
-<div id="zealand-experimented-with-the-language-and-called-their-product-r.-note" class="section level3">
-<h3>Zealand) experimented with the language and called their product R. Note</h3>
-</div>
-<div id="that-both-their-first-names-begin-with-the-letter-r.-also-when-modifying-a" class="section level3">
-<h3>that both their first names begin with the letter R. Also when modifying a</h3>
-</div>
-<div id="language-called-s-it-is-tempting-to-call-it-t-or-r." class="section level3">
-<h3>language called S, it is tempting to call it T or R.</h3>
-</div>
-<div id="r-comes-with-a-series-of-default-packages.-a-package-is-a-collection-of-pre-" class="section level3">
-<h3>R comes with a series of default packages. A package is a collection of pre-</h3>
-</div>
-<div id="viously-programmed-functions-often-including-functions-for-specific-tasks.-it-is" class="section level3">
-<h3>viously programmed functions, often including functions for specific tasks. It is</h3>
-</div>
-<div id="tempting-to-call-this-a-library-but-the-r-community-refers-to-it-as-a-package." class="section level3">
-<h3>tempting to call this a library, but the R community refers to it as a package.</h3>
+<div id="what-is-r" class="section level2">
+<h2>What is R?</h2>
+<p>Is a computer language that allows the user to program algorithms and use tools that have been programmed by others. R is based on the computer language S, which was developed by John Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross Ihaka and Robert Gentleman (University of Auckland, in Auckland, New Zealand) experimented with the language and called their product R. Note that both their first names begin with the letter R. Also when modifying a language called S, it is tempting to call it T or R.</p>
+<p>R comes with a series of default packages. A package is a collection of pre- viously programmed functions, often including functions for specific tasks. It is tempting to call this a library, but the R community refers to it as a package.</p>
 <p>###Ambientar #Edit #GUI (Graphical User Interface) preferences #Font #Size</p>
-</div>
 <div id="significa-what-now" class="section level3">
 <h3>&gt; Significa “What now?”</h3>
 </div>
@@ -225,6 +193,7 @@ pre code {
 <p>###Ayuda</p>
 <p>?lm</p>
 <p>#Posible packages find(‘lm’)</p>
+</div>
 </div>
 <div id="posible-lista" class="section level1">
 <h1>Posible lista</h1>
@@ -327,12 +296,16 @@ pre code {
 <div id="remove-all-variables.-one-option-is-to-quit-r-and-restart-it.-alternatively" class="section level3">
 <h3>remove all variables. One option is to quit R and restart it. Alternatively,</h3>
 <p>rm(list = ls(all = TRUE))</p>
-</div>
-<div id="input-data" class="section level3">
-<h3>Input data</h3>
-<p>xxx.frm=read.table(“xxx.txt”,header=T) attach(xxx.frm) xxx.frm</p>
-<p>xxx.frm=read.csv(“xxx.csv”) attach(xxx.frm) xxx.frm</p>
-<p>data&lt;-read.table(file.choose(),header=T)</p>
+<p>Import data (.csv, .txt, direct import)</p>
+<pre class="r"><code>xxx.frm=read.table(&quot;xxx.txt&quot;,header=T)
+attach(xxx.frm)
+xxx.frm
+
+xxx.frm=read.csv(&quot;xxx.csv&quot;)
+attach(xxx.frm)
+xxx.frm
+
+data&lt;-read.table(file.choose(),header=T)</code></pre>
 </div>
 </div>
 

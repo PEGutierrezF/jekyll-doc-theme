@@ -5,19 +5,19 @@ permalink: /pages/Lectures/Introduction to R/
 ---
 
 
-### What is R?
-### Is a computer language that allows the user to program algorithms and use tools 
-### that have been programmed by others. 
-### R is based on the computer language S, which was developed by John
-### Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross
-### Ihaka and Robert Gentleman (University of Auckland, in Auckland, New
-### Zealand) experimented with the language and called their product R. Note
-### that both their first names begin with the letter R. Also when modifying a
-### language called S, it is tempting to call it T or R.
+## What is R?
+Is a computer language that allows the user to program algorithms and use tools 
+that have been programmed by others. 
+R is based on the computer language S, which was developed by John
+Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross
+Ihaka and Robert Gentleman (University of Auckland, in Auckland, New
+Zealand) experimented with the language and called their product R. Note
+that both their first names begin with the letter R. Also when modifying a
+language called S, it is tempting to call it T or R.
 
-### R comes with a series of default packages. A package is a collection of pre-
-### viously programmed functions, often including functions for specific tasks. It is
-### tempting to call this a library, but the R community refers to it as a package.
+R comes with a series of default packages. A package is a collection of pre-
+viously programmed functions, often including functions for specific tasks. It is
+tempting to call this a library, but the R community refers to it as a package.
 
 ###Ambientar
 #Edit
@@ -195,8 +195,10 @@ sum(A)
 
 rm(list = ls(all = TRUE))
 
-### Input data
 
+Import data (.csv, .txt, direct import)
+
+```{r eval = FALSE}
 xxx.frm=read.table("xxx.txt",header=T)
 attach(xxx.frm)
 xxx.frm
@@ -206,6 +208,6 @@ attach(xxx.frm)
 xxx.frm
 
 data<-read.table(file.choose(),header=T)
-
+```
 
 
