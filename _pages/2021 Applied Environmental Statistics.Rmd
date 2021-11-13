@@ -2,7 +2,7 @@
 title: "Applied Environmental Statistics"
 author: "Pablo E. Gutiérrez-Fonseca"
 date: "Spring 202X"
-permalink: /posts/Applied Environmental Statistics/
+permalink: /pages/Applied Environmental Statistics/
 output:
   prettydoc::html_pretty:
     theme: architect
