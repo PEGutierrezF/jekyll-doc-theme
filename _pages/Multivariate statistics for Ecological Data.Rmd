@@ -1,5 +1,12 @@
 ---
 title: "Multivariate statistics for Ecological Data"
+author: "Pablo E. Gutiérrez-Fonseca"
+date: "11/13/2021"
+output: html_document
+---
+
+---
+title: "Multivariate statistics for Ecological Data"
 permalink: /pages/Multivariate statistics for Ecological Data/
 active: /pages/Multivariate statistics for Ecological Data/
 output: html_document
