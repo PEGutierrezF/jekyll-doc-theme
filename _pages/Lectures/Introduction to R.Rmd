@@ -19,29 +19,28 @@ R comes with a series of default packages. A package is a collection of pre-
 viously programmed functions, often including functions for specific tasks. It is
 tempting to call this a library, but the R community refers to it as a package.
 
-###Ambientar
-#Edit
-#GUI (Graphical User Interface) preferences
-#Font
-#Size
+## Environment
+Edit
+GUI (Graphical User Interface) preferences
+Font
+Size
 
-###  > Significa "What now?"
-###  The screen prompt > is an invitation to put R to work.
-###  Each line can have at most 128 characters,   When continuation is expected, the prompt changes from > to +
-###  Note that the + continuation prompt does not carry out arithmetic plus.
+## ">"
+Significa "What now?"
+The screen prompt ">" is an invitation to put R to work.
+Each line can have at most 128 characters,   When continuation is expected, the prompt changes from > to +
+Note that the + continuation prompt does not carry out arithmetic plus.
 
-###Como citar R?
-
+## How cite R?
 citation()
 
-### Como citar un especifica packages?
+## Cite specific packages?
 
 citation('car')
 citation('Kendall')
 citation('randomForest')
 
-###Ayuda
-
+## Help
 ?lm
 
 #Posible packages
@@ -94,13 +93,12 @@ library( )
 
 q()
 
-******************************************************************
-******************************************************************
 
-### Algunas practicas
-
+## Practices 
+```{r}
 5+6+3+6+4+2+4+8+3+2+7
 2+3; 5*7; 3-7
+```
 
 pi
 sin(pi/2)

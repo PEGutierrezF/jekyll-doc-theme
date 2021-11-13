@@ -172,28 +172,27 @@ pre code {
 <h2>What is R?</h2>
 <p>Is a computer language that allows the user to program algorithms and use tools that have been programmed by others. R is based on the computer language S, which was developed by John Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross Ihaka and Robert Gentleman (University of Auckland, in Auckland, New Zealand) experimented with the language and called their product R. Note that both their first names begin with the letter R. Also when modifying a language called S, it is tempting to call it T or R.</p>
 <p>R comes with a series of default packages. A package is a collection of pre- viously programmed functions, often including functions for specific tasks. It is tempting to call this a library, but the R community refers to it as a package.</p>
-<p>###Ambientar #Edit #GUI (Graphical User Interface) preferences #Font #Size</p>
-<div id="significa-what-now" class="section level3">
-<h3>&gt; Significa “What now?”</h3>
 </div>
-<div id="the-screen-prompt-is-an-invitation-to-put-r-to-work." class="section level3">
-<h3>The screen prompt &gt; is an invitation to put R to work.</h3>
+<div id="environment" class="section level2">
+<h2>Environment</h2>
+<p>Edit GUI (Graphical User Interface) preferences Font Size</p>
 </div>
-<div id="each-line-can-have-at-most-128-characters-when-continuation-is-expected-the-prompt-changes-from-to" class="section level3">
-<h3>Each line can have at most 128 characters, When continuation is expected, the prompt changes from &gt; to +</h3>
+<div id="section" class="section level2">
+<h2>“&gt;”</h2>
+<p>Significa “What now?” The screen prompt “&gt;” is an invitation to put R to work. Each line can have at most 128 characters, When continuation is expected, the prompt changes from &gt; to + Note that the + continuation prompt does not carry out arithmetic plus.</p>
 </div>
-<div id="note-that-the-continuation-prompt-does-not-carry-out-arithmetic-plus." class="section level3">
-<h3>Note that the + continuation prompt does not carry out arithmetic plus.</h3>
-<p>###Como citar R?</p>
+<div id="how-cite-r" class="section level2">
+<h2>How cite R?</h2>
 <p>citation()</p>
 </div>
-<div id="como-citar-un-especifica-packages" class="section level3">
-<h3>Como citar un especifica packages?</h3>
+<div id="cite-specific-packages" class="section level2">
+<h2>Cite specific packages?</h2>
 <p>citation(‘car’) citation(‘Kendall’) citation(‘randomForest’)</p>
-<p>###Ayuda</p>
+</div>
+<div id="help" class="section level2">
+<h2>Help</h2>
 <p>?lm</p>
 <p>#Posible packages find(‘lm’)</p>
-</div>
 </div>
 <div id="posible-lista" class="section level1">
 <h1>Posible lista</h1>
@@ -229,14 +228,16 @@ pre code {
 <div id="it-exits-r." class="section level3">
 <h3>It exits R.</h3>
 <p>q()</p>
-<hr />
-<hr />
 </div>
-<div id="algunas-practicas" class="section level3">
-<h3>Algunas practicas</h3>
-<p>5+6+3+6+4+2+4+8+3+2+7 2+3; 5*7; 3-7</p>
+<div id="practices" class="section level2">
+<h2>Practices</h2>
+<pre class="r"><code>5+6+3+6+4+2+4+8+3+2+7</code></pre>
+<pre><code>## [1] 50</code></pre>
+<pre class="r"><code>2+3; 5*7; 3-7</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre><code>## [1] 35</code></pre>
+<pre><code>## [1] -4</code></pre>
 <p>pi sin(pi/2) cos(pi/2)</p>
-</div>
 <div id="exponentes" class="section level3">
 <h3>Exponentes</h3>
 <p>1.2e3 1e4 3e4</p>
@@ -272,6 +273,7 @@ pre code {
 <h3>Remover NA</h3>
 <p>x&lt;-c(1:8,NA) mean(x) x</p>
 <p>Head &lt;-c(31.2,30.4,30.6,30.3,30.8,NA,32.5,NA) Head sum(Head) sum(Head, na.rm=TRUE)</p>
+</div>
 </div>
 </div>
 <div id="na.rmtrue" class="section level1">
