@@ -5,13 +5,12 @@ permalink: /pages/Multivariate statistics for Ecological Data/
 active: /pages/Multivariate statistics for Ecological Data/
 ---
 
-<div>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
             <h4 class="header-light regular-pad"><font color='1F618D'><b>2021 Multivariate statistics for Ecological Data</b></font></h4>
-</div> 
-</div> 
+    </div> 
+        </div> 
 </div>
 
 
@@ -34,4 +33,3 @@ February 4  | [GitHub](Lectures/Lecture02_S2021.html) |
 ```
 </div> 
 
-</div> <!-- Last line of the page 
