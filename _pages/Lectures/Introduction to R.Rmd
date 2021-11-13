@@ -34,8 +34,8 @@ citation()
 
 ## Cite specific packages?
 ```{r}
-citation('car')
-citation('Kendall')
+citation('vegan')
+citation('ggplot2')
 citation('randomForest')
 ```
 
