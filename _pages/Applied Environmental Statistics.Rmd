@@ -1,9 +1,0 @@
----
-title: "Applied Environmental Statistics"
-author: "Pablo E. Gutiérrez-Fonseca"
-date: "11/13/2021"
-output: html_document
----
-
-
-Soon
