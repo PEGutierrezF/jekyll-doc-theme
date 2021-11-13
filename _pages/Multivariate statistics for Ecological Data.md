@@ -15,6 +15,7 @@ active: /pages/Multivariate statistics for Ecological Data/
 </div>
 
 <div class="container">
+
 ```{r}
 knitr::kable(iris[1:5, ], caption = 'A caption')
 
