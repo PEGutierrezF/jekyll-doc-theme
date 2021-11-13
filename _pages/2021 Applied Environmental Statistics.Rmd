@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Applied Environmental Statistics"
 author: "Pablo E. Gutiérrez-Fonseca"
 date: "Spring 202X"
