@@ -3,5 +3,9 @@ layout: default
 title: "Applied Environmental Statistics"
 author: "Pablo E. Gutiérrez-Fonseca"
 date: "Spring 202X"
-permalink: /pages/Applied Environmental Statistics/
+permalink: /pages/2021 Applied Environmental Statistics/
+output:
+  prettydoc::html_pretty:
+    theme: hpstr
+    highlight: github
 ---
