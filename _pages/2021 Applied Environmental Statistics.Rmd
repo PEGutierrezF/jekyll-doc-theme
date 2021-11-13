@@ -6,6 +6,6 @@ date: "Spring 202X"
 permalink: /pages/2021 Applied Environmental Statistics/
 output:
   prettydoc::html_pretty:
-    theme: hpstr
+    theme: architect
     highlight: github
 ---
