@@ -14,10 +14,21 @@ active: /pages/Multivariate statistics for Ecological Data/
 </div> 
 </div>
 
+Date  | Lecture | Homework
+------------- |----------- | -------------
+February 2  | [Introduction](Lectures/Lecture01_S2021.html) | -  
+February 3  | - | [Homework #1](Homeworks/Homework01_S2021.html)             
+February 4  | [GitHub](Lectures/Lecture02_S2021.html) | 
+
+
 <div class="container">
 
 ```{r}
-knitr::kable(iris[1:5, ], caption = 'A caption')
+Date  | Lecture | Homework
+------------- |----------- | -------------
+February 2  | [Introduction](Lectures/Lecture01_S2021.html) | -  
+February 3  | - | [Homework #1](Homeworks/Homework01_S2021.html)             
+February 4  | [GitHub](Lectures/Lecture02_S2021.html) | 
 
 ```
 </div> 
