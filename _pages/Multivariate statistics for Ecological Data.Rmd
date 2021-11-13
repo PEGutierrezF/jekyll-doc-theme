@@ -12,5 +12,11 @@ active: /pages/Multivariate statistics for Ecological Data/
             <h4 class="header-light regular-pad"><font color='1F618D'><b>2021 Multivariate statistics for Ecological Data</b></font></h4>
 </div> 
 </div> 
-</div> 
-</div> 
+</div>
+
+```{r}
+data 
+
+```
+
+</div> <!-- Last line of the page 
