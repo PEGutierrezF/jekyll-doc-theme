@@ -20,10 +20,8 @@ viously programmed functions, often including functions for specific tasks. It i
 tempting to call this a library, but the R community refers to it as a package.
 
 ## Environment
-Edit
-GUI (Graphical User Interface) preferences
-Font
-Size
+Tools -> Global options... -> Appearance 
+
 
 ## ">"
 Significa "What now?"
@@ -35,13 +33,16 @@ Note that the + continuation prompt does not carry out arithmetic plus.
 citation()
 
 ## Cite specific packages?
-
+```{r}
 citation('car')
 citation('Kendall')
 citation('randomForest')
+```
 
 ## Help
+```{r eval=FALSE}
 ?lm
+```
 
 #Posible packages
 find('lm')
@@ -196,7 +197,7 @@ rm(list = ls(all = TRUE))
 
 Import data (.csv, .txt, direct import)
 
-```{r eval = FALSE}
+```{r eval=FALSE}
 xxx.frm=read.table("xxx.txt",header=T)
 attach(xxx.frm)
 xxx.frm
