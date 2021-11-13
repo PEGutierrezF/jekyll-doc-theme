@@ -14,6 +14,7 @@ active: /pages/Multivariate statistics for Ecological Data/
 </div> 
 </div>
 
+
 Date  | Lecture | Homework
 ------------- |----------- | -------------
 February 2  | [Introduction](Lectures/Lecture01_S2021.html) | -  
