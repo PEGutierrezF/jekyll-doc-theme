@@ -13,6 +13,7 @@ active: /pages/Multivariate statistics for Ecological Data/
         </div> 
 </div>
 
+<div class="container">
 
 Date  | Lecture | Homework
 ------------- |----------- | -------------
@@ -20,6 +21,7 @@ February 2  | [Introduction](Lectures/Lecture01_S2021.html) | -
 February 3  | - | [Homework #1](Homeworks/Homework01_S2021.html)             
 February 4  | [GitHub](Lectures/Lecture02_S2021.html) | 
 
+</div> 
 
 <div class="container">
 
