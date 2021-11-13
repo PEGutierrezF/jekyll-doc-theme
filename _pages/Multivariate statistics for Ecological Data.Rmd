@@ -1,6 +1,6 @@
 ---
 title: "Multivariate statistics for Ecological Data"
-author: "Pablo E. Gutiérrez-Fonseca"
+author: "Pablo E. Gutierrez-Fonseca"
 date: "11/13/2021"
 output: html_document
 ---
