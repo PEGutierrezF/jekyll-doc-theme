@@ -5,14 +5,13 @@ permalink: /pages/2021 Applied Environmental Statistics/
 active: /pages/2021 Applied Environmental Statistics/
 ---
 
-<br />
-<br />
 <div>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h4 class="header-light regular-pad"><font color='1F618D'><b><i>2021 Applied Environmental Statistics</i></b></font></h4>
+            <h4 class="header-light regular-pad"><font color='1F618D'><b>2022 Applied Environmental Statistics</b></font></h4>
 </div> 
 </div> 
 </div> 
 </div> 
+
