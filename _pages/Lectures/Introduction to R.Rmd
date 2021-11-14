@@ -1,11 +1,13 @@
 ---
 title: "Introduction to R"
+author: "Pablo E. Gutiérrez-Fonseca"
 layout: default
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
 <br/>
 <br/>
+
 
 #### What is R?
 Is a computer language that allows the user to program algorithms and use tools 
@@ -52,14 +54,14 @@ citation('randomForest')
 <br/>
 
 #### Help
-```{r eval=FALSE}
+```{r, eval=FALSE}
 ?lm
 ```
 
 <br/>
 
 #### Simbols (P: 22)
-```{r eval=FALSE}
+```{r, eval=FALSE}
 + - * / ^ arithmetic
 > >= < <= == != relational
 ! & logical
@@ -91,7 +93,7 @@ TRUE!=TRUE
 <br/>
 
 #### Change directory
-```{r eval=FALSE}
+```{r, eval=FALSE}
 setwd ("C:/users/Pablo Guti/desktop/")
 ```
 
@@ -105,7 +107,7 @@ getwd()
 <br/>
 
 #### Instals packages
-```{r eval=FALSE}
+```{r, eval=FALSE}
 install.packages()
 install.packages()
 install.packages()
@@ -114,7 +116,7 @@ install.packages()
 <br/>
 
 #### Instals libraries
-```{r eval=FALSE}
+```{r, eval=FALSE}
 library( )
 library( )
 library( )
@@ -262,7 +264,7 @@ rm(list = ls(all = TRUE))
 <br/>
 
 #### Import data (.csv, .txt, direct import)
-```{r eval=FALSE}
+```{r, eval=FALSE}
 xxx.frm=read.table("xxx.txt",header=T)
 attach(xxx.frm)
 xxx.frm
