@@ -168,25 +168,25 @@ pre code {
 </div>
 
 
-<div id="what-is-r" class="section level2">
-<h2>What is R?</h2>
+<div id="what-is-r" class="section level1">
+<h1>What is R?</h1>
 <p>Is a computer language that allows the user to program algorithms and use tools that have been programmed by others. R is based on the computer language S, which was developed by John Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross Ihaka and Robert Gentleman (University of Auckland, in Auckland, New Zealand) experimented with the language and called their product R. Note that both their first names begin with the letter R. Also when modifying a language called S, it is tempting to call it T or R.</p>
-<p>R comes with a series of default packages. A package is a collection of pre- viously programmed functions, often including functions for specific tasks. It is tempting to call this a library, but the R community refers to it as a package.</p>
+<p>R comes with a series of default packages. A package is a collection of previously programmed functions, often including functions for specific tasks. It is tempting to call this a library, but the R community refers to it as a package.</p>
 </div>
-<div id="environment" class="section level2">
-<h2>Environment</h2>
+<div id="environment" class="section level1">
+<h1>Environment</h1>
 <p>Tools -&gt; Global options… -&gt; Appearance</p>
 </div>
-<div id="section" class="section level2">
-<h2>“&gt;”</h2>
+<div id="section" class="section level1">
+<h1>“&gt;”</h1>
 <p>Significa “What now?” <br />The screen prompt “&gt;” is an invitation to put R to work. <br />Each line can have at most 128 characters, When continuation is expected, the prompt changes from &gt; to + Note that the + continuation prompt does not carry out arithmetic plus.</p>
 </div>
-<div id="how-cite-r" class="section level2">
-<h2>How cite R?</h2>
+<div id="how-cite-r" class="section level1">
+<h1>How cite R?</h1>
 <p>citation()</p>
 </div>
-<div id="cite-specific-packages" class="section level2">
-<h2>Cite specific packages?</h2>
+<div id="cite-specific-packages" class="section level1">
+<h1>Cite specific packages?</h1>
 <pre class="r"><code>citation(&#39;vegan&#39;)</code></pre>
 <pre><code>## 
 ## To cite package &#39;vegan&#39; in publications use:
@@ -247,16 +247,12 @@ pre code {
 ##     url = {https://CRAN.R-project.org/doc/Rnews/},
 ##   }</code></pre>
 </div>
-<div id="help" class="section level2">
-<h2>Help</h2>
+<div id="help" class="section level1">
+<h1>Help</h1>
 <pre class="r"><code>?lm</code></pre>
-<p>#Posible packages find(‘lm’)</p>
 </div>
-<div id="posible-lista" class="section level1">
-<h1>Posible lista</h1>
-<p>apropos(‘lm’)</p>
-<div id="simbolos-p-22" class="section level3">
-<h3>Simbolos (P: 22)</h3>
+<div id="simbolos-p-22" class="section level1">
+<h1>Simbolos (P: 22)</h1>
 <ul>
 <li><ul>
 <li><ul>
@@ -264,25 +260,47 @@ pre code {
 </ul></li>
 </ul></li>
 </ul>
-<p>#Equality TRUE==TRUE ‘HELLO’==‘GOOBYE’ ‘HELLO’==‘HELLO’ 3==2 3==3</p>
-<p>##Inequality TRUE!=TRUE ‘HELLO’!=‘GOOBYE’</p>
 </div>
-<div id="changes-directory" class="section level3">
-<h3>Changes directory</h3>
-<p>setwd (“C:/users/Pablo Guti/desktop/”)</p>
+<div id="equality" class="section level1">
+<h1>Equality</h1>
+<pre class="r"><code>TRUE==TRUE</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>&#39;HELLO&#39;==&#39;GOOBYE&#39;</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>&#39;HELLO&#39;==&#39;HELLO&#39;</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>3==2</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>3==3</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="if-you-want-to-find-out-the-name-of-the-current-working-directory-use" class="section level3">
-<h3>If you want to find out the name of the current working directory, use:</h3>
-<p>getwd()</p>
+<div id="inequality" class="section level1">
+<h1>Inequality</h1>
+<pre class="r"><code>TRUE!=TRUE</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>&#39;HELLO&#39;!=&#39;GOOBYE&#39;</code></pre>
+<pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="instalar-packages" class="section level3">
-<h3>Instalar packages</h3>
-<p>install.packages() install.packages() install.packages()</p>
+<div id="changes-directory" class="section level1">
+<h1>Changes directory</h1>
+<pre class="r"><code>setwd (&quot;C:/users/Pablo Guti/desktop/&quot;)</code></pre>
 </div>
-<div id="instalar-librerias" class="section level3">
-<h3>Instalar librerias</h3>
-<p>library( ) library( ) library( )</p>
+<div id="if-you-want-to-find-out-the-name-of-the-current-working-directory-use" class="section level1">
+<h1>If you want to find out the name of the current working directory, use:</h1>
+<pre class="r"><code>getwd()</code></pre>
+<pre><code>## [1] &quot;D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures&quot;</code></pre>
 </div>
+<div id="instalar-packages" class="section level1">
+<h1>Instalar packages</h1>
+<pre class="r"><code>install.packages()
+install.packages()
+install.packages()</code></pre>
+</div>
+<div id="instalar-librerias" class="section level1">
+<h1>Instalar librerias</h1>
+<pre class="r"><code>library( )
+library( )
+library( )</code></pre>
 <div id="it-exits-r." class="section level3">
 <h3>It exits R.</h3>
 <p>q()</p>

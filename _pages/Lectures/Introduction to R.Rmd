@@ -70,7 +70,7 @@ TRUE!=TRUE
 
 
 # Changes directory
-```{r eval=Falsa}
+```{r eval=FALSE}
 setwd ("C:/users/Pablo Guti/desktop/")
 ```
 
@@ -80,14 +80,14 @@ getwd()
 ```
 
 # Instalar packages
-```{r}
+```{r eval=FALSE}
 install.packages()
 install.packages()
 install.packages()
 ```
 
 # Instalar librerias
-```{r}
+```{r eval=FALSE}
 library( )
 library( )
 library( )
