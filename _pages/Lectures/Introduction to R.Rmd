@@ -1,13 +1,12 @@
 ---
 title: "Introduction to R"
 author: "Pablo E. Gutiérrez-Fonseca"
-date: "Fall 2021"
+layout: default
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
 <br/>
 <br/>
-
 
 #### What is R?
 Is a computer language that allows the user to program algorithms and use tools 
@@ -275,6 +274,12 @@ xxx.frm
 
 data<-read.table(file.choose(),header=T)
 ```
+
+<br/>
+
+#### References:
+
+Crawley, M. J. (2012). The R book. John Wiley & Sons.
 
 <br/>
 <br/>
