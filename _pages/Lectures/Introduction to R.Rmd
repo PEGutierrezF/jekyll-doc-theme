@@ -24,7 +24,7 @@ tempting to call this a library, but the R community refers to it as a package.
 
 <br/>
 
-#### Environment
+#### Change appearance
 Tools -> Global options... -> Appearance 
 
 <br/>
