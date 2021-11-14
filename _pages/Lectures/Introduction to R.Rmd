@@ -45,7 +45,7 @@ citation('randomForest')
 ```
 
 
-###  Simbolos (P: 22)
+# Simbolos (P: 22)
 + - * / ^ arithmetic
 > >= < <= == != relational
 ! & logical
@@ -63,33 +63,36 @@ TRUE==TRUE
 3==3
 ```
 
-#Inequality
+# Inequality
 ```{r}
-
 TRUE!=TRUE
 'HELLO'!='GOOBYE'
-
 ```
 
 
-### Changes directory
-
+# Changes directory
+```{r eval=Falsa}
 setwd ("C:/users/Pablo Guti/desktop/")
+```
 
-### If you want to find out the name of the current working directory, use:
+# If you want to find out the name of the current working directory, use:
+```{r}
 getwd()
+```
 
-### Instalar packages
-
+# Instalar packages
+```{r}
 install.packages()
 install.packages()
 install.packages()
+```
 
-### Instalar librerias
-
+# Instalar librerias
+```{r}
 library( )
 library( )
 library( )
+```
 
 ### It exits R.
 
