@@ -173,14 +173,17 @@ pre code {
 <h4>What is R?</h4>
 <p>Is a computer language that allows the user to program algorithms and use tools that have been programmed by others. R is based on the computer language S, which was developed by John Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross Ihaka and Robert Gentleman (University of Auckland, in Auckland, New Zealand) experimented with the language and called their product R. Note that both their first names begin with the letter R. Also when modifying a language called S, it is tempting to call it T or R.</p>
 <p>R comes with a series of default packages. A package is a collection of previously programmed functions, often including functions for specific tasks. It is tempting to call this a library, but the R community refers to it as a package.</p>
+<p><br /></p>
 </div>
 <div id="environment" class="section level4">
 <h4>Environment</h4>
 <p>Tools -&gt; Global options… -&gt; Appearance</p>
+<p><br /></p>
 </div>
 <div id="section" class="section level4">
-<h4>“&gt;”</h4>
+<h4>&gt;</h4>
 <p>Significa “What now?” <br />The screen prompt “&gt;” is an invitation to put R to work. <br />Each line can have at most 128 characters, When continuation is expected, the prompt changes from &gt; to + Note that the + continuation prompt does not carry out arithmetic plus.</p>
+<p><br /></p>
 </div>
 <div id="how-cite-r" class="section level4">
 <h4>How cite R?</h4>
@@ -206,6 +209,7 @@ pre code {
 ## We have invested a lot of time and effort in creating R, please cite it
 ## when using it for data analysis. See also &#39;citation(&quot;pkgname&quot;)&#39; for
 ## citing R packages.</code></pre>
+<p><br /></p>
 </div>
 <div id="cite-specific-packages" class="section level4">
 <h4>Cite specific packages?</h4>
@@ -268,10 +272,12 @@ pre code {
 ##     pages = {18-22},
 ##     url = {https://CRAN.R-project.org/doc/Rnews/},
 ##   }</code></pre>
+<p><br /></p>
 </div>
 <div id="help" class="section level4">
 <h4>Help</h4>
 <pre class="r"><code>?lm</code></pre>
+<p><br /></p>
 </div>
 <div id="simbols-p-22" class="section level4">
 <h4>Simbols (P: 22)</h4>
@@ -282,6 +288,7 @@ pre code {
 &lt;- -&gt; assignment
 $ list indexing (the ‘element name’ operator)
 : create a sequence</code></pre>
+<p><br /></p>
 </div>
 <div id="equality" class="section level4">
 <h4>Equality</h4>
@@ -295,6 +302,7 @@ $ list indexing (the ‘element name’ operator)
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>3==3</code></pre>
 <pre><code>## [1] TRUE</code></pre>
+<p><br /></p>
 </div>
 <div id="inequality" class="section level4">
 <h4>Inequality</h4>
@@ -302,27 +310,32 @@ $ list indexing (the ‘element name’ operator)
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>&#39;HELLO&#39;!=&#39;GOOBYE&#39;</code></pre>
 <pre><code>## [1] TRUE</code></pre>
+<p><br /></p>
 </div>
 <div id="change-directory" class="section level4">
 <h4>Change directory</h4>
 <pre class="r"><code>setwd (&quot;C:/users/Pablo Guti/desktop/&quot;)</code></pre>
+<p><br /></p>
 </div>
 <div id="if-you-want-to-find-out-the-name-of-the-current-working-directory-use" class="section level4">
 <h4>If you want to find out the name of the current working directory, use:</h4>
 <pre class="r"><code>getwd()</code></pre>
 <pre><code>## [1] &quot;D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures&quot;</code></pre>
+<p><br /></p>
 </div>
 <div id="instals-packages" class="section level4">
 <h4>Instals packages</h4>
 <pre class="r"><code>install.packages()
 install.packages()
 install.packages()</code></pre>
+<p><br /></p>
 </div>
 <div id="instals-libraries" class="section level4">
 <h4>Instals libraries</h4>
 <pre class="r"><code>library( )
 library( )
 library( )</code></pre>
+<p><br /></p>
 </div>
 <div id="exercises" class="section level4">
 <h4>Exercises</h4>
@@ -338,6 +351,7 @@ library( )</code></pre>
 <pre><code>## [1] 1</code></pre>
 <pre class="r"><code>cos(pi/2)</code></pre>
 <pre><code>## [1] 6.123032e-17</code></pre>
+<p><br /></p>
 </div>
 <div id="exponentes" class="section level3">
 <h3>Exponentes</h3>
@@ -347,12 +361,14 @@ library( )</code></pre>
 <pre><code>## [1] 10000</code></pre>
 <pre class="r"><code>3e4</code></pre>
 <pre><code>## [1] 30000</code></pre>
+<p><br /></p>
 <div id="redondear" class="section level4">
 <h4>Redondear</h4>
 <pre class="r"><code>floor(5.7)</code></pre>
 <pre><code>## [1] 5</code></pre>
 <pre class="r"><code>ceiling(5.7)</code></pre>
 <pre><code>## [1] 6</code></pre>
+<p><br /></p>
 </div>
 <div id="cfunction-where-c-stands-for-concatenate" class="section level4">
 <h4>c()function, where c stands for concatenate</h4>
@@ -370,6 +386,7 @@ Wingcrd</code></pre>
 <pre class="r"><code>s.win &lt;- sum(Wingcrd)
 s.win</code></pre>
 <pre><code>## [1] 440.5</code></pre>
+<p><br /></p>
 <pre class="r"><code>Tarsus &lt;- c(22.3, 19.7, 20.8, 20.3, 20.8, 21.5, 20.6,21.5)
 Head &lt;- c(31.2, 30.4, 30.6, 30.3, 30.3, 30.8, 32.5,NA)
 Wt &lt;- c(9.5, 13.8, 14.8, 15.2, 15.5, 15.6, 15.6,15.7)
@@ -378,6 +395,7 @@ Bird&lt;-c(Tarsus,Head,Wt)
 Bird</code></pre>
 <pre><code>##  [1] 22.3 19.7 20.8 20.3 20.8 21.5 20.6 21.5 31.2 30.4 30.6 30.3 30.3 30.8 32.5
 ## [16]   NA  9.5 13.8 14.8 15.2 15.5 15.6 15.6 15.7</code></pre>
+<p><br /></p>
 </div>
 <div id="cbindfunction-combines-the-variables-in-such-a-way-that-the-output" class="section level4">
 <h4>cbind()function, combines the variables in such a way that the output</h4>
@@ -395,6 +413,7 @@ Bird1</code></pre>
 ## [6,]   21.5 30.8 15.6
 ## [7,]   20.6 32.5 15.6
 ## [8,]   21.5   NA 15.7</code></pre>
+<p><br /></p>
 </div>
 </div>
 <div id="similar-to-the-cbind-function-to-arrange-the-variables-in-columns" class="section level3">
@@ -408,6 +427,7 @@ Bird2</code></pre>
 ## Tarsus 22.3 19.7 20.8 20.3 20.8 21.5 20.6 21.5
 ## Head   31.2 30.4 30.6 30.3 30.3 30.8 32.5   NA
 ## Wt      9.5 13.8 14.8 15.2 15.5 15.6 15.6 15.7</code></pre>
+<p><br /></p>
 <div id="remover-na" class="section level4">
 <h4>Remover NA</h4>
 <pre class="r"><code>x&lt;-c(1:8,NA)
@@ -415,6 +435,7 @@ mean(x)</code></pre>
 <pre><code>## [1] NA</code></pre>
 <pre class="r"><code>x</code></pre>
 <pre><code>## [1]  1  2  3  4  5  6  7  8 NA</code></pre>
+<p><br /></p>
 <pre class="r"><code>Head &lt;-c(31.2,30.4,30.6,30.3,30.8,NA,32.5,NA)
 Head</code></pre>
 <pre><code>## [1] 31.2 30.4 30.6 30.3 30.8   NA 32.5   NA</code></pre>
@@ -422,11 +443,13 @@ Head</code></pre>
 <pre><code>## [1] NA</code></pre>
 <pre class="r"><code>sum(Head, na.rm=TRUE)</code></pre>
 <pre><code>## [1] 185.8</code></pre>
+<p><br /></p>
 </div>
 <div id="na.rmtrue" class="section level4">
 <h4>na.rm=TRUE</h4>
 <pre class="r"><code>mean(x,na.rm=T)</code></pre>
 <pre><code>## [1] 4.5</code></pre>
+<p><br /></p>
 </div>
 <div id="convertir-na-en-ceros" class="section level4">
 <h4>Convertir NA en Ceros</h4>
@@ -438,6 +461,7 @@ vmv</code></pre>
 <pre class="r"><code>vmv[is.na(vmv)]&lt;- 0
 vmv</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  0  0  9 10 11 12</code></pre>
+<p><br /></p>
 </div>
 <div id="asigna-un-determinado-elemento" class="section level4">
 <h4>Asigna un determinado elemento</h4>
@@ -457,6 +481,7 @@ B</code></pre>
 <pre><code>## [1] 1</code></pre>
 <pre class="r"><code>sum(A)</code></pre>
 <pre><code>## [1] 55</code></pre>
+<p><br /></p>
 </div>
 <div id="if-you-want-to-begin-a-new-analysis-on-a-different-dataset-it-may-be-useful-to" class="section level4">
 <h4>If you want to begin a new analysis on a different dataset, it may be useful to</h4>
@@ -464,6 +489,7 @@ B</code></pre>
 <div id="remove-all-variables.-one-option-is-to-quit-r-and-restart-it.-alternatively" class="section level4">
 <h4>remove all variables. One option is to quit R and restart it. Alternatively,</h4>
 <pre class="r"><code>rm(list = ls(all = TRUE))</code></pre>
+<p><br /></p>
 </div>
 <div id="import-data-.csv-.txt-direct-import" class="section level4">
 <h4>Import data (.csv, .txt, direct import)</h4>
