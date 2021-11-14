@@ -5,7 +5,7 @@ permalink: /pages/Lectures/Introduction to R/
 ---
 
 
-## What is R?
+# What is R?
 Is a computer language that allows the user to program algorithms and use tools 
 that have been programmed by others. 
 R is based on the computer language S, which was developed by John
@@ -19,36 +19,31 @@ R comes with a series of default packages. A package is a collection of pre-
 viously programmed functions, often including functions for specific tasks. It is
 tempting to call this a library, but the R community refers to it as a package.
 
-## Environment
+# Environment
 Tools -> Global options... -> Appearance 
 
 
-## ">"
+# ">"
 Significa "What now?"
 <br />The screen prompt ">" is an invitation to put R to work.
 <br />Each line can have at most 128 characters,   When continuation is expected, the prompt changes from > to +
 Note that the + continuation prompt does not carry out arithmetic plus.
 
-## How cite R?
+# How cite R?
 citation()
 
-## Cite specific packages?
+# Cite specific packages?
 ```{r}
 citation('vegan')
 citation('ggplot2')
 citation('randomForest')
 ```
 
-## Help
+# Help
 ```{r eval=FALSE}
 ?lm
 ```
 
-#Posible packages
-find('lm')
-
-# Posible lista
-apropos('lm')
 
 ###  Simbolos (P: 22)
 + - * / ^ arithmetic
@@ -59,16 +54,22 @@ apropos('lm')
 $ list indexing (the ‘element name’ operator)
 : create a sequence
 
-#Equality
+# Equality
+```{r}
 TRUE==TRUE
 'HELLO'=='GOOBYE'
 'HELLO'=='HELLO'
 3==2
 3==3
+```
 
-##Inequality
+#Inequality
+```{r}
+
 TRUE!=TRUE
 'HELLO'!='GOOBYE'
+
+```
 
 
 ### Changes directory
