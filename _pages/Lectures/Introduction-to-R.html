@@ -168,25 +168,25 @@ pre code {
 </div>
 
 
-<div id="what-is-r" class="section level1">
-<h1>What is R?</h1>
+<div id="what-is-r" class="section level4">
+<h4>What is R?</h4>
 <p>Is a computer language that allows the user to program algorithms and use tools that have been programmed by others. R is based on the computer language S, which was developed by John Chambers and others at Bell Laboratories in 1976. In the early 1990s, Ross Ihaka and Robert Gentleman (University of Auckland, in Auckland, New Zealand) experimented with the language and called their product R. Note that both their first names begin with the letter R. Also when modifying a language called S, it is tempting to call it T or R.</p>
 <p>R comes with a series of default packages. A package is a collection of previously programmed functions, often including functions for specific tasks. It is tempting to call this a library, but the R community refers to it as a package.</p>
 </div>
-<div id="environment" class="section level1">
-<h1>Environment</h1>
+<div id="environment" class="section level4">
+<h4>Environment</h4>
 <p>Tools -&gt; Global options… -&gt; Appearance</p>
 </div>
-<div id="section" class="section level1">
-<h1>“&gt;”</h1>
+<div id="section" class="section level4">
+<h4>“&gt;”</h4>
 <p>Significa “What now?” <br />The screen prompt “&gt;” is an invitation to put R to work. <br />Each line can have at most 128 characters, When continuation is expected, the prompt changes from &gt; to + Note that the + continuation prompt does not carry out arithmetic plus.</p>
 </div>
-<div id="how-cite-r" class="section level1">
-<h1>How cite R?</h1>
+<div id="how-cite-r" class="section level4">
+<h4>How cite R?</h4>
 <p>citation()</p>
 </div>
-<div id="cite-specific-packages" class="section level1">
-<h1>Cite specific packages?</h1>
+<div id="cite-specific-packages" class="section level4">
+<h4>Cite specific packages?</h4>
 <pre class="r"><code>citation(&#39;vegan&#39;)</code></pre>
 <pre><code>## 
 ## To cite package &#39;vegan&#39; in publications use:
@@ -247,22 +247,22 @@ pre code {
 ##     url = {https://CRAN.R-project.org/doc/Rnews/},
 ##   }</code></pre>
 </div>
-<div id="help" class="section level1">
-<h1>Help</h1>
+<div id="help" class="section level4">
+<h4>Help</h4>
 <pre class="r"><code>?lm</code></pre>
 </div>
-<div id="simbolos-p-22" class="section level1">
-<h1>Simbolos (P: 22)</h1>
-<ul>
-<li><ul>
-<li><ul>
-<li>/ ^ arithmetic &gt; &gt;= &lt; &lt;= == != relational ! &amp; logical ~ model formulae &lt;- -&gt; assignment $ list indexing (the ‘element name’ operator) : create a sequence</li>
-</ul></li>
-</ul></li>
-</ul>
+<div id="simbols-p-22" class="section level4">
+<h4>Simbols (P: 22)</h4>
+<pre class="r"><code>+ - * / ^ arithmetic
+&gt; &gt;= &lt; &lt;= == != relational
+! &amp; logical
+~ model formulae
+&lt;- -&gt; assignment
+$ list indexing (the ‘element name’ operator)
+: create a sequence</code></pre>
 </div>
-<div id="equality" class="section level1">
-<h1>Equality</h1>
+<div id="equality" class="section level4">
+<h4>Equality</h4>
 <pre class="r"><code>TRUE==TRUE</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>&#39;HELLO&#39;==&#39;GOOBYE&#39;</code></pre>
@@ -274,39 +274,40 @@ pre code {
 <pre class="r"><code>3==3</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="inequality" class="section level1">
-<h1>Inequality</h1>
+<div id="inequality" class="section level4">
+<h4>Inequality</h4>
 <pre class="r"><code>TRUE!=TRUE</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>&#39;HELLO&#39;!=&#39;GOOBYE&#39;</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 </div>
-<div id="changes-directory" class="section level1">
-<h1>Changes directory</h1>
+<div id="change-directory" class="section level4">
+<h4>Change directory</h4>
 <pre class="r"><code>setwd (&quot;C:/users/Pablo Guti/desktop/&quot;)</code></pre>
 </div>
-<div id="if-you-want-to-find-out-the-name-of-the-current-working-directory-use" class="section level1">
-<h1>If you want to find out the name of the current working directory, use:</h1>
+<div id="if-you-want-to-find-out-the-name-of-the-current-working-directory-use" class="section level4">
+<h4>If you want to find out the name of the current working directory, use:</h4>
 <pre class="r"><code>getwd()</code></pre>
 <pre><code>## [1] &quot;D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures&quot;</code></pre>
 </div>
-<div id="instalar-packages" class="section level1">
-<h1>Instalar packages</h1>
+<div id="instals-packages" class="section level4">
+<h4>Instals packages</h4>
 <pre class="r"><code>install.packages()
 install.packages()
 install.packages()</code></pre>
 </div>
-<div id="instalar-librerias" class="section level1">
-<h1>Instalar librerias</h1>
+<div id="instals-libraries" class="section level4">
+<h4>Instals libraries</h4>
 <pre class="r"><code>library( )
 library( )
 library( )</code></pre>
-<div id="it-exits-r." class="section level3">
-<h3>It exits R.</h3>
+</div>
+<div id="it-exits-r." class="section level4">
+<h4>It exits R.</h4>
 <p>q()</p>
 </div>
-<div id="practices" class="section level2">
-<h2>Practices</h2>
+<div id="practices" class="section level4">
+<h4>Practices</h4>
 <pre class="r"><code>5+6+3+6+4+2+4+8+3+2+7</code></pre>
 <pre><code>## [1] 50</code></pre>
 <pre class="r"><code>2+3; 5*7; 3-7</code></pre>
@@ -314,6 +315,7 @@ library( )</code></pre>
 <pre><code>## [1] 35</code></pre>
 <pre><code>## [1] -4</code></pre>
 <p>pi sin(pi/2) cos(pi/2)</p>
+</div>
 <div id="exponentes" class="section level3">
 <h3>Exponentes</h3>
 <p>1.2e3 1e4 3e4</p>
@@ -350,8 +352,6 @@ library( )</code></pre>
 <p>x&lt;-c(1:8,NA) mean(x) x</p>
 <p>Head &lt;-c(31.2,30.4,30.6,30.3,30.8,NA,32.5,NA) Head sum(Head) sum(Head, na.rm=TRUE)</p>
 </div>
-</div>
-</div>
 <div id="na.rmtrue" class="section level1">
 <h1>na.rm=TRUE</h1>
 <p>mean(x,na.rm=T)</p>
@@ -374,7 +374,8 @@ library( )</code></pre>
 <div id="remove-all-variables.-one-option-is-to-quit-r-and-restart-it.-alternatively" class="section level3">
 <h3>remove all variables. One option is to quit R and restart it. Alternatively,</h3>
 <p>rm(list = ls(all = TRUE))</p>
-<p>Import data (.csv, .txt, direct import)</p>
+<div id="import-data-.csv-.txt-direct-import" class="section level4">
+<h4>Import data (.csv, .txt, direct import)</h4>
 <pre class="r"><code>xxx.frm=read.table(&quot;xxx.txt&quot;,header=T)
 attach(xxx.frm)
 xxx.frm
@@ -385,6 +386,7 @@ xxx.frm
 
 data&lt;-read.table(file.choose(),header=T)</code></pre>
 <p><br /> <br /> <br /></p>
+</div>
 </div>
 </div>
 
