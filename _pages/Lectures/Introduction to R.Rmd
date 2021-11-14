@@ -15,8 +15,7 @@ Zealand) experimented with the language and called their product R. Note
 that both their first names begin with the letter R. Also when modifying a
 language called S, it is tempting to call it T or R.
 
-R comes with a series of default packages. A package is a collection of pre-
-viously programmed functions, often including functions for specific tasks. It is
+R comes with a series of default packages. A package is a collection of previously programmed functions, often including functions for specific tasks. It is
 tempting to call this a library, but the R community refers to it as a package.
 
 # Environment
