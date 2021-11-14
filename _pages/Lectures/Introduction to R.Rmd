@@ -1,7 +1,10 @@
 ---
-layout: default
 title: "Introduction to R"
+layout: default
 permalink: /pages/Lectures/Introduction to R/
+output:
+  html_document:
+    df_print: paged
 ---
 
 
@@ -111,28 +114,37 @@ q()
 ```
 
 
-#### Practices 
+#### Exercises 
 ```{r}
 5+6+3+6+4+2+4+8+3+2+7
 2+3; 5*7; 3-7
 ```
 
+
+```{r}
 pi
 sin(pi/2)
 cos(pi/2)
+```
+
 
 ### Exponentes
+```{r}
 1.2e3
 1e4
 3e4
+```
 
-### Redondear 
-
+#### Redondear 
+```{r}
 floor(5.7)
 ceiling(5.7)
+```
 
-###  c()function, where c stands for concatenate
 
+####  c()function, where c stands for concatenate
+
+```{r}
 Wingcrd <- c(59, 55, 53.5, 55, 52.5, 57.5, 53, 55)
 Wingcrd
 Wingcrd [3]
@@ -142,45 +154,58 @@ Wingcrd [-2]
 sum(Wingcrd)
 s.win <- sum(Wingcrd)
 s.win
+```
 
+
+```{r}
 Tarsus <- c(22.3, 19.7, 20.8, 20.3, 20.8, 21.5, 20.6,21.5)
 Head <- c(31.2, 30.4, 30.6, 30.3, 30.3, 30.8, 32.5,NA)
 Wt <- c(9.5, 13.8, 14.8, 15.2, 15.5, 15.6, 15.6,15.7)
 
 Bird<-c(Tarsus,Head,Wt)
 Bird
+```
 
-### cbind()function, combines the variables in such a way that the output
-### contains the original variables in columns. 
+#### cbind()function, combines the variables in such a way that the output
+#### contains the original variables in columns. 
 
+```{r}
 Bird1 <- cbind(Tarsus, Head, Wt)
 Bird1
+```
+
 
 ###  similar to the cbind function to arrange the variables in columns, 
 ###  the rbind function combines the data in rows. 
-
+```{r}
 Bird2 <- rbind(Tarsus, Head, Wt)
 Bird2
+```
 
-******************************************************************
-******************************************************************
 
-### Remover NA
-
+#### Remover NA
+```{r}
 x<-c(1:8,NA)
 mean(x)
 x
+```
 
+
+```{r}
 Head <-c(31.2,30.4,30.6,30.3,30.8,NA,32.5,NA)
 Head
 sum(Head)
 sum(Head, na.rm=TRUE)
+```
 
-#   na.rm=TRUE 
+####   na.rm=TRUE 
+```{r}
 mean(x,na.rm=T)
+```
 
-###   Convertir NA en Ceros
 
+####   Convertir NA en Ceros
+```{r}
 vmv<-c(1:6,NA,NA,9:12)
 vmv
 
@@ -188,11 +213,11 @@ which(is.na(vmv))
 
 vmv[is.na(vmv)]<- 0
 vmv
+```
 
-### Asigna un determinado elemento
+#### Asigna un determinado elemento
 
-<- 
-
+```{r}
 A<-1:10
 A
 
@@ -204,11 +229,14 @@ mean(B)
 max(B)
 min(A)
 sum(A)
+```
 
-### If you want to begin a new analysis on a different dataset, it may be useful to
-### remove all variables. One option is to quit R and restart it. Alternatively,
 
+#### If you want to begin a new analysis on a different dataset, it may be useful to
+#### remove all variables. One option is to quit R and restart it. Alternatively,
+```{r}
 rm(list = ls(all = TRUE))
+```
 
 
 #### Import data (.csv, .txt, direct import)
