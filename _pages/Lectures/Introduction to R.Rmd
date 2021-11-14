@@ -25,8 +25,8 @@ Tools -> Global options... -> Appearance
 
 ## ">"
 Significa "What now?"
-The screen prompt ">" is an invitation to put R to work.
-Each line can have at most 128 characters,   When continuation is expected, the prompt changes from > to +
+<br />The screen prompt ">" is an invitation to put R to work.
+<br />Each line can have at most 128 characters,   When continuation is expected, the prompt changes from > to +
 Note that the + continuation prompt does not carry out arithmetic plus.
 
 ## How cite R?
