@@ -1,7 +1,6 @@
 ---
 title: "Introduction to R"
 author: "Pablo E. Gutiérrez-Fonseca"
-date: 
 layout: default
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
