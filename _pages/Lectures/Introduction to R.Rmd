@@ -2,9 +2,7 @@
 title: "Introduction to R"
 layout: default
 permalink: /pages/Lectures/Introduction to R/
-output:
-  html_document:
-    df_print: paged
+output: html_document
 ---
 
 
@@ -105,12 +103,6 @@ install.packages()
 library( )
 library( )
 library( )
-```
-
-
-#### It exits R.
-```{r}
-q()
 ```
 
 
