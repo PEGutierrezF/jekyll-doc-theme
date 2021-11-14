@@ -1,8 +1,9 @@
 ---
-layout: default
 title: "Introduction to R"
-author: "Pablo E. Gutiérrez-Fonseca"
-date: "`r format(Sys.time(), '%d %B %Y')`"
+author: 
+- "Pablo E. Gutiérrez-Fonseca"
+- Fall 2021
+layout: default
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
