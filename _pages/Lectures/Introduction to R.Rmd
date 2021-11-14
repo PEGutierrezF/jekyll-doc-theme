@@ -30,9 +30,10 @@ Tools -> Global options... -> Appearance
 
 #### >
 Significa "What now?"
-<br />The screen prompt ">" is an invitation to put R to work.
-<br />Each line can have at most 128 characters,   When continuation is expected, the prompt changes from > to +
-Note that the + continuation prompt does not carry out arithmetic plus.
+<br/>The screen prompt ">" is an invitation to put R to work.
+<br/>Each line can have at most 128 characters.
+<br/>When continuation is expected, the prompt changes from > to +
+<br/>Note that the + continuation prompt does not carry out arithmetic plus.
 
 <br/>
 
