@@ -1,8 +1,8 @@
 ---
+layout: default
 title: "Introduction to R"
 author: "Pablo E. Gutiérrez-Fonseca"
-date: \`r format(Sys.Date(), "%m %d,%Y")`\
-layout: default
+date: "`r format(Sys.time(), '%d %B %Y')`"
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
