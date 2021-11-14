@@ -30,13 +30,13 @@ Significa "What now?"
 <br />Each line can have at most 128 characters,   When continuation is expected, the prompt changes from > to +
 Note that the + continuation prompt does not carry out arithmetic plus.
 
-<br/>
+
 #### How cite R?
 ```{r}
 citation()
 ```
 
-<br/>
+
 #### Cite specific packages?
 ```{r}
 citation('vegan')
@@ -44,13 +44,13 @@ citation('ggplot2')
 citation('randomForest')
 ```
 
-<br/>
+
 #### Help
 ```{r eval=FALSE}
 ?lm
 ```
 
-<br/>
+
 #### Simbols (P: 22)
 ```{r eval=FALSE}
 + - * / ^ arithmetic
@@ -62,7 +62,7 @@ $ list indexing (the ‘element name’ operator)
 : create a sequence
 ```
 
-<br/>
+
 #### Equality
 ```{r}
 TRUE==TRUE
@@ -72,26 +72,26 @@ TRUE==TRUE
 3==3
 ```
 
-<br/>
+
 #### Inequality
 ```{r}
 TRUE!=TRUE
 'HELLO'!='GOOBYE'
 ```
 
-<br/>
+
 #### Change directory
 ```{r eval=FALSE}
 setwd ("C:/users/Pablo Guti/desktop/")
 ```
 
-<br/>
+
 #### If you want to find out the name of the current working directory, use:
 ```{r}
 getwd()
 ```
 
-<br/>
+
 #### Instals packages
 ```{r eval=FALSE}
 install.packages()
@@ -99,7 +99,7 @@ install.packages()
 install.packages()
 ```
 
-<br/>
+
 #### Instals libraries
 ```{r eval=FALSE}
 library( )
@@ -107,21 +107,21 @@ library( )
 library( )
 ```
 
-<br/>
+
 #### Exercises 
 ```{r}
 5+6+3+6+4+2+4+8+3+2+7
 2+3; 5*7; 3-7
 ```
 
-<br/>
+
 ```{r}
 pi
 sin(pi/2)
 cos(pi/2)
 ```
 
-<br/>
+
 ### Exponentes
 ```{r}
 1.2e3
@@ -129,7 +129,7 @@ cos(pi/2)
 3e4
 ```
 
-<br/>
+
 #### Redondear 
 ```{r}
 floor(5.7)
@@ -137,7 +137,7 @@ ceiling(5.7)
 ```
 
 
-<br/>
+
 ####  c()function, where c stands for concatenate
 ```{r}
 Wingcrd <- c(59, 55, 53.5, 55, 52.5, 57.5, 53, 55)
@@ -151,7 +151,7 @@ s.win <- sum(Wingcrd)
 s.win
 ```
 
-<br/>
+
 ```{r}
 Tarsus <- c(22.3, 19.7, 20.8, 20.3, 20.8, 21.5, 20.6,21.5)
 Head <- c(31.2, 30.4, 30.6, 30.3, 30.3, 30.8, 32.5,NA)
@@ -162,7 +162,6 @@ Bird
 ```
 
 
-<br/>
 #### cbind()function, combines the variables in such a way that the output
 #### contains the original variables in columns. 
 ```{r}
@@ -170,7 +169,7 @@ Bird1 <- cbind(Tarsus, Head, Wt)
 Bird1
 ```
 
-<br/>
+
 ###  similar to the cbind function to arrange the variables in columns, 
 ###  the rbind function combines the data in rows. 
 ```{r}
@@ -178,7 +177,7 @@ Bird2 <- rbind(Tarsus, Head, Wt)
 Bird2
 ```
 
-<br/>
+
 #### Remover NA
 ```{r}
 x<-c(1:8,NA)
@@ -186,7 +185,7 @@ mean(x)
 x
 ```
 
-<br/>
+
 ```{r}
 Head <-c(31.2,30.4,30.6,30.3,30.8,NA,32.5,NA)
 Head
@@ -194,13 +193,13 @@ sum(Head)
 sum(Head, na.rm=TRUE)
 ```
 
-<br/>
+
 ####   na.rm=TRUE 
 ```{r}
 mean(x,na.rm=T)
 ```
 
-<br/>
+
 ####   Convertir NA en Ceros
 ```{r}
 vmv<-c(1:6,NA,NA,9:12)
@@ -212,7 +211,7 @@ vmv[is.na(vmv)]<- 0
 vmv
 ```
 
-<br/>
+
 #### Asigna un determinado elemento
 ```{r}
 A<-1:10
@@ -228,14 +227,14 @@ min(A)
 sum(A)
 ```
 
-<br/>
+
 #### If you want to begin a new analysis on a different dataset, it may be useful to
 #### remove all variables. One option is to quit R and restart it. Alternatively,
 ```{r}
 rm(list = ls(all = TRUE))
 ```
 
-<br/>
+
 #### Import data (.csv, .txt, direct import)
 ```{r eval=FALSE}
 xxx.frm=read.table("xxx.txt",header=T)
