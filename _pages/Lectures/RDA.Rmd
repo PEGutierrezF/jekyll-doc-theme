@@ -1,0 +1,188 @@
+---
+title: "RDA"
+author: 
+- "Pablo E. Gutiérrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+output:
+  html_document: default
+  pdf_document: default
+permalink: /pages/Lectures/RDA/
+---
+<br/>
+<br/>
+
+#### 1. Primer paso: cargar las librerias que necesitas.
+
+```{r, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+library(dplyr)
+library(vegan)
+
+```
+
+<br/>
+
+#### 2. Segundo paso: cargar los datos.
+```{r}
+
+species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
+env=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal.csv", header=T, row.names=NULL, sep=",")
+
+```
+
+<br/>
+
+#### 3.  Before we can use this explanatory matrix we need to check that its rows are in the same order as our response matrix
+all.equal(rownames(species), rownames(env))
+```{r}
+
+all.equal(rownames(species), rownames(env))
+
+```
+
+<br/>
+
+#### 4. Remover la columna de sitos.
+```{r}
+species_1 <- dplyr::select(species, -site)
+env_1 <- dplyr::select(env, -site)
+
+```
+
+<br/>
+
+#### 5.  Transformar datos.
+Hellinger es una transformacion recomendada por Legendre & Callagher (2001) en datos de abundancia y con una respuesta lineal
+
+```{r}
+
+species_2 <- vegan::decostand(species_1, method = "hellinger")
+
+```
+
+<br/>
+
+#### 6. vegan requires that we write out each term if we are not going to convert the factor to a dummy matrix
+```{r}
+
+rda_tree_all = vegan::rda(species_2 ~ temperature + oxygen + pH +
+                conductivity + plants, data= env_1, scale=T)
+
+```
+
+<br/>
+
+#### 7. Summary
+http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html
+
+Inertia is another name for variation or variance in this case. 
+"Total" refers to total variance
+"Constrained" refers to the amount of variance explained by the explanatory variables,
+"Unconstrained" refers to the residual variance. 
+Constrained + Unconstrained = Total.
+
+An R2 statistic can be derived simply as Constrained / Total.
+
+```{r}
+
+head (summary (rda_tree_all))
+
+```
+
+<br/>
+
+#### 8. Test for colinearity
+Then, we can calculate Variance Inflation Factors (VIF) for each of the constraints (variables) from the environmental matrix. If we find an environmental variable with VIF>10, we'll know that this variable presents colinearity with another or other variables. In that case, we would have to delete the variable from our initial dataset and redo all the analysis. In our example, no variable is redundant with each other (all of them have VIF<10). Linear dependencies can be explored by computing the variables' variance inflation factors (VIF), which measure the proportion by which the variance of a regression coefficient is inflated in the presence of other explanatory variables. VIFs above 20 indicate strong collinearity. Ideally, VIFs above 10 should be at least examined, and avoided if possible. VIFs can be computed in vegan after RDA or CCA (Bocard et al. page 175)
+
+```{r}
+vegan::vif.cca(rda_tree_all)
+
+```
+
+<br/>
+
+#### 9. Plots
+```{r}
+
+screeplot(rda_tree_all)
+
+```
+
+<br/>
+
+#### 10. Percentage explained by constrained and unconstrained variables.
+```{r}
+constrained_eig <- rda_tree_all$CCA$eig/rda_tree_all$tot.chi*100
+unconstrained_eig <- rda_tree_all$CA$eig/rda_tree_all$tot.chi*100
+expl_var <- c(constrained_eig, unconstrained_eig)
+barplot (expl_var[1:20], col = c(rep ('red', length (constrained_eig)), rep ('black', length (unconstrained_eig))),
+         las = 2, ylab = '% variation')
+
+```
+
+<br/>
+
+#### 11. Ordination plots
+
+Scaling 1 (distance biplot): Se prioriza que la distancia entre objetos en el grafico respete tanto como sea posible las distancias euclidias de la matriz original. Los angulos entre vectores (variables) pueden ser distorsionados.
+
+Scaling 2 (correlation biplot): Se prioriza que los angulos entre vectores respeten la correlacion original entre variables. La distancia entre objetos en el grafico puede estar distorsionada.
+
+En resumen, utilizaremos scaling 1 si nos interesa mas ver como se diferencian los objetos, y scaling 2 si nos interesa mas ver como se relacionan las distintas variables.
+
+https://bookdown.org/stephi_gascon/bookdown-demo-master_-_multivariant/_book/ordination.html
+https://fukamilab.github.io/BIO202/06-B-constrained-ordination.html
+
+```{r}
+par(mfrow=c(1,2))
+
+plot(rda_tree_all, scaling=1, main="Odonata in Urban ponds, scaling=1")
+plot(rda_tree_all, scaling=2, main="Odonata in Urban ponds, scaling=2")
+
+```
+
+<br/>
+
+#### 12. Calcular las R
+
+```{r}
+(R2 <- vegan::RsquareAdj(rda_tree_all)$r.squared)
+
+(R2adj <- vegan::RsquareAdj(rda_tree_all)$adj.r.squared)
+
+```
+
+<br/>
+
+#### 13a Testing the global significance of RDA
+```{r}
+set.seed(1)
+vegan::anova.cca(rda_tree_all, step=1000)
+
+```
+
+
+
+#### 13b Testing the significance of CCA axes (at least the first two or three should present a significant p value)
+Hint Argument "step" gives the minimal number of permutations requested 
+to assess if the F value of a test is obviously significant or not
+```{r}
+set.seed(1)
+vegan::anova.cca(rda_tree_all, by='axis', step=1000)
+
+```
+
+<br/>
+
+#### 13c Testing the significance of terms (environmental variables)
+Hint Argument "step" gives the minimal number of permutations requested 
+to assess if the F value of a test is obviously significant or not
+```{r}
+vegan::anova.cca(rda_tree_all, by='terms', step=1000)
+
+```
+
+<br/>
+<br/>
