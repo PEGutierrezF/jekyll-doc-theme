@@ -1,7 +1,10 @@
 ---
 title: "Variation partitioning by RDA"
-author: "Pablo E. Gutiérrez-Fonseca"
-date: "11/17/2021"
+author: 
+- "Pablo E. GutiÃ©rrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
 <br/>
