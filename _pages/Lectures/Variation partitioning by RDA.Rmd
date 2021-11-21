@@ -133,7 +133,7 @@ Legendre (2008) [doi: 10.1093/jpe/rtm001] argued that "Negative values of Ra2 ar
 #### Plot the results
 The plot shows the adjusted R2 values associated with each partition or for overlapping partitions.
 ```{r}
-plot(varp, digits = 2, Xnames = c('Enviromental factors', 'Plants', "Season"), 
+plot(varp, digits = 2, Xnames = c('Enviromental factors', 'Vegetation', "Season"), 
      bg = c('navy', 'tomato', "lightblue"))
 
 ## Show values for all partitions by putting 'cutoff' low enough:
