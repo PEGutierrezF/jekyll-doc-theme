@@ -170,3 +170,5 @@ Physicochemical and Physical characteriscs are all statistically significant in 
 https://wiki.qcbs.ca/r_workshop10
 
 Legendre, P. (2008). Studying beta diversity: ecological variation partitioning by multiple regression and canonical analysis. Journal of plant ecology, 1(1), 3-8.
+
+Legendre, P., & Legendre, L. (2012). Numerical ecology. Elsevier.
