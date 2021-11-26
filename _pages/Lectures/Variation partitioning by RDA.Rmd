@@ -1,5 +1,5 @@
 ---
-title: "partial RDA & Variation partitioning by RDA"
+title: "Variation partitioning by RDA"
 author: 
 - "Pablo E. Guti&eacute;rrez-Fonseca"
 - "`r format(Sys.time(), '%d %B, %Y')`"
