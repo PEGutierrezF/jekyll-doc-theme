@@ -172,14 +172,14 @@ Physicochemical and Physical characteriscs are all statistically significant in 
 *Es la suma total de las diferencias al cuadrado de la media de cada variable.*
 
 **R<sup>2</sup>:** The coefficients of determination (R<sup>2</sup> values) are estimates of how much variation has been 'explained' by a given partition. In RDA, these are simply the squares of the correlation coefficients calculated.<br>
-*Los coeficientes de determinaci&oacute;n (valores R <sup> 2 </sup>) son estimaciones de cu&aacute;nta variaci&oacute;n ha sido "explicada" por una partici&oacute;n determinada. En RDA, estos son simplemente los cuadrados de los coeficientes de correlaci&oacute;n calculados*
+_Los coeficientes de determinaci&oacute;n (valores R<sup>2</sup>) son estimaciones de cu&aacute;nta variaci&oacute;n ha sido explicada por una partici&oacute;n determinada. En RDA, estos son simplemente los cuadrados de los coeficientes de correlaci&oacute;n calculados_
 
 **Adjusted R<sup>2</sup>:** Adjusted coefficients of determination (Adj. R<sup>2</sup> values) take the number of explanatory variables used in an analysis into account. This "inflation" occurs even if the variables have no "true" explanatory power or are redundant relative to other explanatory variables. These estimates should be preferred relative to the unadjusted estimates.<br>
-*Los coeficientes de determinaci&oacute;n ajustados (Adj. R <sup> 2 </sup>) tienen en cuenta el n&uacute;mero de variables explicativas utilizadas en un an&aacute;lisis. Esta "inflaci&oacute;n" ocurre incluso si las variables no tienen un poder explicativo "verdadero" o son redundantes en relaci&oacute;n con otras variables explicativas. Estas estimaciones deben preferirse en relaci&oacute;n con las estimaciones no ajustadas.*
+*Los coeficientes de determinaci&oacute;n ajustados (Adj. R<sup>2</sup>) tienen en cuenta el n&uacute;mero de variables explicativas utilizadas en un an&aacute;lisis. Esta "inflaci&oacute;n" ocurre incluso si las variables no tienen un poder explicativo "verdadero" o son redundantes en relaci&oacute;n con otras variables explicativas. Estas estimaciones deben preferirse en relaci&oacute;n con las estimaciones no ajustadas.*
 
 
 **Significance:** P-values associated with the R<sup>2</sup> values will be calculated by permutation. The overall model and the individual partitions will be tested for significance. Only if the overall model is significant should the individual partitions be examined.<br>
-*Los valores p asociados con los valores R<sup>2</sup> se calcular?n por permutaci&oacute;n. Se probar&iacute;a la importancia del modelo general y las particiones individuales. Solo si el modelo general es significativo deben examinarse las particiones individuales.*
+*Los valores p asociados con los valores R<sup>2</sup> se calcular&aacute;n por permutaci&oacute;n. Se probar&iacute;a la importancia del modelo general y las particiones individuales. Solo si el modelo general es significativo deben examinarse las particiones individuales.*
 
 <br/>
 
@@ -195,3 +195,6 @@ https://wiki.qcbs.ca/r_workshop10
 Legendre, P. (2008). Studying beta diversity: ecological variation partitioning by multiple regression and canonical analysis. Journal of plant ecology, 1(1), 3-8.
 
 Legendre, P., & Legendre, L. (2012). Numerical ecology. Elsevier.
+
+<br/>
+<br/>
