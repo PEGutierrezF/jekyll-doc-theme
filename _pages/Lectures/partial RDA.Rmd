@@ -1,0 +1,124 @@
+---
+title: "partial RDA & Variation partitioning by RDA"
+author: 
+- "Pablo E. Guti&eacute;rrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+permalink: /pages/Lectures/Introduction to R/
+output: html_document
+---
+<br/>
+<br/>
+
+#### Primer paso: cargar las librerias que necesitas.
+```{r, warning=FALSE, message=FALSE}
+library(ggplot2)
+library(dplyr)
+library(vegan)
+```
+
+<br/>
+
+#### Segundo paso: cargar los datos.
+```{r}
+species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
+env=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal_standart.csv", header=T, row.names=NULL, sep=",")
+```
+
+<br/>
+
+#### Remover la columna de sitos.
+```{r}
+species_1 <- select(species, -site)
+env_1 <- select(env, -site)
+```
+
+<br/>
+
+#### Transformar datos.
+Hellinger es una transformacion recomendada por Legendre & Callagher (2001)
+en datos de abundancia y con una respuesta lineal
+```{r}
+species.hel <- decostand(species_1, method = "hellinger")
+```
+
+<br/>
+
+## Partial RDA
+Basic formula:  rda(Y ~ X + Condition(Z))
+Partial RDA is a special case of RDA in which the response variables Y are related to explanatory variables X in the presence of additional explanatory variables, W, called covariables.
+
+Partial RDA is thus a powerful tool when users what to assess the effect of environmental variables on species composition while taking into account the species variation due to other environmental variables with no interest. 
+```{r}
+
+simple_rda <- rda(species.hel ~ temperature + oxygen + pH + conductivity + 
+                 plants + land_use + margin + season, data = env_1)
+
+partial_rda <- rda(species.hel ~ temperature + oxygen + pH + conductivity + 
+                 plants + land_use + margin +
+                Condition(season), data = env_1)
+                
+# anova(partial_rda, permutations = how(nperm = 999))
+```
+More information: Borcard et al (2012). page 172
+
+<br/>
+
+#### Plot the results
+```{r}
+#Construct the triplots
+#Scaling 1
+
+plot(partial_rda, scaling=1, main="Triplot partial RDA - scaling 1", type="none", xlab=c("RDA1"), ylab=c("RDA2"), xlim=c(-1,1), ylim=c(-1,1))
+points(scores(partial_rda, display="sites", choices=c(1,2), scaling=1),
+       pch=21, col="black", bg="steelblue", cex=1.2)
+arrows(0,0,
+       scores(partial_rda, display="species", choices=c(1), scaling=1),
+       scores(partial_rda, display="species", choices=c(2), scaling=1),
+       col="black",length=0)
+text(scores(partial_rda, display="species", choices=c(1), scaling=1),
+     scores(partial_rda, display="species", choices=c(2), scaling=1),
+     labels=rownames(scores(partial_rda, display="species", scaling=1)),
+     col="black", cex=0.8)  
+arrows(0,0,
+      scores(partial_rda, display="bp", choices=c(1), scaling=1),
+      scores(partial_rda, display="bp", choices=c(2), scaling=1),
+      col="red")
+text(scores(partial_rda, display="bp", choices=c(1), scaling=1)+0.05,
+     scores(partial_rda, display="bp", choices=c(2), scaling=1)+0.05,
+     labels=rownames(scores(partial_rda, display="bp", choices=c(2), scaling=1)),
+     col="red", cex=1) 
+ 
+#Scaling 2
+plot(partial_rda, scaling=2, main="Triplot partial RDA - scaling 2", type="none", xlab=c("RDA1"), ylab=c("RDA2"), xlim=c(-1,1), ylim=c(-1,1))
+points(scores(partial_rda, display="sites", choices=c(1,2), scaling=2),
+       pch=21, col="black", bg="steelblue", cex=1.2)
+arrows(0,0,
+       scores(partial_rda, display="species", choices=c(1), scaling=2),
+       scores(partial_rda, display="species", choices=c(2), scaling=2),
+       col="black",length=0)
+text(scores(partial_rda, display="species", choices=c(1), scaling=2),
+     scores(partial_rda, display="species", choices=c(2), scaling=2),
+     labels=rownames(scores(partial_rda, display="species", scaling=2)),
+     col="black", cex=0.8)  
+arrows(0,0,
+       scores(partial_rda, display="bp", choices=c(1), scaling=2),
+       scores(partial_rda, display="bp", choices=c(2), scaling=2),
+       col="red")
+text(scores(partial_rda, display="bp", choices=c(1), scaling=2)+0.05,
+     scores(partial_rda, display="bp", choices=c(2), scaling=2)+0.05,
+     labels=rownames(scores(partial_rda, display="bp", choices=c(2), scaling=2)),
+     col="red", cex=1)  
+
+```
+
+<br/>
+
+
+#### **References**
+https://wiki.qcbs.ca/r_workshop10
+
+Legendre, P., & Legendre, L. (2012). Numerical ecology. Elsevier.
+
+<br/>
+<br/>
