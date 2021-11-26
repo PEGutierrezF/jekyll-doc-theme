@@ -1,7 +1,7 @@
 ---
 title: "partial RDA & Variation partitioning by RDA"
 author: 
-- "Pablo E. Gutiérrez-Fonseca"
+- "Pablo E. Guti&eacute;rrez-Fonseca"
 - "`r format(Sys.time(), '%d %B, %Y')`"
 layout: default
 permalink: /pages/Lectures/Introduction to R/
@@ -166,7 +166,30 @@ Physicochemical and Physical characteriscs are all statistically significant in 
 
 <br/>
 
-#### References
+#### **Glossary**
+
+**Total variation:** This is often the total sum of squared differences from the mean of each variable.<br>
+*Es la suma total de las diferencias al cuadrado de la media de cada variable.*
+
+**R<sup>2</sup>:** The coefficients of determination (R<sup>2</sup> values) are estimates of how much variation has been 'explained' by a given partition. In RDA, these are simply the squares of the correlation coefficients calculated.<br>
+*Los coeficientes de determinaci&oacute;n (valores R <sup> 2 </sup>) son estimaciones de cu&aacute;nta variaci&oacute;n ha sido "explicada" por una partici&oacute;n determinada. En RDA, estos son simplemente los cuadrados de los coeficientes de correlaci&oacute;n calculados*
+
+**Adjusted R<sup>2</sup>:** Adjusted coefficients of determination (Adj. R<sup>2</sup> values) take the number of explanatory variables used in an analysis into account. This "inflation" occurs even if the variables have no "true" explanatory power or are redundant relative to other explanatory variables. These estimates should be preferred relative to the unadjusted estimates.<br>
+*Los coeficientes de determinaci&oacute;n ajustados (Adj. R <sup> 2 </sup>) tienen en cuenta el n&uacute;mero de variables explicativas utilizadas en un an&aacute;lisis. Esta "inflaci&oacute;n" ocurre incluso si las variables no tienen un poder explicativo "verdadero" o son redundantes en relaci&oacute;n con otras variables explicativas. Estas estimaciones deben preferirse en relaci&oacute;n con las estimaciones no ajustadas.*
+
+
+**Significance:** P-values associated with the R<sup>2</sup> values will be calculated by permutation. The overall model and the individual partitions will be tested for significance. Only if the overall model is significant should the individual partitions be examined.<br>
+*Los valores p asociados con los valores R<sup>2</sup> se calcular?n por permutaci&oacute;n. Se probar&iacute;a la importancia del modelo general y las particiones individuales. Solo si el modelo general es significativo deben examinarse las particiones individuales.*
+
+<br/>
+
+#### **Please, Note**
+The shared partition(s) is not an interaction term (e.g., as in ANOVA-like analyses), cannot be tested, and hence cannot be assigned a significance value. This is simply the variation in the response data that could be explained by both explanatory matrices. That is, the explanatory matrices are redundant in this partition. The larger this fraction is, the more multicollinearity is present in the model.<br>
+_Las particiones compartidas **no se refieren al t&eacute;rmino de interacci&oacute;n como en los an&aacute;lisis de tipo ANOVA**, no se pueden probar y, por lo tanto, no se les puede asignar un valor de significancia. Esta es simplemente la variaci&oacute;n en los datos de respuesta que podr&iacute;a explicarse por ambas matrices explicativas. Es decir, las matrices explicativas son redundantes en esta partici&oacute;n. Cuanto m?s grande es esta fracci&oacute;n, m&aacute;s multicolinealidad est&aacute; presente en el modelo._
+
+<br/>
+
+#### **References**
 https://wiki.qcbs.ca/r_workshop10
 
 Legendre, P. (2008). Studying beta diversity: ecological variation partitioning by multiple regression and canonical analysis. Journal of plant ecology, 1(1), 3-8.
