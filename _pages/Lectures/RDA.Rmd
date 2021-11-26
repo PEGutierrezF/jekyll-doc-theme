@@ -12,7 +12,7 @@ permalink: /pages/Lectures/RDA/
 <br/>
 <br/>
 
-#### 1. Primer paso: cargar las librerias que necesitas.
+#### Primer paso: cargar las librerias que necesitas.
 
 ```{r, warning=FALSE, message=FALSE}
 
@@ -24,7 +24,7 @@ library(vegan)
 
 <br/>
 
-#### 2. Segundo paso: cargar los datos.
+#### Segundo paso: cargar los datos.
 ```{r}
 
 species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
@@ -34,7 +34,7 @@ env=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_D
 
 <br/>
 
-#### 3.  Before we can use this explanatory matrix we need to check that its rows are in the same order as our response matrix
+####  Before we can use this explanatory matrix we need to check that its rows are in the same order as our response matrix
 all.equal(rownames(species), rownames(env))
 ```{r}
 
@@ -44,7 +44,7 @@ all.equal(rownames(species), rownames(env))
 
 <br/>
 
-#### 4. Remover la columna de sitos.
+#### Remover la columna de sitos.
 ```{r}
 species_1 <- dplyr::select(species, -site)
 env_1 <- dplyr::select(env, -site)
@@ -53,22 +53,34 @@ env_1 <- dplyr::select(env, -site)
 
 <br/>
 
-#### 5.  Transformar datos.
+####  Transformar datos.
 Hellinger es una transformacion recomendada por Legendre & Callagher (2001) en datos de abundancia y con una respuesta lineal
 
 ```{r}
 
-species_2 <- vegan::decostand(species_1, method = "hellinger")
+spec.hel <- vegan::decostand(species_1, method = "hellinger")
 
 ```
 
 <br/>
 
-#### 6. vegan requires that we write out each term if we are not going to convert the factor to a dummy matrix
+#### Seleccion de variables Forward
+
+```{r}
+rda_Forward_Sel <- rda(spec.hel~1, data= env_1)
+rda_var <- rda(spec.hel ~ temperature + oxygen + pH +
+                conductivity, data= env_1, scale=T)
+step_forward <- ordistep(rda_Forward_Sel, scope=formula(rda_var),
+                         direction = "forward", perm.max=200, pstep=999)
+```
+
+<br/>
+
+#### vegan requires that we write out each term if we are not going to convert the factor to a dummy matrix
 ```{r}
 
-rda_tree_all = vegan::rda(species_2 ~ temperature + oxygen + pH +
-                conductivity + plants, data= env_1, scale=T)
+rda_tree_all = rda(spec.hel ~ temperature + oxygen + pH +
+                conductivity, data= env_1, scale=T)
 
 ```
 
