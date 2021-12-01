@@ -173,87 +173,87 @@ pre code {
 
 
 <p><br /> <br /></p>
-<div id="primer-paso-cargar-las-librerias-que-necesitas." class="section level4">
-<h4>Primer paso: cargar las librerias que necesitas.</h4>
+<div id="step-1" class="section level4">
+<h4><strong>Step 1</strong></h4>
+<p>Load libraries.<br> <em>Cargar las librerias que necesitas.</em></p>
 <pre class="r"><code>library(ggplot2)
 library(dplyr)
 library(vegan)</code></pre>
 <p><br /></p>
 </div>
-<div id="segundo-paso-cargar-los-datos." class="section level4">
-<h4>Segundo paso: cargar los datos.</h4>
+<div id="step-2" class="section level4">
+<h4><strong>Step 2</strong></h4>
+<p>Data<br> <em>Cargar los datos.</em></p>
 <pre class="r"><code>species=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)
-env=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)</code></pre>
+env=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal_standart.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)</code></pre>
 <p><br /></p>
 </div>
-<div id="before-we-can-use-this-explanatory-matrix-we-need-to-check-that-its-rows-are-in-the-same-order-as-our-response-matrix" class="section level4">
-<h4>Before we can use this explanatory matrix we need to check that its rows are in the same order as our response matrix</h4>
-<p>all.equal(rownames(species), rownames(env))</p>
-<pre class="r"><code>all.equal(rownames(species), rownames(env))</code></pre>
-<pre><code>## [1] TRUE</code></pre>
+<div id="step-3" class="section level4">
+<h4><strong>Step 3</strong></h4>
+<p><em>Remover la columna de sitos.</em></p>
+<pre class="r"><code>species_1 &lt;- select(species, -site)
+env_1 &lt;- select(env, -site)</code></pre>
 <p><br /></p>
 </div>
-<div id="remover-la-columna-de-sitos." class="section level4">
-<h4>Remover la columna de sitos.</h4>
-<pre class="r"><code>species_1 &lt;- dplyr::select(species, -site)
-env_1 &lt;- dplyr::select(env, -site)</code></pre>
+<div id="step-4" class="section level4">
+<h4><strong>Step 4</strong></h4>
+<p><strong><em>Transformar datos.</em></strong> <em>Hellinger es una transformacián recomendada por Legendre &amp; Callagher (2001) en datos de abundancia y con una respuesta lineal.</em></p>
+<pre class="r"><code>species.hel &lt;- decostand(species_1, method = &quot;hellinger&quot;)</code></pre>
 <p><br /></p>
 </div>
-<div id="transformar-datos." class="section level4">
-<h4>Transformar datos.</h4>
-<p>Hellinger es una transformacion recomendada por Legendre &amp; Callagher (2001) en datos de abundancia y con una respuesta lineal</p>
-<pre class="r"><code>spec.hel &lt;- vegan::decostand(species_1, method = &quot;hellinger&quot;)</code></pre>
-<p><br /></p>
-</div>
-<div id="seleccion-de-variables-forward" class="section level4">
-<h4>Seleccion de variables Forward</h4>
-<pre class="r"><code>rda_Forward_Sel &lt;- rda(spec.hel~1, data= env_1)
-rda_var &lt;- rda(spec.hel ~ temperature + oxygen + pH +
+<div id="seleccion-de-variables-forward" class="section level2">
+<h2><strong>Seleccion de variables Forward</strong></h2>
+<pre class="r"><code>rda_Forward_Sel &lt;- rda(species.hel~ 1, data= env_1)
+rda_var &lt;- rda(species.hel ~ temperature + oxygen + pH +
                 conductivity, data= env_1, scale=T)
+
 step_forward &lt;- ordistep(rda_Forward_Sel, scope=formula(rda_var),
                          direction = &quot;forward&quot;, perm.max=200, pstep=999)</code></pre>
 <pre><code>## 
-## Start: spec.hel ~ 1 
+## Start: species.hel ~ 1 
 ## 
 ##                Df     AIC      F Pr(&gt;F)   
 ## + temperature   1 -32.034 6.8399  0.005 **
 ## + conductivity  1 -27.955 2.5726  0.015 * 
 ## + oxygen        1 -26.917 1.5332  0.165   
-## + pH            1 -25.818 0.4538  0.925   
+## + pH            1 -25.818 0.4538  0.910   
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Step: spec.hel ~ temperature 
+## Step: species.hel ~ temperature 
 ## 
-##                Df     AIC      F Pr(&gt;F)  
-## + conductivity  1 -32.959 2.8449  0.015 *
-## + oxygen        1 -31.642 1.5461  0.110  
-## + pH            1 -30.533 0.4748  0.905  
+##                Df     AIC      F Pr(&gt;F)   
+## + conductivity  1 -32.959 2.8449  0.010 **
+## + oxygen        1 -31.642 1.5461  0.140   
+## + pH            1 -30.533 0.4748  0.935   
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Step: spec.hel ~ temperature + conductivity 
+## Step: species.hel ~ temperature + conductivity 
 ## 
 ##          Df     AIC      F Pr(&gt;F)
-## + oxygen  1 -32.639 1.5869  0.105
-## + pH      1 -31.486 0.4927  0.865</code></pre>
+## + oxygen  1 -32.639 1.5869  0.115
+## + pH      1 -31.486 0.4927  0.915</code></pre>
 <p><br /></p>
 </div>
-<div id="vegan-requires-that-we-write-out-each-term-if-we-are-not-going-to-convert-the-factor-to-a-dummy-matrix" class="section level4">
-<h4>vegan requires that we write out each term if we are not going to convert the factor to a dummy matrix</h4>
-<pre class="r"><code>rda_tree_all = rda(spec.hel ~ temperature + oxygen + pH +
+<div id="simple-rda" class="section level2">
+<h2><strong>simple RDA</strong></h2>
+<div id="step-1-simple-rda" class="section level4">
+<h4><strong>Step 1: simple RDA</strong></h4>
+<p><em>Construir el modelo y ejecutar un RDA simple</em></p>
+<pre class="r"><code>rda_tree_all = rda(species.hel ~ temperature + oxygen + pH +
                 conductivity, data= env_1, scale=T)</code></pre>
 <p><br /></p>
 </div>
-<div id="summary" class="section level4">
-<h4>7. Summary</h4>
+<div id="step-2-simple-rda" class="section level4">
+<h4><strong>Step 2: simple RDA</strong></h4>
 <p><a href="http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html" class="uri">http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html</a></p>
 <p>Inertia is another name for variation or variance in this case. “Total” refers to total variance “Constrained” refers to the amount of variance explained by the explanatory variables, “Unconstrained” refers to the residual variance. Constrained + Unconstrained = Total.</p>
 <p>An R2 statistic can be derived simply as Constrained / Total.</p>
 <pre class="r"><code>head (summary (rda_tree_all))</code></pre>
 <pre><code>## 
 ## Call:
-## rda(formula = spec.hel ~ temperature + oxygen + pH + conductivity,      data = env_1, scale = T) 
+## rda(formula = species.hel ~ temperature + oxygen + pH + conductivity,      data = env_1, scale = T) 
 ## 
 ## Partitioning of correlations:
 ##               Inertia Proportion
@@ -355,9 +355,9 @@ step_forward &lt;- ordistep(rda_Forward_Sel, scope=formula(rda_var),
 ## conductivity  0.467586 -0.8547 0.1306  0.18381   0   0</code></pre>
 <p><br /></p>
 </div>
-<div id="test-for-colinearity" class="section level4">
-<h4>8. Test for colinearity</h4>
-<p>Then, we can calculate Variance Inflation Factors (VIF) for each of the constraints (variables) from the environmental matrix. If we find an environmental variable with VIF&gt;10, we’ll know that this variable presents colinearity with another or other variables. In that case, we would have to delete the variable from our initial dataset and redo all the analysis. In our example, no variable is redundant with each other (all of them have VIF&lt;10). Linear dependencies can be explored by computing the variables’ variance inflation factors (VIF), which measure the proportion by which the variance of a regression coefficient is inflated in the presence of other explanatory variables. VIFs above 20 indicate strong collinearity. Ideally, VIFs above 10 should be at least examined, and avoided if possible. VIFs can be computed in vegan after RDA or CCA (Bocard et al. page 175)</p>
+<div id="step-3-simple-rda" class="section level4">
+<h4><strong>Step 3: simple RDA</strong></h4>
+<p><br> #### <strong>Test for colinearity</strong> Then, we can calculate Variance Inflation Factors (VIF) for each of the constraints (variables) from the environmental matrix. If we find an environmental variable with VIF&gt;10, we’ll know that this variable presents colinearity with another or other variables. In that case, we would have to delete the variable from our initial dataset and redo all the analysis. In our example, no variable is redundant with each other (all of them have VIF&lt;10). Linear dependencies can be explored by computing the variables’ variance inflation factors (VIF), which measure the proportion by which the variance of a regression coefficient is inflated in the presence of other explanatory variables. VIFs above 20 indicate strong collinearity. Ideally, VIFs above 10 should be at least examined, and avoided if possible. VIFs can be computed in vegan after RDA or CCA (Bocard et al. page 175)</p>
 <pre class="r"><code>vegan::vif.cca(rda_tree_all)</code></pre>
 <pre><code>##  temperature       oxygen           pH conductivity 
 ##     1.018591     1.047133     1.041448     1.004959</code></pre>
@@ -408,7 +408,7 @@ vegan::anova.cca(rda_tree_all, step=1000)</code></pre>
 ## Permutation: free
 ## Number of permutations: 999
 ## 
-## Model: rda(formula = spec.hel ~ temperature + oxygen + pH + conductivity, data = env_1, scale = T)
+## Model: rda(formula = species.hel ~ temperature + oxygen + pH + conductivity, data = env_1, scale = T)
 ##          Df Variance     F Pr(&gt;F)    
 ## Model     4    5.883 1.943  0.001 ***
 ## Residual 53   40.117                 
@@ -425,7 +425,7 @@ vegan::anova.cca(rda_tree_all, by=&#39;axis&#39;, step=1000)</code></pre>
 ## Permutation: free
 ## Number of permutations: 999
 ## 
-## Model: rda(formula = spec.hel ~ temperature + oxygen + pH + conductivity, data = env_1, scale = T)
+## Model: rda(formula = species.hel ~ temperature + oxygen + pH + conductivity, data = env_1, scale = T)
 ##          Df Variance      F Pr(&gt;F)   
 ## RDA1      1    2.793 3.6900  0.002 **
 ## RDA2      1    1.397 1.8452  0.169   
@@ -445,7 +445,7 @@ vegan::anova.cca(rda_tree_all, by=&#39;axis&#39;, step=1000)</code></pre>
 ## Permutation: free
 ## Number of permutations: 999
 ## 
-## Model: rda(formula = spec.hel ~ temperature + oxygen + pH + conductivity, data = env_1, scale = T)
+## Model: rda(formula = species.hel ~ temperature + oxygen + pH + conductivity, data = env_1, scale = T)
 ##              Df Variance      F Pr(&gt;F)    
 ## temperature   1    2.475 3.2697  0.001 ***
 ## oxygen        1    1.174 1.5516  0.075 .  
@@ -455,6 +455,7 @@ vegan::anova.cca(rda_tree_all, by=&#39;axis&#39;, step=1000)</code></pre>
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p><br /> <br /></p>
+</div>
 </div>
 
 

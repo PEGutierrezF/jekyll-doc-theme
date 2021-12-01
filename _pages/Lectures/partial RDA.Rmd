@@ -63,7 +63,7 @@ More information: Borcard et al (2012). page 172
 <br>
 
 #### **Step 1: partial RDA** 
-_Construir y ejecutar un RDA simple y un RDA parcial (i.e., controlado por covariables)._ 
+_Construir los modelos y ejecutar un RDA simple y un RDA parcial (i.e., controlado por covariables)._ 
 ```{r}
 
 simple_rda <- rda(species.hel ~ temperature + oxygen + pH + conductivity + 

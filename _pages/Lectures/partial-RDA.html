@@ -210,7 +210,7 @@ env_1 &lt;- select(env, -site)</code></pre>
 <p><br></p>
 <div id="step-1-partial-rda" class="section level4">
 <h4><strong>Step 1: partial RDA</strong></h4>
-<p><em>Construir y ejecutar un RDA simple y un RDA parcial (i.e., controlado por covariables).</em></p>
+<p><em>Construir los modelos y ejecutar un RDA simple y un RDA parcial (i.e., controlado por covariables).</em></p>
 <pre class="r"><code>simple_rda &lt;- rda(species.hel ~ temperature + oxygen + pH + conductivity + 
                  plants + land_use + margin + season, data = env_1)
 
