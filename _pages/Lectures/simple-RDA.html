@@ -217,26 +217,26 @@ step_forward &lt;- ordistep(rda_Forward_Sel, scope=formula(rda_var),
 ## 
 ##                Df     AIC      F Pr(&gt;F)   
 ## + temperature   1 -32.034 6.8399  0.005 **
-## + conductivity  1 -27.955 2.5726  0.010 **
+## + conductivity  1 -27.955 2.5726  0.015 * 
 ## + oxygen        1 -26.917 1.5332  0.165   
-## + pH            1 -25.818 0.4538  0.930   
+## + pH            1 -25.818 0.4538  0.925   
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Step: spec.hel ~ temperature 
 ## 
-##                Df     AIC      F Pr(&gt;F)   
-## + conductivity  1 -32.959 2.8449  0.010 **
-## + oxygen        1 -31.642 1.5461  0.115   
-## + pH            1 -30.533 0.4748  0.910   
+##                Df     AIC      F Pr(&gt;F)  
+## + conductivity  1 -32.959 2.8449  0.015 *
+## + oxygen        1 -31.642 1.5461  0.110  
+## + pH            1 -30.533 0.4748  0.905  
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Step: spec.hel ~ temperature + conductivity 
 ## 
 ##          Df     AIC      F Pr(&gt;F)
-## + oxygen  1 -32.639 1.5869  0.125
-## + pH      1 -31.486 0.4927  0.960</code></pre>
+## + oxygen  1 -32.639 1.5869  0.105
+## + pH      1 -31.486 0.4927  0.865</code></pre>
 <p><br /></p>
 </div>
 <div id="vegan-requires-that-we-write-out-each-term-if-we-are-not-going-to-convert-the-factor-to-a-dummy-matrix" class="section level4">
