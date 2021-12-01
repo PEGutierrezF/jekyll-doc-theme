@@ -10,7 +10,8 @@ output: html_document
 <br/>
 <br/>
 
-#### **First step** 
+#### **Step 1**
+Load libraries.<br>
 _Cargar las librerias que necesitas._
 ```{r, warning=FALSE, message=FALSE}
 library(ggplot2)
@@ -20,7 +21,8 @@ library(vegan)
 
 <br/>
 
-#### **Segundo paso** 
+#### **Step 2**
+Data
 _Cargar los datos._
 ```{r}
 species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
@@ -29,7 +31,8 @@ env=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_D
 
 <br/>
 
-#### **Remover la columna de sitos.**
+#### **Step 3**
+_Remover la columna de sitos._
 ```{r}
 species_1 <- select(species, -site)
 env_1 <- select(env, -site)
@@ -37,32 +40,36 @@ env_1 <- select(env, -site)
 
 <br/>
 
-#### **Transformar datos.**
-_Hellinger es una transformaci&aacute;n recomendada por Legendre & Callagher (2001) en datos de abundancia y con una respuesta lineal._
+#### **Step 4**
+**_Transformar datos._** _Hellinger es una transformaci&aacute;n recomendada por Legendre & Callagher (2001) en datos de abundancia y con una respuesta lineal._
 ```{r}
 species.hel <- decostand(species_1, method = "hellinger")
 ```
 
 <br/>
 
-## Variation partitioning by partial RDA
-Variation partitioning is a type of analysis that combines RDA and partial RDA to divide the variation of a response variable among two, three or four explanatory data sets. Variation partitioning are generally represented by Venn diagram in which the percentage of explained variance by each explanatory data set (or combination of data stets) is reported.
+## **Variation partitioning by partial RDA**
+**Variation partitioning** is a type of analysis that combines **simple RDA** and **partial RDA** to divide the variation of a response variable among two, three or four explanatory data sets. Variation partitioning are generally represented by Venn diagram in which the percentage of explained variance by each explanatory data set (or combination of data stets) is reported.<br>
+_**La partici&oacute;n de la variaci&oacute;n** es un tipo de an&aacute;lisis que combina un **RDA simple** y un **RDA parcial** para dividir la variaci&oacute;n de una variable de respuesta entre dos, tres o cuatro conjuntos de datos explicativos. La partici&oacute;n de variaci&oacute;n generalmente se representa mediante un diagrama de Venn en el que se informa el porcentaje de varianza explicada por cada conjunto de datos explicativos (o combinaci&oacute;n de stets de datos)._
 
 <br/>
 
-#### Vamos a correr un RDA con las matrices (diferentes factores) separadas. 
+#### **Step 1: Partition the Variation** 
+_Vamos a correr un RDA con las matrices (diferentes factores) separadas._ 
 ```{r}
 varp <- varpart(species.hel, ~ temperature + oxygen + pH + conductivity, 
                 ~plants + land_use + margin, ~season, data = env_1)
 varp
 ```
-Legendre (2008) [doi: 10.1093/jpe/rtm001] argued that "Negative values of Ra2 are interpreted as zeros; they correspond to cases where the explanatory variables explain less variation than random normal variables would."
+Legendre (2008) argued that "Negative values of Adj. R<sup>2</sup> are interpreted as zeros; they correspond to cases where the explanatory variables explain less variation than random normal variables would."<br>
+_Legendre (2008) sugiere que "**los valores negativos de Adj. R<sup>2</sup> se interpretan como ceros**". Estos valores corresponden a casos donde las variables explicativas explican menos variaci&oacute;n que las variables normales aleatorias"_
 
 
 <br/>
 
-#### Plot the results
-The plot shows the adjusted R2 values associated with each partition or for overlapping partitions.
+#### **Step 2: Partition the Variation**
+Plot the results. The plot shows the adjusted R<sup>2</sup> values associated with each partition or for overlapping partitions.<br>
+_Graficar los resultados. El gr&aacute;fico muestra los valores de R<sup>2</sup> ajustados asociados con cada partici&oacute;n o para particiones superpuestas._
 ```{r}
 plot(varp, digits = 2, Xnames = c('Enviromental factors', 'Vegetation', "Season"), 
      bg = c('navy', 'tomato', "lightblue"))
@@ -73,7 +80,9 @@ plot(varp, digits = 2, Xnames = c('Enviromental factors', 'Vegetation', "Season"
 
 <br/>
 
-#### Then we can test the significance of each individual component. 
+#### **Step 3: Partition the Variation**
+Test the significance of each individual component.<br> 
+_Pruebar la significancia de cada componente individual._
 ```{r}
 
 # significance of partition from Environment (physicochemical variables)
@@ -93,7 +102,8 @@ anova(rda(species.hel ~ season +
           data=env_1))
 
 ```
-Physicochemical and Physical characteriscs are all statistically significant in their contributions to Odonata community composition, even though the amount of variation explained by Physicochemistry is small. There was no statistically significant of season in Odonata composition independent of these other measured drivers.
+Physicochemical and Physical characteriscs are all statistically significant in their contributions to Odonata community composition, even though the amount of variation explained by Physicochemistry is small. There was no statistically significant of season in Odonata composition independent of these other measured drivers.<br>
+_Las variables fisicoqu&iacute;micas y vegetales son estad&iacute;sticamente significativas en sus contribuciones a la variabilidad composici&oacute;n de la comunidad Odonata, a&uacute;n cuando la cantidad de variaci&oacute;n explicada por la fisicoqu&iacute;mica es peque&ntilde;a. No hubo relaci&oacute;n, estad&iacute;sticamente significativa, de la temporada sobre la composici&oacute;n de Odonata._
 
 <br/>
 
@@ -116,7 +126,7 @@ _Los coeficientes de determinaci&oacute;n (valores R<sup>2</sup>) son estimacion
 
 #### **Please, Note**
 The shared partition(s) is not an interaction term (e.g., as in ANOVA-like analyses), cannot be tested, and hence cannot be assigned a significance value. This is simply the variation in the response data that could be explained by both explanatory matrices. That is, the explanatory matrices are redundant in this partition. The larger this fraction is, the more multicollinearity is present in the model.<br>
-_Las particiones compartidas **no se refieren al t&eacute;rmino de interacci&oacute;n como en los an&aacute;lisis de tipo ANOVA**, no se pueden probar y, por lo tanto, no se les puede asignar un valor de significancia. Esta es simplemente la variaci&oacute;n en los datos de respuesta que podr&iacute;a explicarse por ambas matrices explicativas. Es decir, las matrices explicativas son redundantes en esta partici&oacute;n. Cuanto m?s grande es esta fracci&oacute;n, m&aacute;s multicolinealidad est&aacute; presente en el modelo._
+_Las particiones compartidas **no se refieren al t&eacute;rmino de interacci&oacute;n como en los an&aacute;lisis de tipo ANOVA**, no se pueden probar y, por lo tanto, no se les puede asignar un valor de significancia. Esta es simplemente la variaci&oacute;n en los datos de respuesta que podr&iacute;a explicarse por ambas matrices explicativas. Es decir, las matrices explicativas son redundantes en esta partici&oacute;n. Cuanto m&aacute;s grande es esta fracci&oacute;n, m&aacute;s multicolinealidad est&aacute; presente en el modelo._
 
 <br/>
 

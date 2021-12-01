@@ -173,35 +173,36 @@ pre code {
 
 
 <p><br /> <br /></p>
-<div id="first-step" class="section level4">
-<h4><strong>First step</strong></h4>
-<p><em>Cargar las librerias que necesitas.</em></p>
+<div id="step-1" class="section level4">
+<h4><strong>Step 1</strong></h4>
+<p>Load libraries.<br> <em>Cargar las librerias que necesitas.</em></p>
 <pre class="r"><code>library(ggplot2)
 library(dplyr)
 library(vegan)</code></pre>
 <p><br /></p>
 </div>
-<div id="segundo-paso" class="section level4">
-<h4><strong>Segundo paso</strong></h4>
-<p><em>Cargar los datos.</em></p>
+<div id="step-2" class="section level4">
+<h4><strong>Step 2</strong></h4>
+<p>Data <em>Cargar los datos.</em></p>
 <pre class="r"><code>species=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)
 env=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal_standart.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)</code></pre>
 <p><br /></p>
 </div>
-<div id="remover-la-columna-de-sitos." class="section level4">
-<h4><strong>Remover la columna de sitos.</strong></h4>
+<div id="step-3" class="section level4">
+<h4><strong>Step 3</strong></h4>
+<p><em>Remover la columna de sitos.</em></p>
 <pre class="r"><code>species_1 &lt;- select(species, -site)
 env_1 &lt;- select(env, -site)</code></pre>
 <p><br /></p>
 </div>
-<div id="transformar-datos." class="section level4">
-<h4><strong>Transformar datos.</strong></h4>
-<p><em>Hellinger es una transformacián recomendada por Legendre &amp; Callagher (2001) en datos de abundancia y con una respuesta lineal.</em></p>
+<div id="step-4" class="section level4">
+<h4><strong>Step 4</strong></h4>
+<p><strong><em>Transformar datos.</em></strong> <em>Hellinger es una transformacián recomendada por Legendre &amp; Callagher (2001) en datos de abundancia y con una respuesta lineal.</em></p>
 <pre class="r"><code>species.hel &lt;- decostand(species_1, method = &quot;hellinger&quot;)</code></pre>
 <p><br /></p>
 </div>
 <div id="partial-rda" class="section level2">
-<h2>Partial RDA</h2>
+<h2><strong>Partial RDA</strong></h2>
 <p>Basic formula: rda(Y ~ X + Condition(Z)) Partial RDA is a special case of RDA in which the response variables Y are related to explanatory variables X in the presence of additional explanatory variables, W, called covariables.</p>
 <p>Partial RDA is thus a powerful tool when users what to assess the effect of environmental variables on species composition while taking into account the species variation due to other environmental variables with no interest.</p>
 <pre class="r"><code>simple_rda &lt;- rda(species.hel ~ temperature + oxygen + pH + conductivity + 

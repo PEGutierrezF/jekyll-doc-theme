@@ -10,7 +10,8 @@ output: html_document
 <br/>
 <br/>
 
-#### **First step** 
+#### **Step 1**
+Load libraries.<br>
 _Cargar las librerias que necesitas._
 ```{r, warning=FALSE, message=FALSE}
 library(ggplot2)
@@ -20,7 +21,8 @@ library(vegan)
 
 <br/>
 
-#### **Segundo paso** 
+#### **Step 2**
+Data
 _Cargar los datos._
 ```{r}
 species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
@@ -29,7 +31,8 @@ env=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_D
 
 <br/>
 
-#### **Remover la columna de sitos.**
+#### **Step 3**
+_Remover la columna de sitos._
 ```{r}
 species_1 <- select(species, -site)
 env_1 <- select(env, -site)
@@ -37,15 +40,15 @@ env_1 <- select(env, -site)
 
 <br/>
 
-#### **Transformar datos.**
-_Hellinger es una transformaci&aacute;n recomendada por Legendre & Callagher (2001) en datos de abundancia y con una respuesta lineal._
+#### **Step 4**
+**_Transformar datos._** _Hellinger es una transformaci&aacute;n recomendada por Legendre & Callagher (2001) en datos de abundancia y con una respuesta lineal._
 ```{r}
 species.hel <- decostand(species_1, method = "hellinger")
 ```
 
 <br/>
 
-## Partial RDA
+## **Partial RDA**
 Basic formula:  rda(Y ~ X + Condition(Z))
 Partial RDA is a special case of RDA in which the response variables Y are related to explanatory variables X in the presence of additional explanatory variables, W, called covariables.
 
