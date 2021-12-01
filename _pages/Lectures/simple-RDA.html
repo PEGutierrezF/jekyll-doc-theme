@@ -203,7 +203,7 @@ env_1 &lt;- select(env, -site)</code></pre>
 </div>
 <div id="seleccion-de-variables-forward" class="section level3">
 <h3><strong>Seleccion de variables Forward</strong></h3>
-<p><em>Muchas veces uno desea reducir el námero de variables explicatiivas de un modelo. Para qué hace esto? 1) Para buscar parsimonia (la solución mas simple con menos variables) en el modelo; 2) Por sospechas de correlación entre variables explicativas. Esto último podría volver inestables los coeficientes de regresión de las variables explicativas del modelo (Borcard et al. 2012).</em></p>
+<p><em>Muchas veces uno desea reducir el número de variables explicativas de un modelo. Para qué hacer esto? 1) Para buscar parsimonia (la solución mas simple con menos variables) en el modelo; 2) Por sospechas de correlación entre variables explicativas. Esto último podría volver inestables los coeficientes de regresión de las variables explicativas del modelo (Borcard et al. 2012).</em></p>
 <pre class="r"><code>rda_Forward_Sel &lt;- rda(species.hel~ 1, data= env_1)
 rda_var &lt;- rda(species.hel ~ temperature + oxygen + pH + 
                 conductivity, data= env_1, scale=T)

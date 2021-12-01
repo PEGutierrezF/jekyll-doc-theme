@@ -51,7 +51,7 @@ species.hel <- decostand(species_1, method = "hellinger")
 <br/>
 
 ### **Seleccion de variables Forward**
-_Muchas veces uno desea reducir el n&aacute;mero de variables explicatiivas de un modelo.  Para qu&eacute; hace esto? 1) Para buscar parsimonia (la soluci&oacute;n mas simple con menos variables) en el modelo; 2) Por sospechas de correlaci&oacute;n entre variables explicativas.  Esto &uacute;ltimo podr&iacute;a volver inestables los coeficientes de regresi&oacute;n de las variables explicativas del modelo (Borcard et al. 2012)._
+_Muchas veces uno desea reducir el n&uacute;mero de variables explicativas de un modelo.  Para qu&eacute; hacer esto? 1) Para buscar parsimonia (la soluci&oacute;n mas simple con menos variables) en el modelo; 2) Por sospechas de correlaci&oacute;n entre variables explicativas.  Esto &uacute;ltimo podr&iacute;a volver inestables los coeficientes de regresi&oacute;n de las variables explicativas del modelo (Borcard et al. 2012)._
 ```{r}
 rda_Forward_Sel <- rda(species.hel~ 1, data= env_1)
 rda_var <- rda(species.hel ~ temperature + oxygen + pH + 
