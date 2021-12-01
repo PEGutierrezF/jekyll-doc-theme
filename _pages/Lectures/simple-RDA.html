@@ -205,7 +205,7 @@ env_1 &lt;- select(env, -site)</code></pre>
 <h3><strong>Seleccion de variables Forward</strong></h3>
 <p><em>Muchas veces uno desea reducir el námero de variables explicatiivas de un modelo. Para qué hace esto? 1) Para buscar parsimonia (la solución mas simple con menos variables) en el modelo; 2) Por sospechas de correlación entre variables explicativas. Esto último podría volver inestables los coeficientes de regresión de las variables explicativas del modelo (Borcard et al. 2012).</em></p>
 <pre class="r"><code>rda_Forward_Sel &lt;- rda(species.hel~ 1, data= env_1)
-rda_var &lt;- rda(species.hel ~ temperature + oxygen + pH +
+rda_var &lt;- rda(species.hel ~ temperature + oxygen + pH + 
                 conductivity, data= env_1, scale=T)
 
 
@@ -239,7 +239,7 @@ step_forward &lt;- ordiR2step(rda_Forward_Sel, scope=formula(rda_var),
 ## + pH             0.08434640
 ## 
 ##                Df     AIC      F Pr(&gt;F)   
-## + conductivity  1 -32.959 2.8449  0.004 **
+## + conductivity  1 -32.959 2.8449  0.006 **
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
@@ -383,7 +383,7 @@ step_forward &lt;- ordiR2step(rda_Forward_Sel, scope=formula(rda_var),
 </div>
 <div id="test-for-colinearity" class="section level3">
 <h3><strong>Test for colinearity</strong></h3>
-<p>Then, we can calculate Variance Inflation Factors (VIF) for each of the constraints (variables) from the environmental matrix. If we find an environmental variable with VIF&gt;10, we’ll know that this variable presents colinearity with another or other variables. In that case, we would have to delete the variable from our initial dataset and redo all the analysis. In our example, no variable is redundant with each other (all of them have VIF&lt;10). Linear dependencies can be explored by computing the variables’ variance inflation factors (VIF), which measure the proportion by which the variance of a regression coefficient is inflated in the presence of other explanatory variables. VIFs above 20 indicate strong collinearity. Ideally, VIFs above 10 should be at least examined, and avoided if possible. VIFs can be computed in vegan after RDA or CCA (Bocard et al. page 175)</p>
+<p>Then, we can calculate Variance Inflation Factors (VIF) for each of the constraints (variables) from the environmental matrix. If we find an environmental variable with VIF&gt;10, we’ll know that this variable presents colinearity with another or other variables. In that case, we would have to delete the variable from our initial dataset and redo all the analysis. In our example, no variable is redundant with each other (all of them have VIF&lt;10). Linear dependencies can be explored by computing the variables’ variance inflation factors (VIF), which measure the proportion by which the variance of a regression coefficient is inflated in the presence of other explanatory variables. <br> <strong>VIFs above 20 indicate strong collinearity. Ideally, VIFs above 10 should be at least examined, and avoided if possible. VIFs can be computed in vegan after RDA or CCA (Bocard et al. page 175)</strong></p>
 <pre class="r"><code>vegan::vif.cca(rda_tree_all)</code></pre>
 <pre><code>##  temperature       oxygen           pH conductivity 
 ##     1.018591     1.047133     1.041448     1.004959</code></pre>
