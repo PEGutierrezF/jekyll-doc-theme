@@ -22,7 +22,7 @@ library(vegan)
 <br/>
 
 #### **Step 2**
-Data
+Data<br>
 _Cargar los datos._
 ```{r}
 species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
@@ -82,7 +82,7 @@ plot(varp, digits = 2, Xnames = c('Enviromental factors', 'Vegetation', "Season"
 
 #### **Step 3: Partition the Variation**
 Test the significance of each individual component.<br> 
-_Pruebar la significancia de cada componente individual._
+_Probar la significancia de cada componente individual._
 ```{r}
 
 # significance of partition from Environment (physicochemical variables)
@@ -102,7 +102,7 @@ anova(rda(species.hel ~ season +
           data=env_1))
 
 ```
-Physicochemical and Physical characteriscs are all statistically significant in their contributions to Odonata community composition, even though the amount of variation explained by Physicochemistry is small. There was no statistically significant of season in Odonata composition independent of these other measured drivers.<br>
+Physicochemical variables and vegetation around urban lakes are all statistically significant in their contributions to Odonata community composition, even though the amount of variation explained by Physicochemistry is small. There was no statistically significant of season in Odonata composition independent of these other measured drivers.<br>
 _Las variables fisicoqu&iacute;micas y vegetales son estad&iacute;sticamente significativas en sus contribuciones a la variabilidad composici&oacute;n de la comunidad Odonata, a&uacute;n cuando la cantidad de variaci&oacute;n explicada por la fisicoqu&iacute;mica es peque&ntilde;a. No hubo relaci&oacute;n, estad&iacute;sticamente significativa, de la temporada sobre la composici&oacute;n de Odonata._
 
 <br/>

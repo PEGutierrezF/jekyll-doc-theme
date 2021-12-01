@@ -183,7 +183,7 @@ library(vegan)</code></pre>
 </div>
 <div id="step-2" class="section level4">
 <h4><strong>Step 2</strong></h4>
-<p>Data <em>Cargar los datos.</em></p>
+<p>Data<br> <em>Cargar los datos.</em></p>
 <pre class="r"><code>species=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)
 env=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal_standart.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)</code></pre>
 <p><br /></p>
@@ -269,7 +269,7 @@ varp</code></pre>
 </div>
 <div id="step-3-partition-the-variation" class="section level4">
 <h4><strong>Step 3: Partition the Variation</strong></h4>
-<p>Test the significance of each individual component.<br> <em>Pruebar la significancia de cada componente individual.</em></p>
+<p>Test the significance of each individual component.<br> <em>Probar la significancia de cada componente individual.</em></p>
 <pre class="r"><code># significance of partition from Environment (physicochemical variables)
 anova(rda(species.hel ~ temperature + oxygen + pH + conductivity + 
           Condition(plants + land_use + margin) +  
@@ -280,7 +280,7 @@ anova(rda(species.hel ~ temperature + oxygen + pH + conductivity +
 ## 
 ## Model: rda(formula = species.hel ~ temperature + oxygen + pH + conductivity + Condition(plants + land_use + margin) + Condition(season), data = env_1)
 ##          Df Variance      F Pr(&gt;F)  
-## Model     4  0.02938 1.5398   0.03 *
+## Model     4  0.02938 1.5398  0.025 *
 ## Residual 46  0.21943                
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
@@ -309,9 +309,9 @@ anova(rda(species.hel ~ season +
 ## 
 ## Model: rda(formula = species.hel ~ season + Condition(plants + land_use + margin) + Condition(temperature + oxygen + pH + conductivity), data = env_1)
 ##          Df Variance      F Pr(&gt;F)
-## Model     1 0.006247 1.3096  0.161
+## Model     1 0.006247 1.3096  0.192
 ## Residual 46 0.219425</code></pre>
-<p>Physicochemical and Physical characteriscs are all statistically significant in their contributions to Odonata community composition, even though the amount of variation explained by Physicochemistry is small. There was no statistically significant of season in Odonata composition independent of these other measured drivers.<br> <em>Las variables fisicoquímicas y vegetales son estadísticamente significativas en sus contribuciones a la variabilidad composición de la comunidad Odonata, aún cuando la cantidad de variación explicada por la fisicoquímica es pequeña. No hubo relación, estadísticamente significativa, de la temporada sobre la composición de Odonata.</em></p>
+<p>Physicochemical variables and vegetation around urban lakes are all statistically significant in their contributions to Odonata community composition, even though the amount of variation explained by Physicochemistry is small. There was no statistically significant of season in Odonata composition independent of these other measured drivers.<br> <em>Las variables fisicoquímicas y vegetales son estadísticamente significativas en sus contribuciones a la variabilidad composición de la comunidad Odonata, aún cuando la cantidad de variación explicada por la fisicoquímica es pequeña. No hubo relación, estadísticamente significativa, de la temporada sobre la composición de Odonata.</em></p>
 <p><br /></p>
 </div>
 <div id="glossary" class="section level4">
