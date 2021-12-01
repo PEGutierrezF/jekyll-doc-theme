@@ -50,7 +50,7 @@ species.hel <- decostand(species_1, method = "hellinger")
 
 <br/>
 
-## **Seleccion de variables Forward**
+### **Seleccion de variables Forward**
 
 ```{r}
 rda_Forward_Sel <- rda(species.hel~ 1, data= env_1)
@@ -78,46 +78,38 @@ rda_tree_all = rda(species.hel ~ temperature + oxygen + pH +
 
 #### **Step 2: simple RDA**
 
-http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html
-
-Inertia is another name for variation or variance in this case. 
-"Total" refers to total variance
-"Constrained" refers to the amount of variance explained by the explanatory variables,
-"Unconstrained" refers to the residual variance. 
-Constrained + Unconstrained = Total.
-
-An R2 statistic can be derived simply as Constrained / Total.
+**Summary**
 
 ```{r}
 
-head (summary (rda_tree_all))
+head (summary(rda_tree_all))
 
 ```
 
 <br/>
 
-#### **Step 3: simple RDA**
-<br>
-#### **Test for colinearity**
+### **Test for colinearity**
+
 Then, we can calculate Variance Inflation Factors (VIF) for each of the constraints (variables) from the environmental matrix. If we find an environmental variable with VIF>10, we'll know that this variable presents colinearity with another or other variables. In that case, we would have to delete the variable from our initial dataset and redo all the analysis. In our example, no variable is redundant with each other (all of them have VIF<10). Linear dependencies can be explored by computing the variables' variance inflation factors (VIF), which measure the proportion by which the variance of a regression coefficient is inflated in the presence of other explanatory variables. VIFs above 20 indicate strong collinearity. Ideally, VIFs above 10 should be at least examined, and avoided if possible. VIFs can be computed in vegan after RDA or CCA (Bocard et al. page 175)
 
 ```{r}
+
 vegan::vif.cca(rda_tree_all)
 
 ```
 
 <br/>
 
-#### 9. Plots
+#### **Step 3: simple RDA**
+Plot the results.
 ```{r}
-
 screeplot(rda_tree_all)
-
 ```
 
 <br/>
 
-#### 10. Percentage explained by constrained and unconstrained variables.
+#### **Step 4: simple RDA**
+Percentage explained by constrained and unconstrained variables.
 ```{r}
 constrained_eig <- rda_tree_all$CCA$eig/rda_tree_all$tot.chi*100
 unconstrained_eig <- rda_tree_all$CA$eig/rda_tree_all$tot.chi*100
@@ -129,7 +121,8 @@ barplot (expl_var[1:20], col = c(rep ('red', length (constrained_eig)), rep ('bl
 
 <br/>
 
-#### 11. Ordination plots
+#### **Step 5: simple RDA**
+**Ordination plots**
 
 Scaling 1 (distance biplot): Se prioriza que la distancia entre objetos en el grafico respete tanto como sea posible las distancias euclidias de la matriz original. Los angulos entre vectores (variables) pueden ser distorsionados.
 
@@ -150,7 +143,8 @@ plot(rda_tree_all, scaling=2, main="Odonata in Urban ponds, scaling=2")
 
 <br/>
 
-#### 12. Calcular las R
+#### **Step 6: simple RDA**
+_Calcular las R_
 
 ```{r}
 (R2 <- vegan::RsquareAdj(rda_tree_all)$r.squared)
@@ -161,7 +155,8 @@ plot(rda_tree_all, scaling=2, main="Odonata in Urban ponds, scaling=2")
 
 <br/>
 
-#### 13a Testing the global significance of RDA
+#### **Step 6: simple RDA**
+Testing the global significance of RDA
 ```{r}
 set.seed(1)
 vegan::anova.cca(rda_tree_all, step=1000)
@@ -169,8 +164,7 @@ vegan::anova.cca(rda_tree_all, step=1000)
 ```
 
 
-
-#### 13b Testing the significance of CCA axes (at least the first two or three should present a significant p value)
+Testing the significance of RDA axes (at least the first two or three should present a significant p value)
 Hint Argument "step" gives the minimal number of permutations requested 
 to assess if the F value of a test is obviously significant or not
 ```{r}
@@ -181,13 +175,31 @@ vegan::anova.cca(rda_tree_all, by='axis', step=1000)
 
 <br/>
 
-#### 13c Testing the significance of terms (environmental variables)
+Testing the significance of terms (environmental variables)
 Hint Argument "step" gives the minimal number of permutations requested 
 to assess if the F value of a test is obviously significant or not
 ```{r}
 vegan::anova.cca(rda_tree_all, by='terms', step=1000)
 
 ```
+
+<br>
+
+#### **Glossary**
+
+Inertia is another name for variation or variance in this case. 
+"Total" refers to total variance
+"Constrained" refers to the amount of variance explained by the explanatory variables,
+"Unconstrained" refers to the residual variance. 
+Constrained + Unconstrained = Total.
+
+An R2 statistic can be derived simply as Constrained / Total.
+
+<br>
+
+#### **References**
+
+http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html
 
 <br/>
 <br/>
