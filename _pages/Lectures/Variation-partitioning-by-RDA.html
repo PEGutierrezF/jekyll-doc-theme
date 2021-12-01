@@ -207,7 +207,7 @@ env_1 &lt;- select(env, -site)</code></pre>
 <p><br /></p>
 <div id="step-1-partition-the-variation" class="section level4">
 <h4><strong>Step 1: Partition the Variation</strong></h4>
-<p><em>Vamos a correr un RDA con las matrices (diferentes factores) separadas.</em></p>
+<p><em>Construir y ejecutar un RDA con las matrices (diferentes factores) separadas.</em></p>
 <pre class="r"><code>varp &lt;- varpart(species.hel, ~ temperature + oxygen + pH + conductivity, 
                 ~plants + land_use + margin, ~season, data = env_1)
 varp</code></pre>
@@ -309,7 +309,7 @@ anova(rda(species.hel ~ season +
 ## 
 ## Model: rda(formula = species.hel ~ season + Condition(plants + land_use + margin) + Condition(temperature + oxygen + pH + conductivity), data = env_1)
 ##          Df Variance      F Pr(&gt;F)
-## Model     1 0.006247 1.3096  0.192
+## Model     1 0.006247 1.3096  0.187
 ## Residual 46 0.219425</code></pre>
 <p>Physicochemical variables and vegetation around urban lakes are all statistically significant in their contributions to Odonata community composition, even though the amount of variation explained by Physicochemistry is small. There was no statistically significant of season in Odonata composition independent of these other measured drivers.<br> <em>Las variables fisicoquímicas y vegetales son estadísticamente significativas en sus contribuciones a la variabilidad composición de la comunidad Odonata, aún cuando la cantidad de variación explicada por la fisicoquímica es pequeña. No hubo relación, estadísticamente significativa, de la temporada sobre la composición de Odonata.</em></p>
 <p><br /></p>

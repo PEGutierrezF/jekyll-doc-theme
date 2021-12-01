@@ -22,7 +22,7 @@ library(vegan)
 <br/>
 
 #### **Step 2**
-Data
+Data<br>
 _Cargar los datos._
 ```{r}
 species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
@@ -49,10 +49,21 @@ species.hel <- decostand(species_1, method = "hellinger")
 <br/>
 
 ## **Partial RDA**
-Basic formula:  rda(Y ~ X + Condition(Z))
-Partial RDA is a special case of RDA in which the response variables Y are related to explanatory variables X in the presence of additional explanatory variables, W, called covariables.
+Basic formula:  rda(Y ~ X + Condition(Z))<br>
+_La formula b&aacute;sica es:  rda(Y ~ X + Condition(Z))_<br>
+
+Partial RDA is a special case of RDA in which the response variables Y are related to explanatory variables X in the presence of additional explanatory variables, W, called covariables.<br>
+_Un RDA parcial es un caso especial de un RDA simple en el que las **variables de respuesta Y** est&aacute;n relacionadas con las **variables explicativas X** en presencia de **variables explicativas adicionales, W,** llamadas **covariables**._<br>
 
 Partial RDA is thus a powerful tool when users what to assess the effect of environmental variables on species composition while taking into account the species variation due to other environmental variables with no interest. 
+_Por lo tanto, un RDA parcial es una herramienta poderosa cuando los usuarios eval&uacute;an el efecto de las variables ambientales en la composici&oacute;n de las especies, teniendo en cuenta la variaci&oacute;n de las especies debido a otras variables ambientales sin "inter&eacute;s"._<br>
+
+More information: Borcard et al (2012). page 172
+
+<br>
+
+#### **Step 1: partial RDA** 
+_Construir y ejecutar un RDA simple y un RDA parcial (i.e., controlado por covariables)._ 
 ```{r}
 
 simple_rda <- rda(species.hel ~ temperature + oxygen + pH + conductivity + 
@@ -64,11 +75,11 @@ partial_rda <- rda(species.hel ~ temperature + oxygen + pH + conductivity +
                 
 # anova(partial_rda, permutations = how(nperm = 999))
 ```
-More information: Borcard et al (2012). page 172
 
 <br/>
 
-#### Plot the results
+#### **Step 2: partial RDA** 
+Plot the results
 ```{r}
 #Construct the triplots
 #Scaling 1

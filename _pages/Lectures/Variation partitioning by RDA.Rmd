@@ -55,7 +55,7 @@ _**La partici&oacute;n de la variaci&oacute;n** es un tipo de an&aacute;lisis qu
 <br/>
 
 #### **Step 1: Partition the Variation** 
-_Vamos a correr un RDA con las matrices (diferentes factores) separadas._ 
+_Construir y ejecutar un RDA con las matrices (diferentes factores) separadas._ 
 ```{r}
 varp <- varpart(species.hel, ~ temperature + oxygen + pH + conductivity, 
                 ~plants + land_use + margin, ~season, data = env_1)

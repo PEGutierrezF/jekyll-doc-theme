@@ -183,7 +183,7 @@ library(vegan)</code></pre>
 </div>
 <div id="step-2" class="section level4">
 <h4><strong>Step 2</strong></h4>
-<p>Data <em>Cargar los datos.</em></p>
+<p>Data<br> <em>Cargar los datos.</em></p>
 <pre class="r"><code>species=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)
 env=read.csv(&quot;D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal_standart.csv&quot;, header=T, row.names=NULL, sep=&quot;,&quot;)</code></pre>
 <p><br /></p>
@@ -203,8 +203,14 @@ env_1 &lt;- select(env, -site)</code></pre>
 </div>
 <div id="partial-rda" class="section level2">
 <h2><strong>Partial RDA</strong></h2>
-<p>Basic formula: rda(Y ~ X + Condition(Z)) Partial RDA is a special case of RDA in which the response variables Y are related to explanatory variables X in the presence of additional explanatory variables, W, called covariables.</p>
-<p>Partial RDA is thus a powerful tool when users what to assess the effect of environmental variables on species composition while taking into account the species variation due to other environmental variables with no interest.</p>
+<p>Basic formula: rda(Y ~ X + Condition(Z))<br> <em>La formula básica es: rda(Y ~ X + Condition(Z))</em><br></p>
+<p>Partial RDA is a special case of RDA in which the response variables Y are related to explanatory variables X in the presence of additional explanatory variables, W, called covariables.<br> <em>Un RDA parcial es un caso especial de un RDA simple en el que las <strong>variables de respuesta Y</strong> están relacionadas con las <strong>variables explicativas X</strong> en presencia de <strong>variables explicativas adicionales, W,</strong> llamadas <strong>covariables</strong>.</em><br></p>
+<p>Partial RDA is thus a powerful tool when users what to assess the effect of environmental variables on species composition while taking into account the species variation due to other environmental variables with no interest. <em>Por lo tanto, un RDA parcial es una herramienta poderosa cuando los usuarios evalúan el efecto de las variables ambientales en la composición de las especies, teniendo en cuenta la variación de las especies debido a otras variables ambientales sin “interés”.</em><br></p>
+<p>More information: Borcard et al (2012). page 172</p>
+<p><br></p>
+<div id="step-1-partial-rda" class="section level4">
+<h4><strong>Step 1: partial RDA</strong></h4>
+<p><em>Construir y ejecutar un RDA simple y un RDA parcial (i.e., controlado por covariables).</em></p>
 <pre class="r"><code>simple_rda &lt;- rda(species.hel ~ temperature + oxygen + pH + conductivity + 
                  plants + land_use + margin + season, data = env_1)
 
@@ -213,10 +219,11 @@ partial_rda &lt;- rda(species.hel ~ temperature + oxygen + pH + conductivity +
                 Condition(season), data = env_1)
                 
 # anova(partial_rda, permutations = how(nperm = 999))</code></pre>
-<p>More information: Borcard et al (2012). page 172</p>
 <p><br /></p>
-<div id="plot-the-results" class="section level4">
-<h4>Plot the results</h4>
+</div>
+<div id="step-2-partial-rda" class="section level4">
+<h4><strong>Step 2: partial RDA</strong></h4>
+<p>Plot the results</p>
 <pre class="r"><code>#Construct the triplots
 #Scaling 1
 
