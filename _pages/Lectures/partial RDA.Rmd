@@ -10,7 +10,8 @@ output: html_document
 <br/>
 <br/>
 
-#### Primer paso: cargar las librerias que necesitas.
+#### **First step** 
+_Cargar las librerias que necesitas._
 ```{r, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(dplyr)
@@ -19,7 +20,8 @@ library(vegan)
 
 <br/>
 
-#### Segundo paso: cargar los datos.
+#### **Segundo paso** 
+_Cargar los datos._
 ```{r}
 species=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_species.csv", header=T, row.names=NULL, sep=",")
 env=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/RDA_environmetal_standart.csv", header=T, row.names=NULL, sep=",")
@@ -27,7 +29,7 @@ env=read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_D
 
 <br/>
 
-#### Remover la columna de sitos.
+#### **Remover la columna de sitos.**
 ```{r}
 species_1 <- select(species, -site)
 env_1 <- select(env, -site)
@@ -35,9 +37,8 @@ env_1 <- select(env, -site)
 
 <br/>
 
-#### Transformar datos.
-Hellinger es una transformacion recomendada por Legendre & Callagher (2001)
-en datos de abundancia y con una respuesta lineal
+#### **Transformar datos.**
+_Hellinger es una transformaci&aacute;n recomendada por Legendre & Callagher (2001) en datos de abundancia y con una respuesta lineal._
 ```{r}
 species.hel <- decostand(species_1, method = "hellinger")
 ```
