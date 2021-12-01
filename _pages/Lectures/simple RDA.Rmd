@@ -57,8 +57,12 @@ rda_Forward_Sel <- rda(species.hel~ 1, data= env_1)
 rda_var <- rda(species.hel ~ temperature + oxygen + pH +
                 conductivity, data= env_1, scale=T)
 
-step_forward <- ordistep(rda_Forward_Sel, scope=formula(rda_var),
+
+# scope must give the formula of the largest possible model (maximum model)
+step_forward <- ordiR2step(rda_Forward_Sel, scope=formula(rda_var),
                          direction = "forward", perm.max=200, pstep=999)
+
+anova(step_forward)
 ```
 
 <br/>
@@ -201,6 +205,12 @@ An R2 statistic can be derived simply as Constrained / Total.
 #### **References**
 
 http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html
+
+https://www.youtube.com/watch?v=BEldn3BmqW0
+
+Blanchet, F. G., Legendre, P., & Borcard, D. (2008). Forward selection of explanatory variables. Ecology, 89(9), 2623-2632.
+
+Borcard, D., Gillet, F., & Legendre, P. (2011). Numerical ecology with R (Vol. 2, p. 688). New York: springer.
 
 <br/>
 <br/>

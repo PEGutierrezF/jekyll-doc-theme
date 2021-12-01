@@ -208,33 +208,58 @@ env_1 &lt;- select(env, -site)</code></pre>
 rda_var &lt;- rda(species.hel ~ temperature + oxygen + pH +
                 conductivity, data= env_1, scale=T)
 
-step_forward &lt;- ordistep(rda_Forward_Sel, scope=formula(rda_var),
+
+# scope must give the formula of the largest possible model (maximum model)
+step_forward &lt;- ordiR2step(rda_Forward_Sel, scope=formula(rda_var),
                          direction = &quot;forward&quot;, perm.max=200, pstep=999)</code></pre>
-<pre><code>## 
-## Start: species.hel ~ 1 
+<pre><code>## Step: R2.adj= 0 
+## Call: species.hel ~ 1 
+##  
+##                  R2.adjusted
+## &lt;All variables&gt;  0.121876827
+## + temperature    0.092933271
+## + conductivity   0.026849480
+## + oxygen         0.009268338
+## &lt;none&gt;           0.000000000
+## + pH            -0.009674690
+## 
+##               Df     AIC      F Pr(&gt;F)   
+## + temperature  1 -32.034 6.8399  0.002 **
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Step: R2.adj= 0.09293327 
+## Call: species.hel ~ temperature 
+##  
+##                 R2.adjusted
+## &lt;All variables&gt;  0.12187683
+## + conductivity   0.12186316
+## + oxygen         0.10169278
+## &lt;none&gt;           0.09293327
+## + pH             0.08434640
 ## 
 ##                Df     AIC      F Pr(&gt;F)   
-## + temperature   1 -32.034 6.8399  0.005 **
-## + conductivity  1 -27.955 2.5726  0.020 * 
-## + oxygen        1 -26.917 1.5332  0.125   
-## + pH            1 -25.818 0.4538  0.885   
+## + conductivity  1 -32.959 2.8449  0.004 **
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
-## Step: species.hel ~ temperature 
+## Step: R2.adj= 0.1218632 
+## Call: species.hel ~ temperature + conductivity 
+##  
+##                 R2.adjusted
+## + oxygen          0.1311344
+## &lt;All variables&gt;   0.1218768
+## &lt;none&gt;            0.1218632
+## + pH              0.1136885</code></pre>
+<pre class="r"><code>anova(step_forward)</code></pre>
+<pre><code>## Permutation test for rda under reduced model
+## Permutation: free
+## Number of permutations: 999
 ## 
-##                Df     AIC      F Pr(&gt;F)  
-## + conductivity  1 -32.959 2.8449   0.02 *
-## + oxygen        1 -31.642 1.5461   0.11  
-## + pH            1 -30.533 0.4748   0.94  
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Step: species.hel ~ temperature + conductivity 
-## 
-##          Df     AIC      F Pr(&gt;F)  
-## + oxygen  1 -32.639 1.5869   0.06 .
-## + pH      1 -31.486 0.4927   0.92  
+## Model: rda(formula = species.hel ~ temperature + conductivity, data = env_1)
+##          Df Variance      F Pr(&gt;F)    
+## Model     2  0.09366 4.9551  0.001 ***
+## Residual 55  0.51980                  
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p><br /></p>
@@ -465,6 +490,9 @@ vegan::anova.cca(rda_tree_all, by=&#39;axis&#39;, step=1000)</code></pre>
 <div id="references" class="section level4">
 <h4><strong>References</strong></h4>
 <p><a href="http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html" class="uri">http://dmcglinn.github.io/quant_methods/lessons/multivariate_models.html</a></p>
+<p><a href="https://www.youtube.com/watch?v=BEldn3BmqW0" class="uri">https://www.youtube.com/watch?v=BEldn3BmqW0</a></p>
+<p>Blanchet, F. G., Legendre, P., &amp; Borcard, D. (2008). Forward selection of explanatory variables. Ecology, 89(9), 2623-2632.</p>
+<p>Borcard, D., Gillet, F., &amp; Legendre, P. (2011). Numerical ecology with R (Vol. 2, p. 688). New York: springer.</p>
 <p><br /> <br /></p>
 </div>
 </div>
