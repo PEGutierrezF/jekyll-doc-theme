@@ -214,9 +214,9 @@ step_forward &lt;- ordistep(rda_Forward_Sel, scope=formula(rda_var),
 ## 
 ##                Df     AIC      F Pr(&gt;F)   
 ## + temperature   1 -32.034 6.8399  0.005 **
-## + conductivity  1 -27.955 2.5726  0.005 **
-## + oxygen        1 -26.917 1.5332  0.125   
-## + pH            1 -25.818 0.4538  0.920   
+## + conductivity  1 -27.955 2.5726  0.025 * 
+## + oxygen        1 -26.917 1.5332  0.135   
+## + pH            1 -25.818 0.4538  0.930   
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
@@ -224,16 +224,16 @@ step_forward &lt;- ordistep(rda_Forward_Sel, scope=formula(rda_var),
 ## 
 ##                Df     AIC      F Pr(&gt;F)  
 ## + conductivity  1 -32.959 2.8449  0.020 *
-## + oxygen        1 -31.642 1.5461  0.155  
-## + pH            1 -30.533 0.4748  0.910  
+## + oxygen        1 -31.642 1.5461  0.125  
+## + pH            1 -30.533 0.4748  0.900  
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Step: species.hel ~ temperature + conductivity 
 ## 
 ##          Df     AIC      F Pr(&gt;F)
-## + oxygen  1 -32.639 1.5869   0.13
-## + pH      1 -31.486 0.4927   0.91</code></pre>
+## + oxygen  1 -32.639 1.5869  0.155
+## + pH      1 -31.486 0.4927  0.900</code></pre>
 <p><br /></p>
 </div>
 <div id="simple-rda" class="section level2">
@@ -416,6 +416,7 @@ vegan::anova.cca(rda_tree_all, step=1000)</code></pre>
 ## Residual 53   40.117                 
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p><br></p>
 <p>Testing the significance of RDA axes (at least the first two or three should present a significant p value) Hint Argument “step” gives the minimal number of permutations requested to assess if the F value of a test is obviously significant or not</p>
 <pre class="r"><code>set.seed(1)
 vegan::anova.cca(rda_tree_all, by=&#39;axis&#39;, step=1000)</code></pre>
@@ -454,7 +455,7 @@ vegan::anova.cca(rda_tree_all, by=&#39;axis&#39;, step=1000)</code></pre>
 </div>
 <div id="glossary" class="section level4">
 <h4><strong>Glossary</strong></h4>
-<p>Inertia is another name for variation or variance in this case. “Total” refers to total variance “Constrained” refers to the amount of variance explained by the explanatory variables, “Unconstrained” refers to the residual variance. Constrained + Unconstrained = Total.</p>
+<p><strong>Inertia:</strong> is another name for variation or variance in this case.<br> <strong>“Total”:</strong> refers to total variance. Constrained + Unconstrained = Total<br> <strong>“Constrained”:</strong> refers to the amount of variance explained by the explanatory variables.<br> <strong>“Unconstrained”:</strong> refers to the residual variance.</p>
 <p>An R2 statistic can be derived simply as Constrained / Total.</p>
 <p><br></p>
 </div>

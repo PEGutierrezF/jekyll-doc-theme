@@ -163,6 +163,7 @@ vegan::anova.cca(rda_tree_all, step=1000)
 
 ```
 
+<br>
 
 Testing the significance of RDA axes (at least the first two or three should present a significant p value)
 Hint Argument "step" gives the minimal number of permutations requested 
@@ -187,11 +188,11 @@ vegan::anova.cca(rda_tree_all, by='terms', step=1000)
 
 #### **Glossary**
 
-Inertia is another name for variation or variance in this case. 
-"Total" refers to total variance
-"Constrained" refers to the amount of variance explained by the explanatory variables,
-"Unconstrained" refers to the residual variance. 
-Constrained + Unconstrained = Total.
+**Inertia:** is another name for variation or variance in this case.<br>
+**"Total":** refers to total variance. Constrained + Unconstrained = Total<br>
+**"Constrained":** refers to the amount of variance explained by the explanatory variables.<br>
+**"Unconstrained":** refers to the residual variance. 
+
 
 An R2 statistic can be derived simply as Constrained / Total.
 
