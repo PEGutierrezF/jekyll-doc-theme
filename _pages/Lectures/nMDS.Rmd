@@ -1,0 +1,56 @@
+---
+title: "non-Metric Multidimentional Scaling (nMDS)"
+author: 
+- "Pablo E. Guti&eacute;rrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+permalink: /pages/Lectures/Introduction to R/
+output: html_document
+---
+<br/>
+<br/>
+
+#### **Step 1**
+Load libraries.<br>
+_Cargar las librerias que necesitas._
+```{r, warning=FALSE,message=FALSE}
+libraries <- c("vegan", "ggplot2", "dplyr")
+lapply(libraries, require, character.only = TRUE)
+```
+
+<br/>
+
+#### **Step 2**
+Data<br>
+_Cargar los datos._
+```{r, results='hide'}
+laselva_full  <- read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/nMDS_laSelva.csv")
+head(laselva_full)
+
+```
+
+<br/>
+
+#### **Step 3** 
+_Seleccionar la matrix de especies._
+```{r, results='hide'}
+laselva_sp <- dplyr::select(laselva_full, Baetid:Collemb)
+str(laselva_sp)
+ncol(laselva_sp)
+nrow(laselva_sp)
+
+```
+
+<br/>
+
+## non-Metric Multidimentional Scaling (nMDS)
+
+#### **Step 4**
+_Ejecutar un nMDS_
+```{r}
+set.seed(14) # Con este comando, siempre comenzara del mismo lugar.
+
+laselva.mds <- metaMDS(laselva_sp, distance = "bray", k = 2, trymax=100)  #using all the defaults
+laselva.mds
+```
+
