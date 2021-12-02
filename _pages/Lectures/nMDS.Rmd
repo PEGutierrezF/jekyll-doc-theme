@@ -47,10 +47,16 @@ nrow(laselva_sp)
 
 #### **Step 4**
 _Ejecutar un nMDS_
-```{r}
+```{r, results = 'hide'}
 set.seed(14) # Con este comando, siempre comenzara del mismo lugar.
-
 laselva.mds <- metaMDS(laselva_sp, distance = "bray", k = 2, trymax=100)  #using all the defaults
+```
+
+<br>
+
+#### **Step 5**
+_Resumen de los reusltados_
+```{r}
 laselva.mds
 ```
 
