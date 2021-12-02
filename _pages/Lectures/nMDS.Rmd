@@ -59,12 +59,12 @@ _Resumen de los reusltados_
 ```{r}
 laselva.mds
 ```
-_Lo mas importante de ver en este "output" es el **stress**_
+_Lo m&aacute;s importante de ver en este "output" es el **stress**_
 
 As a rule of thumb literature has identified the following cut-ff values for stress-level:<br>
 &gt; 0.2 is poor (risks for false interpretation).<br> 
 0.1 - 0.2 is fair (some distances can be misleading for interpretation).<br> 
-0.05 - 0.1 is good (can be con???dent in inferences from plot).<br>
+0.05 - 0.1 is good (can be confident in inferences from plot).<br>
 &lt; 0.05 is excellent (this can be rare).
 
 <br>
@@ -87,7 +87,7 @@ stressplot(laselva.mds)
 <br>
 
 #### **Step 5: nMDS**
-_Otra metrica para evaluar el ajuste (buen desempeno) del nMDS es mirar el "Goodness of ???t"._
+_Otra metrica para evaluar el ajuste (buen desempe&ntilde;o) del nMDS es mirar el "Goodness of fit"._
 ```{r}
 gof <- goodness(laselva.mds)
 # gof

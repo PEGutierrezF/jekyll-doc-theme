@@ -232,8 +232,8 @@ laselva.mds &lt;- metaMDS(laselva_sp, distance = &quot;bray&quot;, k = 2, trymax
 ## No convergent solutions - best solution after 100 tries
 ## Scaling: centring, PC rotation, halfchange scaling 
 ## Species: expanded scores based on &#39;wisconsin(sqrt(laselva_sp))&#39;</code></pre>
-<p><em>Lo mas importante de ver en este “output” es el <strong>stress</strong></em></p>
-<p>As a rule of thumb literature has identified the following cut-ff values for stress-level:<br> &gt; 0.2 is poor (risks for false interpretation).<br> 0.1 - 0.2 is fair (some distances can be misleading for interpretation).<br> 0.05 - 0.1 is good (can be con???dent in inferences from plot).<br> &lt; 0.05 is excellent (this can be rare).</p>
+<p><em>Lo más importante de ver en este “output” es el <strong>stress</strong></em></p>
+<p>As a rule of thumb literature has identified the following cut-ff values for stress-level:<br> &gt; 0.2 is poor (risks for false interpretation).<br> 0.1 - 0.2 is fair (some distances can be misleading for interpretation).<br> 0.05 - 0.1 is good (can be confident in inferences from plot).<br> &lt; 0.05 is excellent (this can be rare).</p>
 <p><br></p>
 </div>
 <div id="step-3-nmds" class="section level4">
@@ -252,7 +252,7 @@ laselva.mds &lt;- metaMDS(laselva_sp, distance = &quot;bray&quot;, k = 2, trymax
 </div>
 <div id="step-5-nmds" class="section level4">
 <h4><strong>Step 5: nMDS</strong></h4>
-<p><em>Otra metrica para evaluar el ajuste (buen desempeno) del nMDS es mirar el “Goodness of ???t”.</em></p>
+<p><em>Otra metrica para evaluar el ajuste (buen desempeño) del nMDS es mirar el “Goodness of fit”.</em></p>
 <pre class="r"><code>gof &lt;- goodness(laselva.mds)
 # gof
 
