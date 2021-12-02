@@ -45,7 +45,7 @@ nrow(laselva_sp)
 
 ## non-Metric Multidimentional Scaling (nMDS)
 
-#### **Step 4**
+#### **Step 1: nMDS**
 _Ejecutar un nMDS_
 ```{r, results = 'hide'}
 set.seed(14) # Con este comando, siempre comenzara del mismo lugar.
@@ -54,9 +54,129 @@ laselva.mds <- metaMDS(laselva_sp, distance = "bray", k = 2, trymax=100)  #using
 
 <br>
 
-#### **Step 5**
+#### **Step 2: nMDS**
 _Resumen de los reusltados_
 ```{r}
 laselva.mds
 ```
+_Lo mas importante de ver en este "output" es el **stress**_
 
+As a rule of thumb literature has identified the following cut-ff values for stress-level:<br>
+&gt; 0.2 is poor (risks for false interpretation).<br> 
+0.1 - 0.2 is fair (some distances can be misleading for interpretation).<br> 
+0.05 - 0.1 is good (can be con???dent in inferences from plot).<br>
+&lt; 0.05 is excellent (this can be rare).
+
+<br>
+
+#### **Step 3: nMDS**
+Plot the results.
+```{r}
+plot(laselva.mds, type="t")
+```
+
+<br>
+
+#### **Step 4: nMDS**
+Stressplot. Large scatter around the line suggests that original dissimilarities are not well
+preserved in the reduced number of dimensions. Looks pretty good in this case.
+```{r}
+stressplot(laselva.mds)
+```
+
+<br>
+
+#### **Step 5: nMDS**
+_Otra metrica para evaluar el ajuste (buen desempeno) del nMDS es mirar el "Goodness of ???t"._
+```{r}
+gof <- goodness(laselva.mds)
+# gof
+
+{plot (laselva.mds, display = 'sites', type = 't', main = 'Goodness of fit') # this function draws NMDS ordination diagram with sites
+points (laselva.mds, display = 'sites', cex = 2*gof/mean(gof))} # and this adds the points with size reflecting goodness of fit (bigger = worse fit)
+```
+
+<br>
+
+#### **Step 6: nMDS**
+_Calcular el % de variacion explicado por cada eje_
+```{r}
+MDS <- cmdscale(vegdist(laselva_sp, method = "bray"), k = 2, eig = T, add = T )
+round(MDS$eig*100/sum(MDS$eig),1)
+```
+
+<br>
+
+## Visualizar los datos con ```ggplot2```
+<br>
+
+#### **Step 1: Data visualization**
+_**Score** son los axis de la ordenacion_
+```{r}
+data.scores <- as.data.frame(scores(laselva.mds)) 
+head(data.scores)
+```
+
+<br>
+
+#### **Step 2: Data visualization**
+_Agregar las especies al dataframe llamado **data.scores**_
+```{r}
+species.scores <- as.data.frame(scores(laselva.mds, "species"))  #Using the scores function from vegan to extract the species scores and convert to a data.frame
+#species.scores$species <- rownames(species.scores)  # create a column of species, from the rownames of species.scores
+head(species.scores)  #look at the data
+```
+
+<br>
+
+#### **Step 3: Data visualization**
+_Extraer los meses de la base de datos original (laselva_full) y agregarla a **data.scores**_
+```{r}
+month  <- dplyr::select(laselva_full, month)
+data.scores$month <- unlist(month)
+head(data.scores)
+```
+
+<br>
+
+#### **Step 4: Data visualization**
+_Hay cuatro grupos, previamente identificados por un cluster _
+```{r}
+grp.a <- data.scores[data.scores$month == "one", ][chull(data.scores[data.scores$month == 
+          "one", c("NMDS1", "NMDS2")]),]  # hull values for grp A
+grp.b <- data.scores[data.scores$month == "two", ][chull(data.scores[data.scores$month == 
+          "two", c("NMDS1", "NMDS2")]),]  # hull values for grp A  
+grp.c <- data.scores[data.scores$month == "three", ][chull(data.scores[data.scores$month == 
+          "three", c("NMDS1", "NMDS2")]),]  # hull values for grp A  
+grp.d <- data.scores[data.scores$month == "four", ][chull(data.scores[data.scores$month == 
+          "four", c("NMDS1", "NMDS2")]),]  # hull values for grp A  
+
+hull.data <- rbind(grp.a, grp.b, grp.c, grp.d)
+head(hull.data)
+```
+
+<br>
+
+#### **Step 5: Data visualization**
+```{r}
+ggplot() + 
+  geom_polygon(data=hull.data,aes(x=NMDS1,y=NMDS2,fill=month,group=month),alpha=0.30) + # add the convex hulls
+#  geom_text(data=species.scores,aes(x=NMDS1,y=NMDS2,label=species),alpha=0.5) +  # add the species labels
+  geom_point(data=data.scores,aes(x=NMDS1,y=NMDS2,shape=month,colour=month),size=4) + # add the point markers
+#  scale_colour_manual(values=c("one" = "red", "two" = "blue",
+#                                "three"="black", "four"="green")) +
+  coord_equal() +
+  theme_bw() + 
+  theme(axis.text.x = element_blank(),  # remove x-axis text
+        axis.text.y = element_blank(), # remove y-axis text
+        axis.ticks = element_blank(),  # remove axis ticks
+        axis.title.x = element_text(size=18), # remove x-axis labels
+        axis.title.y = element_text(size=18), # remove y-axis labels
+        panel.background = element_blank(), 
+        panel.grid.major = element_blank(),  #remove major-grid labels
+        panel.grid.minor = element_blank(),  #remove minor-grid labels
+        plot.background = element_blank())
+```
+
+<br>
+<br>
