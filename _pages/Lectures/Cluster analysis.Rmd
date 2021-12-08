@@ -1,0 +1,44 @@
+---
+title: "Cluster analysis"
+author: 
+- "Pablo E. Guti&eacute;rrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+permalink: /pages/Lectures/Introduction to R/
+output: html_document
+---
+<br/>
+<br/>
+
+#### **Step 1**
+Load libraries.<br>
+_Cargar las librerias que necesitas._
+```{r, warning=FALSE, message=FALSE}
+library(vegan)
+```
+
+<br>
+
+#### **Step 2**
+Data<br>
+_Cargar los datos._
+```{r, results='hide'}
+spe.fish  <- read.csv("D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/Cluster_analysis_fish_PR.csv", header = TRUE, row.names = 1)
+head(spe.fish)
+
+```
+
+<br>
+
+## Cluster analysis
+
+#### **Step 1: Cluster**
+_Ejecutar el analisis de conglomerados_
+```{r}
+# Ward Hierarchical Clustering
+d <- dist(spe.fish, method = "euclidean") # distance matrix
+fit <- hclust(d, method="ward.D2")
+plot(fit, cex = 0.6, hang = -1) # display dendogram
+```
+
+
