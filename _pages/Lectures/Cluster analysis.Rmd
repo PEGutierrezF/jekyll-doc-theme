@@ -31,14 +31,72 @@ head(spe.fish)
 <br>
 
 ## Cluster analysis
+Clustering is a technique, non-parametric (Zelterman 2015, page 299), to group similar data points into one group and separate out dissimilar observations into different groups or clusters. In Hierarchical Clustering, clusters are created such that they have a predetermined ordering i.e. a hierarchy.<br>
+_Un Cl&uacute;steres es una t&eacute;cnica, no param&eacute;trica (Zelterman 2015), para 1) agrupar datos similares en un grupo, y 2) separar datos diferentes en grupos o conglomerados.  En cl&uacute;ster jer&aacute;rquicos, los grupos se crean de manera que tengan un orden predeterminado, es decir, una jerarqu&iacute;a._
+
+<br>
+Clustering is not a typical statistical method in that it does **not test any hypothesis**. Clustering helps bring out some features hidden in the data; it is the user who decides if these structures are interesting and worth interpreting in ecological terms (Borcard et al. 2012).<br>
+_Los cl&uacute;steres no son m&eacute;todos estad&iacute;sticos t&iacute;picos en el sentido de que **no prueban ninguna hip&oacute;tesis**. Los cl&uacute;steres ayuda a resaltar algunas caracter&iacute;sticas ocultas en los datos. Es el usuario quien decide si estas estructuras son interesantes y vale la pena interpretarlas en términos ecol&oacute;gicos (Borcard et al. 2012)._
+
+<br>
+
+There are at least 5 families of grouping methods. More details in Borcard et al. (2012)<br>
+_Hay al menos 5 familias de metodos de agrupaci&oacute;n. Mas detalles en Borcard et al. (2012)_
+
+<br>
+
+#### Ward’s Minimum Variance Clustering
+This method is based on the linear model criterion of least squares. The objective is to define groups in such a way that the within-group sum of squares (i.e. the squared error of ANOVA) is minimized.<br_
+_Este m&eacute;todo se basa en el criterio del modelo lineal de m&iacute;nimos cuadrados. El objetivo es definir grupos de tal manera que se minimice la suma de cuadrados dentro del grupo (es decir, el error al cuadrado de ANOVA)._
+
+<br>
 
 #### **Step 1: Cluster**
 _Ejecutar el analisis de conglomerados_
 ```{r}
 # Ward Hierarchical Clustering
-d <- dist(spe.fish, method = "euclidean") # distance matrix
-fit <- hclust(d, method="ward.D2")
-plot(fit, cex = 0.6, hang = -1) # display dendogram
+dist.fish <- dist(spe.fish, method = "euclidean") # distance matrix.  You need to calculate this before running the cluster analysis
+fish_clust <- hclust(dist.fish, method="ward.D2") #method:  What type of algorithm should be used to cluster points and define groups
+plot(fish_clust, cex = 0.6, hang = -1) # display dendogram
 ```
 
 
+<br>
+
+#### **Step 2: Cluster**
+_Delinear los grupos_
+```{r}
+plot(fish_clust, cex = 0.6, hang = -1) 
+rect.hclust(fish_clust, k = 3, border = 2:6)
+# abline(h = 100, col = 'red')
+```
+
+<br>
+
+#### **Step 3: Cluster**
+_Identificar a que grupo pertenece cada dato_
+```{r}
+cut_avg <- cutree(fish_clust, k = 3)
+cut_avg
+```
+
+<br>
+
+#### **Step 4: Cluster**
+_N&uacute;mero de observaciones en cada grupo_
+```{r}
+table(cut_avg)
+```
+
+<br/>
+
+#### **References**
+
+Borcard, D., Gillet, F., & Legendre, P. (2011). Numerical ecology with R (Vol. 2, p. 688). New York: springer.
+
+Legendre, P., & Legendre, L. (2012). Numerical ecology. Elsevier.
+
+Zelterman, D. (2015). Applied multivariate statistics with R. Switzerland: Springer International Publishing.
+
+<br/>
+<br/>
