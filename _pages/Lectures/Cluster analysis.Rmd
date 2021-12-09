@@ -15,6 +15,7 @@ Load libraries.<br>
 _Cargar las librerias que necesitas._
 ```{r, warning=FALSE, message=FALSE}
 library(vegan)
+library(factoextra)
 ```
 
 <br>
@@ -58,7 +59,7 @@ _Ejecutar el analisis de conglomerados_
 # distance matrix.  You need to calculate this before running the cluster analysis.  The most popular distance is # the Euclidean distance (Zelterman 2015, page 293)
 dist.fish <- dist(spe.fish, method = "euclidean") 
 
- #method:  What type of algorithm should be used to cluster points and define groups
+# method:  What type of algorithm should be used to cluster points and define groups
 fish_clust <- hclust(dist.fish, method="ward.D2")
 
 # display dendogram
@@ -92,6 +93,33 @@ _N&uacute;mero de observaciones en cada grupo_
 ```{r}
 table(cut_avg)
 ```
+
+<br>
+
+#### **Optimal number of clusters**
+In order to find the optimal number of clusters is recommended to choose it based on:
+
+<br>
+
+##### **Elbow method**
+The location of a knee in the plot is usually considered as an indicator of the appropriate number of clusters because it means that adding another cluster does not improve much better the partition. This method seems to suggest 4 clusters.
+
+The Elbow method is sometimes ambiguous and an alternative is the average silhouette method.
+```{r}
+fviz_nbclust(spe.fish, kmeans, method = "wss") +
+  geom_vline(xintercept = 5, linetype = 2) + # add line for better visualisation
+  labs(subtitle = "Elbow method") # add subtitle
+```
+
+<br>
+
+##### **Silhouette method**
+The Silhouette method measures the quality of a clustering and determines how well each point lies within its cluster.
+```{r}
+fviz_nbclust(spe.fish, kmeans, method = "silhouette") +
+  labs(subtitle = "Silhouette method")
+```
+
 
 <br/>
 
