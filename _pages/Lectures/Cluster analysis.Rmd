@@ -74,7 +74,7 @@ _Delinear los grupos_
 ```{r}
 plot(fish_clust, cex = 0.6, hang = -1, 
      main = "Cluster dendrogram", sub = NULL,
-     xlab = "", ylab = "Eucludian distance") 
+     xlab = "", ylab = "Euclidean distance") 
 
 rect.hclust(fish_clust, k = 3, border = 2:6)
 # abline(h = 100, col = 'red')
