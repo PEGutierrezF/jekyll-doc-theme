@@ -55,9 +55,14 @@ _Este m&eacute;todo se basa en el criterio del modelo lineal de m&iacute;nimos c
 _Ejecutar el analisis de conglomerados_
 ```{r}
 # Ward Hierarchical Clustering
-dist.fish <- dist(spe.fish, method = "euclidean") # distance matrix.  You need to calculate this before running the cluster analysis.  The most popular distance is the Euclidean distance (Zelterman 2015, page 293)
-fish_clust <- hclust(dist.fish, method="ward.D2") #method:  What type of algorithm should be used to cluster points and define groups
-plot(fish_clust, cex = 0.6, hang = -1) # display dendogram
+# distance matrix.  You need to calculate this before running the cluster analysis.  The most popular distance is # the Euclidean distance (Zelterman 2015, page 293)
+dist.fish <- dist(spe.fish, method = "euclidean") 
+
+ #method:  What type of algorithm should be used to cluster points and define groups
+fish_clust <- hclust(dist.fish, method="ward.D2")
+
+# display dendogram
+plot(fish_clust, cex = 0.6, hang = -1) 
 ```
 
 
