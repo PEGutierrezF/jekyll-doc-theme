@@ -47,7 +47,7 @@ _Hay al menos 5 familias de metodos de agrupaci&oacute;n. Mas detalles en Borcar
 <br>
 
 #### **Ward’s Minimum Variance Clustering**
-This method is based on the linear model criterion of least squares. The objective is to define groups in such a way that the within-group sum of squares (i.e. the squared error of ANOVA) is minimized.<br_
+This method is based on the linear model criterion of least squares. The objective is to define groups in such a way that the within-group sum of squares (i.e. the squared error of ANOVA) is minimized. More details in Murtagh & Legendre (2014).<br>
 _Este m&eacute;todo se basa en el criterio del modelo lineal de m&iacute;nimos cuadrados. El objetivo es definir grupos de tal manera que se minimice la suma de cuadrados dentro del grupo (es decir, el error al cuadrado de ANOVA)._
 
 <br>
@@ -131,6 +131,8 @@ fviz_nbclust(spe.fish, kmeans, method = "silhouette") +
 Borcard, D., Gillet, F., & Legendre, P. (2011). Numerical ecology with R (Vol. 2, p. 688). New York: springer.
 
 Legendre, P., & Legendre, L. (2012). Numerical ecology. Elsevier.
+
+Murtagh, F., & Legendre, P. (2014). Ward’s hierarchical agglomerative clustering method: which algorithms implement Ward’s criterion?. Journal of classification, 31(3), 274-295.
 
 Zelterman, D. (2015). Applied multivariate statistics with R. Switzerland: Springer International Publishing.
 
