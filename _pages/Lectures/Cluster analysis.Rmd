@@ -6,6 +6,7 @@ author:
 layout: default
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
+published: false
 ---
 <br/>
 <br/>
