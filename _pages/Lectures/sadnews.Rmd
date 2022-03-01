@@ -7,3 +7,8 @@ layout: default
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
+
+
+! [Alt text] (D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/assets/img/StatsFunny.jpg)
+
+
