@@ -8,5 +8,7 @@ permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
 
-![Next semester.](/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/assets/img/StatsFunny.jpg)
 
+<center>
+![Next semester.](/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/assets/img/StatsFunny.jpg)
+</center>
