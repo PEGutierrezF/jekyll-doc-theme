@@ -9,6 +9,6 @@ output: html_document
 ---
 
 
-! [Alt text] (D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/assets/img/StatsFunny.jpg)
+! [Alt text] (/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/assets/img/StatsFunny.jpg)
 
 
