@@ -7,8 +7,13 @@ layout: default
 permalink: /pages/Lectures/Introduction to R/
 output: html_document
 ---
-
+<br/>
+<br/>
 
 <center>
-![Next semester.](/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/assets/img/StatsFunny.jpg)
+
+<img src="/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/assets/img/StatsFunny.jpg">
+
+Next semester!
+
 </center>
