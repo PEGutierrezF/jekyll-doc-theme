@@ -21,9 +21,32 @@ xxx.frm=read.csv("xxx.csv")
 attach(xxx.frm)
 xxx.frm
 
-data<-read.table(file.choose(),header=T)
 ```
 
+<br/>
+
+```{r, eval = FALSE}
+# Remove eval = FALSE to run the chunk
+
+data.temp <-read.table(file.choose(),header=T)
+
+data.temp <- read.csv(file.choose(), dec='.', sep=';')
+
+```
+
+<br/>
+
+#### Let's explore the data
+```{r, eval = FALSE}
+# Remove eval = FALSE to run the chunk
+
+head(data.temp)
+plot(data.temp)
+summary(data.temp)
+
+```
+
+<br/>
 <br/>
 
 #### References:

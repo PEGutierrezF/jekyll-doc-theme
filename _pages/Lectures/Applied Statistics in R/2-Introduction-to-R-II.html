@@ -181,10 +181,23 @@ xxx.frm
 
 xxx.frm=read.csv(&quot;xxx.csv&quot;)
 attach(xxx.frm)
-xxx.frm
-
-data&lt;-read.table(file.choose(),header=T)</code></pre>
+xxx.frm</code></pre>
 <p><br /></p>
+<pre class="r"><code># Remove eval = FALSE to run the chunk
+
+data.temp &lt;-read.table(file.choose(),header=T)
+
+data.temp &lt;- read.csv(file.choose(), dec=&#39;.&#39;, sep=&#39;;&#39;)</code></pre>
+<p><br /></p>
+</div>
+<div id="lets-explore-the-data" class="section level4">
+<h4>Let’s explore the data</h4>
+<pre class="r"><code># Remove eval = FALSE to run the chunk
+
+head(data.temp)
+plot(data.temp)
+summary(data.temp)</code></pre>
+<p><br /> <br /></p>
 </div>
 <div id="references" class="section level4">
 <h4>References:</h4>
