@@ -158,7 +158,7 @@ ceiling(5.7)
 
 <br/>
 
-####  c()function, where c stands for concatenate
+####  c() function, where c stands for concatenate
 ```{r}
 Wingcrd <- c(59, 55, 53.5, 55, 52.5, 57.5, 53, 55)
 Wingcrd
