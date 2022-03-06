@@ -1,0 +1,35 @@
+---
+title: "Introduction to R II"
+author: 
+- "Pablo E. Gutiérrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+permalink: /pages/Lectures/Introduction to R/
+output: html_document
+---
+<br/>
+<br/>
+
+
+#### Import data (.csv, .txt, direct import)
+```{r, eval=FALSE}
+xxx.frm=read.table("xxx.txt",header=T)
+attach(xxx.frm)
+xxx.frm
+
+xxx.frm=read.csv("xxx.csv")
+attach(xxx.frm)
+xxx.frm
+
+data<-read.table(file.choose(),header=T)
+```
+
+<br/>
+
+#### References:
+
+Crawley, M. J. (2012). The R book. John Wiley & Sons.
+
+<br/>
+<br/>
+<br/>

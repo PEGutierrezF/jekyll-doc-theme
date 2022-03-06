@@ -62,14 +62,14 @@ citation('randomForest')
 
 <br/>
 
-#### Simbols (P: 22)
+#### Simbols (Crawley 2007, page 15)
 ```{r, eval=FALSE}
 + - * / ^ arithmetic
 > >= < <= == != relational
 ! & logical
 ~ model formulae
 <- -> assignment
-$ list indexing (the ‘element name’ operator)
+$ list indexing (the 'element name' operator)
 : create a sequence
 ```
 
@@ -280,7 +280,7 @@ data<-read.table(file.choose(),header=T)
 
 <br/>
 
-#### References:
+#### **References**
 
 Crawley, M. J. (2012). The R book. John Wiley & Sons.
 
