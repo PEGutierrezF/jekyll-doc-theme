@@ -437,7 +437,7 @@
       &:hover,
       &:focus {
         color: "red" ; // $navbar-default-link-active-color // No cambia nada
-        background-color: "red" ; //$navbar-default-link-active-bg
+        background-color: "red" ; //$navbar-default-link-active-bg // No cambia nada
       }
     }
     > .disabled > a {
@@ -633,8 +633,8 @@
           &,
           &:hover,
           &:focus {
-            color: $navbar-inverse-link-active-color;
-            background-color: $navbar-inverse-link-active-bg;
+            color: "yellow" ; //$navbar-inverse-link-active-color 
+            background-color: "yellow" ; //$navbar-inverse-link-active-bg
           }
         }
         > .disabled > a {
