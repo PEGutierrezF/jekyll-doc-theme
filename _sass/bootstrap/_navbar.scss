@@ -436,8 +436,8 @@
       &,
       &:hover,
       &:focus {
-        color: "red" ; // $navbar-default-link-active-color
-        background-color: $navbar-default-link-active-bg;
+        color: "red" ; // $navbar-default-link-active-color // No cambia nada
+        background-color: "red" ; //$navbar-default-link-active-bg
       }
     }
     > .disabled > a {
