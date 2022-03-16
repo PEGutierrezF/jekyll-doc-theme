@@ -406,7 +406,7 @@
 .navbar-default {
   background-color: #ffffff; //$navbar-default-bg <- Original. Cambia el color de la BG de la barra de navegacion 
   
-  border-color: #ede8e8 ; // $navbar-default-border <- Original. Cambia el color de la BG de la barra de navegacion 
+  border-color:  #ffffff; // $navbar-default-border <- Original. Cambia el color de la BG de la barra de navegacion 
 
   .navbar-brand {
     color: $navbar-default-brand-color;
@@ -428,6 +428,7 @@
       &:hover,
       &:focus {
         color: #f7f7f7; // $navbar-default-link-hover-color  // ESTA CAMBIA LA LETRA CUANDO PASA EL CURSOR
+        
         background-color: #969696; //$navbar-default-link-hover-bg  // ESTA CAMBIA EL BG CUANDO PASA EL CURSOR
       }
     }
