@@ -404,8 +404,8 @@
 
 // Default navbar
 .navbar-default {
-  background-color: $navbar-default-bg;
-  border-color: $navbar-default-border;
+  background-color: #69899f; //$navbar-default-bg
+  border-color: #ede8e8 ; // $navbar-default-border
 
   .navbar-brand {
     color: $navbar-default-brand-color;
