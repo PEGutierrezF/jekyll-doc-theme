@@ -493,8 +493,8 @@
           &,
           &:hover,
           &:focus {
-            color: $navbar-default-link-active-color;
-            background-color: $navbar-default-link-active-bg;
+            color: "red" ; // $navbar-default-link-active-color
+            background-color: "red" ; //$navbar-default-link-active-bg
           }
         }
         > .disabled > a {
@@ -625,16 +625,16 @@
           color: $navbar-inverse-link-color;
           &:hover,
           &:focus {
-            color: "green" ; // $navbar-inverse-link-hover-color
-            background-color: "green"; // $navbar-inverse-link-hover-bg
+            color: "green" ; // $navbar-inverse-link-hover-color// No hace nada
+            background-color: "green"; // $navbar-inverse-link-hover-bg // No hace nada
           }
         }
         > .active > a {
           &,
           &:hover,
           &:focus {
-            color: "yellow" ; //$navbar-inverse-link-active-color 
-            background-color: "yellow" ; //$navbar-inverse-link-active-bg
+            color: "yellow" ; //$navbar-inverse-link-active-color // No hace nada
+            background-color: "yellow" ; //$navbar-inverse-link-active-bg // No hace nada
           }
         }
         > .disabled > a {
