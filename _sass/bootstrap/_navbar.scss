@@ -436,7 +436,7 @@
       &,
       &:hover,
       &:focus {
-        color: $navbar-default-link-active-color;
+        color: "red" ; // $navbar-default-link-active-color
         background-color: $navbar-default-link-active-bg;
       }
     }
