@@ -89,7 +89,7 @@ function encrypt(password) {
 }
 
 gulp.task('firewall:encrypt', () => {
-  return gulp.src('_Appl.Stats.in.R/')
+  return gulp.src('_Appl.Stats.in.R')
     .pipe(encrypt('password'))
     .pipe(gulp.dest('_posts'));
 });
