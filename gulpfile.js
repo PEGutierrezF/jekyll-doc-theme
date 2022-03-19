@@ -89,9 +89,9 @@ function encrypt(password) {
 }
 
 gulp.task('firewall:encrypt', () => {
-  return gulp.src('D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/*.*')
+  return gulp.src('_Appl.Stats.in.R/')
     .pipe(encrypt('password'))
-    .pipe(gulp.dest('D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_posts'));
+    .pipe(gulp.dest('_posts'));
 });
 
 gulp.task('firewall:watch', () => {
