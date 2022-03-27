@@ -108,6 +108,9 @@
     - src: /assets/img/sliders/MatchedPairs.jpg
       title: 
       alt:
+    - src: /assets/img/sliders/FitYbyX.jpg
+      title: 
+      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
