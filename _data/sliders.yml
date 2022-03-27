@@ -108,8 +108,8 @@
     - src: /assets/img/sliders/MatchedPairs.jpg
       title: 
       alt:
-    - src: /assets/img/sliders/FitYbyX.jpg
-      title: Colorado stream
+    - src: /assets/img/sliders/FitYbyX.PNG
+      title:
       alt:
   settings:
     height: "'auto'"
