@@ -105,14 +105,17 @@
   bullets: true
   captions: true
   images:
-    - src: /assets/img/sliders/MatchedPairs.jpg
+    - src: /assets/img/Biomonitoring1.jpg
       title: 
       alt:
-    - src: /assets/img/sliders/FitYbyX.jpg
-      title: 
+    - src: /assets/img/Biomonitoring2.jpg
+      title: Colorado stream
       alt:
-    - src: /assets/img/Goodness.jpg
-      title: 
+    - src: /assets/img/Biomonitoring3.jpg
+      title: Reventaz&#243n river
+      alt:
+    - src: /assets/img/Biomonitoring4.jpg
+      title: Exotic species
       alt:
   settings:
     height: "'auto'"
