@@ -100,3 +100,14 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
+
+- selector: slider6
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/sliders/MatchedPairs.jpg
+      title: 
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
