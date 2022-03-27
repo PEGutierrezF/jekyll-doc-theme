@@ -111,6 +111,9 @@
     - src: /assets/img/sliders/FitYbyX.jpg
       title: 
       alt:
+    - src: /assets/img/Goodness.jpg
+      title: 
+      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
