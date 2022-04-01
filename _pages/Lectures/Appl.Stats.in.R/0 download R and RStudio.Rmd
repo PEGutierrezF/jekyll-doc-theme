@@ -47,6 +47,10 @@ Download R and follow the typical downloading and installation prompts associate
 <img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step5.jpg">
 </center>
 
+<br/>
+<br/>
+<br/>
+
 ## Downloading R Studio for the first time
 
 
