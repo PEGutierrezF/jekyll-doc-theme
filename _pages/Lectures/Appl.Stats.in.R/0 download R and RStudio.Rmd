@@ -10,6 +10,9 @@ output: html_document
 <br/>
 <br/>
 
+## Downloading R for the first time
+<br/>
+
 #### **Step 1**
 Go to https://www.r-project.org/
 <br/>
@@ -44,6 +47,8 @@ Download R and follow the typical downloading and installation prompts associate
 <img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step5.jpg">
 </center>
 
+## Downloading R Studio for the first time
 
+<br/>
 <br/>
 <br/>
