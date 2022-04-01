@@ -1,7 +1,7 @@
 ---
 title: "Download R and RStudio"
 author: 
-- "Pablo E. GutiÃ©rrez-Fonseca"
+- "Pablo E. Gutiérrez-Fonseca"
 - "`r format(Sys.time(), '%d %B, %Y')`"
 layout: default
 permalink: /pages/Lectures/Introduction to R/
@@ -13,9 +13,18 @@ output: html_document
 #### **Step 1**
 Go to https://www.r-project.org/
 <br/>
+<br/>
 
 #### **Step 2**
-In the left hand corner under Download click CRAN
+In the left hand corner under Download click CRAN.
 <center>
 <img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step1.jpg">
+</center>
+<br/>
+<br/>
+
+#### **Step 3**
+Select one from this list, and download it using the appropriate link for your computer system.
+<center>
+<img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step3.jpg">
 </center>
