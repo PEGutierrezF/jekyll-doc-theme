@@ -49,6 +49,14 @@ Download R and follow the typical downloading and installation prompts associate
 
 ## Downloading R Studio for the first time
 
+
+<br/>
+<br/>
+
+#### References and other resources:
+
+https://ashavrova.com/introduction-to-r-and-r-studio/
+
 <br/>
 <br/>
 <br/>
