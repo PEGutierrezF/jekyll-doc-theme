@@ -61,7 +61,7 @@ Go to https://www.rstudio.com/
 <br/>
 
 #### **Step 7**
-scroll down and click on **Download Free Desktop IDE**
+Scroll down and click on **Download Free Desktop IDE**
 <center>
 <img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step7.jpg">
 </center>
@@ -84,12 +84,12 @@ Select one from this list. Download and install it using the appropriate link fo
 <br/>
 <br/>
 
+### YAY! You are now ready to explore the unlimited world of Statistics!!!
+<br/>
+<br/>
 
-
-
-
-#### References and other resources:
-
+#### **References and other resources**
+<br/>
 https://ashavrova.com/introduction-to-r-and-r-studio/
 
 <br/>
