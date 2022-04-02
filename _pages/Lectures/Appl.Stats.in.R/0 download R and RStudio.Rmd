@@ -43,7 +43,8 @@ Click base.
 <br/>
 
 #### **Step 5**
-Download R and follow the typical downloading and installation prompts associated with your computer. system<center>
+Download R and follow the typical downloading and installation prompts associated with your computer. system
+<center>
 <img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step5.jpg">
 </center>
 
@@ -52,10 +53,40 @@ Download R and follow the typical downloading and installation prompts associate
 <br/>
 
 ## Downloading R Studio for the first time
+<br/>
 
-
+#### **Step 6**
+Go to https://www.rstudio.com/
 <br/>
 <br/>
+
+#### **Step 7**
+scroll down and click on **Download Free Desktop IDE**
+<center>
+<img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step7.jpg">
+</center>
+<br/>
+<br/>
+
+#### **Step 8**
+Pick a version. Free has all of the tools you will need for this course.
+<center>
+<img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step8.jpg">
+</center>
+<br/>
+<br/>
+
+#### **Step 9**
+Select one from this list. Download and install it using the appropriate link for your computer system.
+<center>
+<img src="D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step9.jpg">
+</center>
+<br/>
+<br/>
+
+
+
+
 
 #### References and other resources:
 
