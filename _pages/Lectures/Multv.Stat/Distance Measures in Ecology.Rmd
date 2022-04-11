@@ -1,0 +1,67 @@
+---
+title: "Introduction to Generalized Additive Models with R and mgcv"
+author: "Pablo"
+date: "July 30th, 2022"
+output:
+  xaringan::moon_reader:
+    css: ['default', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 'slides.css']
+    lib_dir: libs
+    nature:
+      titleSlideClass: ['inverse','middle','left',my-title-slide]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+      ratio: '16:9'
+---
+class: inverse middle center big-subsection
+
+
+```{r setup, include=FALSE, cache=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(cache = TRUE, dev = 'svg', echo = TRUE, message = FALSE, warning = FALSE,
+                      fig.height=6, fig.width = 1.777777*6)
+library('here')
+library('mgcv')
+library('ggplot2')
+library("tibble")
+library('gganimate')
+library('cowplot')
+library('tidyr')
+library("knitr")
+library("viridis")
+library('readr')
+library('dplyr')
+## plot defaults
+theme_set(theme_minimal(base_size = 16, base_family = 'Fira Sans'))
+## constants
+anim_width <- 1000
+anim_height <- anim_width / 1.77777777
+anim_dev <- 'png'
+anim_res <- 200
+```
+
+
+
+
+# Distance Measures
+
+1. The first step of most multivariate analyses is to calculate a matrix of distances or similarities among a set of items in a multidimensional space.[^one]
+
+[^one]: https://one.com
+
+2. This is analogous to constructing the triangular "mileage chart" provided with many road maps.[^1]
+
+
+---
+
+
+# Distance Measures
+
+- This first step is extremely important. If information is ignored in this step, then it cannot be expressed in the results.  
+
+<br> <!-- Space -->
+
+- Likewise, if noise or outliers are exaggerated by the distance measure, then these unwanted features of our data will have undue influence on the results, perhaps obscuring meaningful patterns.
+
+---
