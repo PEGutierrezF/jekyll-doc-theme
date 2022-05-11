@@ -193,13 +193,19 @@ vegan::anova.cca(rda_tree_all, by='terms', step=1000)
 
 #### **Glossary**
 
-**Inertia:** is another name for variation or variance in this case.<br>
-**"Total":** refers to total variance. Constrained + Unconstrained = Total<br>
-**"Constrained":** refers to the amount of variance explained by the explanatory variables.<br>
-**"Unconstrained":** refers to the residual variance. 
+**Constrained:** refers to the amount of variance explained by the explanatory variables.
 
+**Inertia:** is another name for variation or variance in this case.
 
-An R2 statistic can be derived simply as Constrained / Total.
+**An R2 statistic** can be derived simply as Constrained / Total.
+
+**Total:** refers to total variance. Constrained + Unconstrained = Total
+
+**Unconstrained:** refers to the residual variance.
+
+**VIF:**
+is a diagnostic tool done post-estimation to check for multicollinearity. VIF is not a model-building technique.
+
 
 <br>
 
