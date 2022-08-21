@@ -128,9 +128,6 @@
     - src: /assets/img/sliders/Water3.jpg
       title: Urban Runoff
       alt:
-    - src: /assets/img/sliders/Water4.jpg
-      title: Pond
-      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
