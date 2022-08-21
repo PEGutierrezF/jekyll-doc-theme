@@ -122,6 +122,15 @@
     - src: /assets/img/sliders/Water1.jpg
       title: 
       alt:
+    - src: /assets/img/sliders/Water1.jpg
+      title: 
+      alt:
+    - src: /assets/img/sliders/Water1.jpg
+      title: 
+      alt:
+    - src: /assets/img/sliders/Water1.jpg
+      title: 
+      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
