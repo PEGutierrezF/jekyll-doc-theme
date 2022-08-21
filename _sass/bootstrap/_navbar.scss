@@ -705,6 +705,13 @@ table tbody tr:nth-child(odd) {
 
 ///////////////////////////////////////////////////////////////////////////////////
 // ESTO ES PARA LA DOBLE LINEA EN COLLABORATION
+hr.s8{
+  border: none;
+  height: 0px;
+  box-shadow: 0 1px 4px 1px cornflowerblue;
+}
+
+
 hr.s9 {
   height:6px;
   border-top:2px solid gray;
