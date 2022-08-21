@@ -120,16 +120,16 @@
   captions: true
   images:
     - src: /assets/img/sliders/Water1.jpg
-      title: 
+      title: Winooski River Reservoir
       alt:
     - src: /assets/img/sliders/Water2.jpg
-      title: 
+      title: Winooski Falls
       alt:
     - src: /assets/img/sliders/Water3.jpg
-      title: 
+      title: Urban Runoff
       alt:
     - src: /assets/img/sliders/Water4.jpg
-      title: 
+      title: Pond
       alt:
   settings:
     height: "'auto'"
