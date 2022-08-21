@@ -704,11 +704,11 @@ table tbody tr:nth-child(odd) {
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-// ESTO ES PARA LA DOBLE LINEA EN COLLABORATION
-hr.s8{
-  border: none;
-  height: 0px;
-  box-shadow: 0 1px 4px 1px cornflowerblue;
+// ESTO ES PARA LA DOBLE LINEA EN COLLABORATION.  21 de Agosto 2022
+hr.style13 {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
 
 
