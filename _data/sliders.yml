@@ -114,3 +114,17 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
+    
+- selector: slider7
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/sliders/Water1.jpg
+      title: 
+      alt:
+    - src: /assets/img/sliders/Water2.jpg
+      title:
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
