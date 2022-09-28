@@ -113,7 +113,7 @@ round(MDS$eig*100/sum(MDS$eig),1)
 #### **Step 1: Data visualization**
 _**Score** son los axis de la ordenacion_
 ```{r}
-data.scores <- as.data.frame(scores(laselva.mds)) 
+data.scores <- as.data.frame(scores(laselva.mds, "sites")) 
 head(data.scores)
 ```
 
