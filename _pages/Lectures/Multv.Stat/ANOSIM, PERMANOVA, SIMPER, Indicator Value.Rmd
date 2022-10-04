@@ -68,15 +68,70 @@ plot(dis_well, las=1)
 ```
 
 
+<br/>
+<br/>
 
 ### PERMANOVA
 
 ```{r}
 
-permanova <- adonis(laselva_sp ~ laselva_full$month, data = laselva_full, permutations = 999, method="bray")
-summary(permanova)
+laselva_adonis <- adonis2(laselva_sp ~ month, data = laselva_full, permutations = 999, method="bray")
+print(laselva_adonis)
+
+```
+
+<br/>
+<br/>
+
+
+Paso 5. Comparasion entre grupos.
+
+```{r}
+
+library(devtools)
+install_github("pmartinezarbizu/pairwiseAdonis/pairwiseAdonis") 
+library(pairwiseAdonis)
+
+pair.mod <- pairwise.adonis(laselva_sp, factors= laselva_full$month)
+pair.mod
+
+```
+
+<br/>
+<br/>
+
+Paso 6.  Vamos a ver quien cuales especies contribuyen a la disimilaridad entre esos grupos.
+
+```{r}
+################ SIMPER ######################
+
+laselva_simper <- with(laselva_full, simper(laselva_sp, laselva_full$month), permutations = 999)
+summary(laselva_simper, ordered = TRUE,
+    digits = max(3,getOption("digits") - 3))
 
 ```
 
 
+<br/>
+<br/>
 
+Paso 7.  Vamos a determinar las especies que son indecadoras de cada periodo.
+
+max.order = 1 (which is equal to duleg=TRUE)  ->  singletons  #Unicas en un sitio
+max.order = 2 -> singletons and pairs  # Unicas y comparitdas
+max.order = 3 -> singletons, pairs and triplets
+
+
+
+```{r}
+################ Indicator Value ###############
+
+
+ind_species <- multipatt(laselva_sp, laselva_full$month, max.order=1,
+                    func="IndVal",control=how(nperm=999))
+summary(ind_species)
+
+```
+
+<br/>
+<br/>
