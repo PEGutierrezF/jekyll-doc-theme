@@ -127,9 +127,9 @@ max.order = 3 -> singletons, pairs and triplets
 ################ Indicator Value ###############
 
 
-ind_species <- multipatt(laselva_sp, laselva_full$month, max.order=1,
-                    func="IndVal",control=how(nperm=999))
-summary(ind_species)
+#ind_species <- multipatt(laselva_sp, laselva_full$month, max.order=1,
+ #                   func="IndVal",control=how(nperm=999))
+#summary(ind_species)
 
 ```
 
