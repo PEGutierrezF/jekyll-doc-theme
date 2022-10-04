@@ -24,8 +24,8 @@ lapply(libraries, require, character.only = TRUE)
 #### **Step 2**
 Data<br>
 _Cargar los datos._
-```{r, results='hide'}
-laselva_full  <- read.csv("D:/Curriculum/07_ Cursos/Course_Multivariate_Stat_for_Ecological_Data/data/nMDS_laSelva.csv")
+```{r, echo=FALSE, results='hide'}
+laselva_full  <- read.csv("C:/Users/pgutierr/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/nMDS_laSelva.csv")
 head(laselva_full)
 
 ```
@@ -46,11 +46,37 @@ nrow(laselva_sp)
 
 ## ANOSIM, PERMANOVA, SIMPER, Indicator Value
 
-### Analysis of Similitud
+### Analysis of Similitude
 ```{r}
 laselva.dist <- vegdist(laselva_sp, method="bray")
 laselva.anosim <- anosim(laselva.dist, laselva_full$month)
 summary(laselva.anosim)
 plot(laselva.anosim)
 ```
+
+
+```{r}
+dis_well <- betadisper(laselva.dist, laselva_full$month)
+permutest(dis_well)
+
+well.HSD <- TukeyHSD(dis_well)
+well.HSD 
+
+par(mfrow=c(1,2))
+plot(well.HSD, las=1)
+plot(dis_well, las=1)
+```
+
+
+
+### PERMANOVA
+
+```{r}
+
+permanova <- adonis(laselva_sp ~ laselva_full$month, data = laselva_full, permutations = 999, method="bray")
+summary(permanova)
+
+```
+
+
 
