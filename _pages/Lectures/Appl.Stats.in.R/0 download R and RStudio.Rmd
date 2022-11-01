@@ -4,7 +4,7 @@ author:
 - "Pablo E. Gutiérrez-Fonseca"
 - "`r format(Sys.time(), '%d %B, %Y')`"
 layout: default
-permalink: /pages/Lectures/Introduction to R/
+permalink: /pages/Lectures/Appl.Stats.in.R/download R and RStudio/
 output: html_document
 ---
 <br/>

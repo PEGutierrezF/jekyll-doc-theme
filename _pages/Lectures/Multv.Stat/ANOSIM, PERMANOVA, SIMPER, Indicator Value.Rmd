@@ -25,7 +25,7 @@ lapply(libraries, require, character.only = TRUE)
 Data<br>
 _Cargar los datos._
 ```{r, echo=FALSE, results='hide'}
-laselva_full  <- read.csv("C:/Users/pgutierr/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/nMDS_laSelva.csv")
+laselva_full  <- read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/nMDS_laSelva.csv")
 head(laselva_full)
 
 ```
