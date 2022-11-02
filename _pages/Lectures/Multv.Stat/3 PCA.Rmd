@@ -10,10 +10,11 @@ output: html_document
 <br/>
 <br/>
 
-1. Primer paso: cargar las librerias que necesitas.
-
+#### **Step 1**
+Load libraries.<br>
+_Cargar las librerias que necesitas._
 ```{r, warning=FALSE, message=FALSE}
-
+library("missForest")
 library(ggplot2)
 library(dplyr)
 library(missMDA) # Imputate
@@ -30,8 +31,11 @@ library(labdsv) #loadings.pca(pca)
 
 ```
 
-2. Segundo paso: cargar los datos.
+<br/>
 
+#### **Step 2**
+Data<br>
+_Cargar los datos._
 ```{r}
 channel <- read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/PCA_channel_form.csv",header=TRUE)
 head(channel)
@@ -40,78 +44,49 @@ tail(channel)
 
 
 2.1 Vamos a examinar los datos
-
 ```{r}
 summary(channel)
 
 ```
 
 
-2.1 Remover la(s) variable(s) que tiene(n) mucho NAs y las Etiquetas (a la funcion lo le gusta), luego las agregamos.
+2.2 Vamos a imputar datos.  Dado que los datos de sustrato continene NAs, vamos a importar solo estos.
+```{r}
+df1 <- dplyr::select(channel, Elevacion, Ancho, Velocidad, Rocas, 
+                     Canto, grava, arena, Limo)
 
+df1_a <- missForest(df1, maxiter = 4, ntree = 100,
+                    variablewise = TRUE, decreasing = FALSE, verbose=F, replace=TRUE,
+                    classwt = NULL, cutoff = NULL, strata = NULL,
+                    sampsize = NULL, nodesize = NULL, maxnodes = NULL,
+                    xtrue = NA, parallelize = "no")
+```
+
+2.3 Seleccionamos otras variables de interes.
 ```{r}
 
-channel_1 <- select(channel, -Forma)
-summary(channel_1)
+df2_a <- dplyr::select(channel, Elevacion, NAtemp, NASatO2)
 
 ```
 
-
-2.2 Vamos a imputar datos.  Esto es comun para set de datos de campo, los cuales tienden a tener ceros (por mal funcionamiento de los equipos, condiciones climticas adversas que no puedemos ir al campo).  Se realiza como un paso preliminar para para
-realizar un PCA en un set de datos completos.
-
-Mas informacion aca:  https://www.rdocumentation.org/packages/missMDA/versions/1.18/topics/imputePCA
-
-Primero separar e imputar los datos de sustrato y los fisicoquimicos por aparte.
+2.4 Unimos las dos tablas.
 
 ```{r}
 
-# df0 <- channel_1[, 6:13]
-# df0
-
-df1 <- select(channel_1, Elevacion, Ancho, Velocidad, Rocas, Canto, grava, arena, Limo)
-
-
-df1a <- imputePCA(df1, ncp=4, scale = TRUE, method = c("Regularized","EM"), 
-                      row.w = NULL, ind.sup=NULL,quanti.sup=NULL,quali.sup=NULL,
-                      coeff.ridge = 1, threshold = 1e-06, seed = NULL, nb.init = 1,  
-                      maxiter = 1000)
-
-
-df2 <- select(channel_1, Elevacion, NAN_Am, NAtemp, NASatO2, nit, NADBO)
-df2a <- imputePCA(df2, ncp=4, scale = TRUE, method = c("Regularized","EM"), 
-                   row.w = NULL, ind.sup=NULL,quanti.sup=NULL,quali.sup=NULL,
-                   coeff.ridge = 1, threshold = 1e-06, seed = NULL, nb.init = 1,  
-                   maxiter = 1000)
-
+new_channel <- do.call("merge", c(lapply(list(df1_a$ximp, df2_a), data.frame, 
+                                         row.names=NULL), by = 0, all = TRUE, sort = FALSE))[-1]
+#remove 1 elevation
+new_channel <- dplyr::select(new_channel, -Elevacion.y)
 ```
 
+<br/>
 
-Unir las dos tablas y seleccionar las columnas para hacer el PCA.
-
-```{r}
-df1b <- as.data.frame(df1a) # Sustrata
-df2b <- as.data.frame(df2a) # Physicochemical
-
-
-new_channel <- do.call("merge", c(lapply(list(df1b, df2b), data.frame, row.names=NULL), 
-by = 0, all = TRUE, sort = FALSE))[-1]
-
-new_channel2 <- select(new_channel,
-                      completeObs.Elevacion.x, completeObs.Ancho, completeObs.Velocidad,
-                     completeObs.Rocas, completeObs.Canto, completeObs.grava, completeObs.arena,
-                    completeObs.Limo, completeObs.NAtemp, completeObs.NASatO2
-                      )
-              
-```
-
-
-
+#### **Step 3**
 3.  Vamos a correr el PCA
 
 ```{r}
 
-channel.pca <- prcomp(new_channel2, center = TRUE, scale =TRUE)
+channel.pca <- prcomp(new_channel, center = TRUE, scale =TRUE)
 summary(channel.pca)
 
 
@@ -158,7 +133,7 @@ round(loadings, 2)[ , 1:3]
 
 print(channel.pca)
 
-rownames(loadings) <- colnames(new_channel2)
+rownames(loadings) <- colnames(new_channel)
 scores <- channel.pca$x 
 
 
@@ -177,7 +152,7 @@ screeplot(channel.pca, type="lines")
 varPercent <- variance/sum(variance) * 100
 barplot(varPercent, xlab='PC', ylab='Percent Variance',
 names.arg=1:length(varPercent), las=1, col='gray') +
-abline(h=1/ncol(new_channel2)*100, col="red")
+abline(h=1/ncol(new_channel)*100, col="red")
 
 ```
 
