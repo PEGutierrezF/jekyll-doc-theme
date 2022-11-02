@@ -1,0 +1,240 @@
+---
+title: "Principal Component Analysis (PCA)"
+author: "Pablo E. Gutiérrez-Fonseca"
+date: "8/26/2021"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+
+1. Primer paso: cargar las librerias que necesitas.
+
+
+```{r, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+library(dplyr)
+library(missMDA) # Imputate
+library(ggfortify) # autoplot()
+library(cluster) #pam
+library(factoextra) #get_pca_var()
+library(data.table) # data.table()
+library(labdsv) #loadings.pca(pca)
+
+# library(devtools)
+
+# install_github("vqv/ggbiplot") #ggbiplot
+# library(ggbiplot)
+
+```
+
+2. Segundo paso: cargar los datos.
+
+```{r}
+channel <- read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/PCA_channel_form.csv",header=TRUE)
+head(channel)
+tail(channel)
+```
+
+
+2.1 Vamos a examinar los datos
+
+```{r}
+summary(channel)
+
+```
+
+
+2.1 Remover la(s) variable(s) que tiene(n) mucho NAs y las Etiquetas (a la funcion lo le gusta), luego las agregamos.
+
+```{r}
+
+channel_1 <- select(channel, -Forma)
+summary(channel_1)
+
+```
+
+
+2.2 Vamos a imputar datos.  Esto es comun para set de datos de campo, los cuales tienden a tener ceros (por mal funcionamiento de los equipos, condiciones climticas adversas que no puedemos ir al campo).  Se realiza como un paso preliminar para para
+realizar un PCA en un set de datos completos.
+
+Mas informacion aca:  https://www.rdocumentation.org/packages/missMDA/versions/1.18/topics/imputePCA
+
+Primero separar e imputar los datos de sustrato y los fisicoquimicos por aparte.
+
+```{r}
+
+# df0 <- channel_1[, 6:13]
+# df0
+
+df1 <- select(channel_1, Elevacion, Ancho, Velocidad, Rocas, Canto, grava, arena, Limo)
+
+
+df1a <- imputePCA(df1, ncp=4, scale = TRUE, method = c("Regularized","EM"), 
+                      row.w = NULL, ind.sup=NULL,quanti.sup=NULL,quali.sup=NULL,
+                      coeff.ridge = 1, threshold = 1e-06, seed = NULL, nb.init = 1,  
+                      maxiter = 1000)
+
+
+df2 <- select(channel_1, Elevacion, NAN_Am, NAtemp, NASatO2, nit, NADBO)
+df2a <- imputePCA(df2, ncp=4, scale = TRUE, method = c("Regularized","EM"), 
+                   row.w = NULL, ind.sup=NULL,quanti.sup=NULL,quali.sup=NULL,
+                   coeff.ridge = 1, threshold = 1e-06, seed = NULL, nb.init = 1,  
+                   maxiter = 1000)
+
+```
+
+
+Unir las dos tablas y seleccionar las columnas para hacer el PCA.
+
+```{r}
+df1b <- as.data.frame(df1a) # Sustrata
+df2b <- as.data.frame(df2a) # Physicochemical
+
+
+new_channel <- do.call("merge", c(lapply(list(df1b, df2b), data.frame, row.names=NULL), 
+by = 0, all = TRUE, sort = FALSE))[-1]
+
+new_channel2 <- select(new_channel,
+                      completeObs.Elevacion.x, completeObs.Ancho, completeObs.Velocidad,
+                     completeObs.Rocas, completeObs.Canto, completeObs.grava, completeObs.arena,
+                    completeObs.Limo, completeObs.NAtemp, completeObs.NASatO2
+                      )
+              
+```
+
+
+
+3.  Vamos a correr el PCA
+
+```{r}
+
+channel.pca <- prcomp(new_channel2, center = TRUE, scale =TRUE)
+summary(channel.pca)
+
+
+```
+
+
+3.1 Vamos a ver el grafico.
+
+```{r}
+
+autoplot(channel.pca)
+
+autoplot(channel.pca, data = channel, colour = 'Forma')
+
+autoplot(channel.pca, data = channel, colour = 'Forma', loadings = TRUE)
+
+autoplot(channel.pca, data = channel, colour = 'Forma', loadings = TRUE,
+         loadings.colour = 'blue', 
+         loadings.label = TRUE, loadings.label.size = 3)
+
+
+
+```
+
+Otra manera de ver el grafico
+
+```{r}
+
+# ggbiplot(channel.pca, labels=rownames(channel$Forma))
+
+```
+
+
+3.2 Vamos a ver la contribucion de cada una de las variables. 
+
+
+```{r}
+
+variance <- (channel.pca$sdev)^2
+
+# Cargar los loadings
+loadings <- channel.pca$rotation
+round(loadings, 2)[ , 1:3]
+
+print(channel.pca)
+
+rownames(loadings) <- colnames(new_channel2)
+scores <- channel.pca$x 
+
+
+```
+
+
+3.3 Ver graficamente lo que explica cada axis.
+
+```{r}
+
+layout(matrix(1:2, ncol=2))
+screeplot(channel.pca)
+screeplot(channel.pca, type="lines")
+
+
+varPercent <- variance/sum(variance) * 100
+barplot(varPercent, xlab='PC', ylab='Percent Variance',
+names.arg=1:length(varPercent), las=1, col='gray') +
+abline(h=1/ncol(new_channel2)*100, col="red")
+
+```
+
+
+
+4  Otras formas de visualizar los datos.
+```{r}
+fviz_eig(channel.pca)
+
+
+fviz_pca_biplot(channel.pca, repel = TRUE,
+                col.var = "#2E9FDF", # Variables color
+                col.ind = "#696969",  # Individuals color
+                select.var = list(contrib = 5))
+
+
+```
+
+
+4.1 Con las elipses.
+
+```{r}
+
+fviz_pca_ind(channel.pca, label="none", habillage=channel$Forma,
+     addEllipses=TRUE, ellipse.level=0.95, palette = "Dark2")
+
+```
+
+
+4.2 
+```{r}
+PCA <- fviz_pca_biplot(channel.pca, label = "var", habillage=channel$Forma,
+               addEllipses=TRUE, ellipse.level=0.95,
+               ggtheme = theme_minimal())
+
+# PCA + ggsave("PCA.jpg", width=11, height=8.5)
+
+```
+
+
+
+5.  Convertirlo en una data.frame para trabajarlo en ggplot2
+
+```{r}
+
+data <- data.table(PC1=channel.pca$x[,1], PC2=channel.pca$x[,2], Forma=  channel[,1])
+data <- data[order(channel$Forma),]
+
+ggplot(data, aes(x=PC1,y=PC2)) + 
+  geom_point(size = 2, aes(color=Forma))
+
+
+```
+
+
+6. Otras enlaces de interes.
+```{r}
+# http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-# princomp/
+```
+
