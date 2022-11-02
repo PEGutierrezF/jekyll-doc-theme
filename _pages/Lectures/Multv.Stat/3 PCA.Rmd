@@ -14,21 +14,10 @@ output: html_document
 Load libraries.<br>
 _Cargar las librerias que necesitas._
 ```{r, warning=FALSE, message=FALSE}
-library("missForest")
-library(ggplot2)
-library(dplyr)
-library(missMDA) # Imputate
-library(ggfortify) # autoplot()
-library(cluster) #pam
-library(factoextra) #get_pca_var()
-library(data.table) # data.table()
-library(labdsv) #loadings.pca(pca)
+libraries <- c('cluster','data.table','dplyr','factoextra',
+               'ggfortify','ggplot2','missForest','missMDA','labdsv')
 
-# library(devtools)
-
-# install_github("vqv/ggbiplot") #ggbiplot
-# library(ggbiplot)
-
+lapply(libraries, require, character.only = TRUE)
 ```
 
 <br/>
@@ -83,7 +72,6 @@ new_channel <- dplyr::select(new_channel, -Elevacion.y)
 
 #### **Step 3**
 3.  Vamos a correr el PCA
-
 ```{r}
 
 channel.pca <- prcomp(new_channel, center = TRUE, scale =TRUE)
@@ -92,6 +80,7 @@ summary(channel.pca)
 
 ```
 
+<br/>
 
 3.1 Vamos a ver el grafico.
 
@@ -111,6 +100,8 @@ autoplot(channel.pca, data = channel, colour = 'Forma', loadings = TRUE,
 
 ```
 
+<br/>
+
 Otra manera de ver el grafico
 
 ```{r}
@@ -119,9 +110,9 @@ Otra manera de ver el grafico
 
 ```
 
+<br/>
 
 3.2 Vamos a ver la contribucion de cada una de las variables. 
-
 
 ```{r}
 
@@ -139,6 +130,7 @@ scores <- channel.pca$x
 
 ```
 
+<br/>
 
 3.3 Ver graficamente lo que explica cada axis.
 
@@ -156,7 +148,7 @@ abline(h=1/ncol(new_channel)*100, col="red")
 
 ```
 
-
+<br/>
 
 4  Otras formas de visualizar los datos.
 ```{r}
@@ -171,9 +163,9 @@ fviz_pca_biplot(channel.pca, repel = TRUE,
 
 ```
 
+<br/>
 
 4.1 Con las elipses.
-
 ```{r}
 
 fviz_pca_ind(channel.pca, label="none", habillage=channel$Forma,
@@ -181,6 +173,7 @@ fviz_pca_ind(channel.pca, label="none", habillage=channel$Forma,
 
 ```
 
+<br/>
 
 4.2 
 ```{r}
@@ -193,9 +186,8 @@ PCA <- fviz_pca_biplot(channel.pca, label = "var", habillage=channel$Forma,
 ```
 
 
-
+<br/>
 5.  Convertirlo en una data.frame para trabajarlo en ggplot2
-
 ```{r}
 
 data <- data.table(PC1=channel.pca$x[,1], PC2=channel.pca$x[,2], Forma=  channel[,1])
@@ -207,9 +199,11 @@ ggplot(data, aes(x=PC1,y=PC2)) +
 
 ```
 
+<br/>
 
-6. Otras enlaces de interes.
-```{r}
-# http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-# princomp/
-```
+#### **References**
 
+http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-#princomp/
+
+<br/>
+<br/>
