@@ -1,11 +1,11 @@
 ---
-title: "Principal Component Analysis (PCA)"
-author: "Pablo E. Gutiérrez-Fonseca"
-date: "8/26/2021"
-output:
-  html_document:
-    df_print: paged
-  pdf_document: default
+title: "Principal Component Analysis"
+author: 
+- "Pablo E. Guti&eacute;rrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+permalink: /pages/Lectures/PCA/
+output: html_document
 ---
 
 
