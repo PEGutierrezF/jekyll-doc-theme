@@ -32,7 +32,7 @@ head(channel)
 
 <br/>
 
-#### **Step 2.1**
+##### **Step 2.1**
 _Vamos a examinar los datos_
 ```{r}
 summary(channel)
@@ -41,7 +41,7 @@ summary(channel)
 
 <br/>
 
-#### **Step 2.2**
+##### **Step 2.2**
 _Muchas veces, los sensores se apagan o funcional mal, o no se pudo recolectar una muestra.  Esto genera vacios.  R los reconoce como NAs.  Podemos llenar estos vacios imputando datos._
 ```{r}
 df1 <- dplyr::select(channel, Elevacion, Ancho, Velocidad, Rocas, 
@@ -56,7 +56,7 @@ df1_a <- missForest(df1, maxiter = 4, ntree = 100,
 
 <br/>
 
-#### **Step 2.3**
+##### **Step 2.3**
 _2.3 Seleccionamos otras variables de interes._
 ```{r}
 
@@ -66,7 +66,7 @@ df2_a <- dplyr::select(channel, Elevacion, NAtemp, NASatO2)
 
 <br/>
 
-#### **Step 2.4**
+##### **Step 2.4**
 _Unimos las dos tablas_
 ```{r}
 
@@ -79,7 +79,7 @@ new_channel <- dplyr::select(new_channel, -Elevacion.y)
 <br/>
 
 #### **Step 3**
-3.  Vamos a correr el PCA
+_Ahora, corremos el PCA usando el dataframe que contiene las variables completas (i.e., sin NAs)._
 ```{r}
 
 channel.pca <- prcomp(new_channel, center = TRUE, scale =TRUE)
@@ -90,10 +90,9 @@ summary(channel.pca)
 
 <br/>
 
-3.1 Vamos a ver el grafico.
-
+##### **Step 3.1**
+_Exploremos los datos con los graficos default que tiene el paquete estadistico._
 ```{r}
-
 autoplot(channel.pca)
 
 autoplot(channel.pca, data = channel, colour = 'Forma')
@@ -103,39 +102,26 @@ autoplot(channel.pca, data = channel, colour = 'Forma', loadings = TRUE)
 autoplot(channel.pca, data = channel, colour = 'Forma', loadings = TRUE,
          loadings.colour = 'blue', 
          loadings.label = TRUE, loadings.label.size = 3)
-
-
-
 ```
 
 <br/>
 
-Otra manera de ver el grafico
-
+##### **Step 4**
+_Vamos a ver la contribucion de cada una de las variables. Podemos ver cuanto explican los primero 3 PC_
 ```{r}
-
-# ggbiplot(channel.pca, labels=rownames(channel$Forma))
-
-```
-
-<br/>
-
-3.2 Vamos a ver la contribucion de cada una de las variables. 
-
-```{r}
-
 variance <- (channel.pca$sdev)^2
 
 # Cargar los loadings
 loadings <- channel.pca$rotation
 round(loadings, 2)[ , 1:3]
+```
 
+_Tambien, podemos ver cuanto explican todos los PCs_
+```{r}
 print(channel.pca)
 
 rownames(loadings) <- colnames(new_channel)
 scores <- channel.pca$x 
-
-
 ```
 
 <br/>
