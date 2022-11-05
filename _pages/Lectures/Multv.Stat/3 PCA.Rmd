@@ -12,9 +12,17 @@ output: html_document
 
 #### **Basic concepts of PCAs**
 #### **Conceptos b&#225;sicos en PCAs**
-PCA is an ordination used to reduce a data set with n cases (e.g., study sites) and p variables (e.g., environmental variables) to a smaller number of synthetic variables that represent most of the information in the set of original data (McCune et al. 2002).<br>
+PCA is an ordination used to reduce a data set with **_n_** cases (e.g., study sites) and **_p_** variables (e.g., environmental variables) to a smaller number of synthetic variables that represent most of the information in the set of original data (McCune et al. 2002).<br>
 
-_El PCA es una ordenaci&#243;n que se utiliza para reducir un conjunto de datos con n casos (e.g., sitios de estudio) y p variables (e.g., variables ambientales) a un n&#250;mero menor de variables sint&#233;ticas que representan la mayor parte de la informaci&#243;n en el conjunto de datos original (McCune et al. 2002)._
+_El PCA es una ordenaci&#243;n que se utiliza para reducir un conjunto de datos con **n** casos (e.g., sitios de estudio) y **p** variables (e.g., variables ambientales) a un n&#250;mero menor de variables sint&#233;ticas que representan la mayor parte de la informaci&#243;n en el conjunto de datos original (McCune et al. 2002)._
+
+<br/>
+
+#### **_"prcomp"_ package**
+Some blogs (e.g., 1) recommend using the "**_prcomp_**" package to run PCAs, since it uses the singular value decomposition (SVD) which has slightly better numerical accuracy compared to other packages like "**_princomp_**".<br>
+
+_Algunos blogs (e.g., 1) recomiendan usar el paquete "**prcomp**" para ejecutar PCA, ya que usa la descomposici&#243;n de valores singulares (SVD) que tiene una precisi&#243;n num&#233;rica ligeramente mejor comparado con "**princomp**"._
+
 <br/>
 <br/>
 
@@ -205,9 +213,9 @@ ggplot(data, aes(x=PC1,y=PC2)) +
 
 #### **References**
 
-http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-#princomp/
-
 McCune, B., Grace, J. B., & Urban, D. L. (2002). Analysis of ecological communities (Vol. 28). Gleneden Beach, OR: MjM software design.
+
+1. http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-#princomp/
 
 <br/>
 <br/>
