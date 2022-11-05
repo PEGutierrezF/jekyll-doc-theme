@@ -19,9 +19,13 @@ _El PCA es una ordenaci&#243;n que se utiliza para reducir un conjunto de datos 
 <br/>
 
 #### **_"prcomp"_ package**
-Some blogs (e.g., 1) recommend using the "**_prcomp_**" package to run PCAs, since it uses the singular value decomposition (SVD) which has slightly better numerical accuracy compared to other packages like "**_princomp_**".<br>
+Some blogs (e.g., 1) recommend using the "**_prcomp_**" package to run PCAs, since it uses the singular value decomposition [(SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition), which has slightly better numerical accuracy compared to other packages like "**_princomp_**".<br>
 
-_Algunos blogs (e.g., 1) recomiendan usar el paquete "**prcomp**" para ejecutar PCA, ya que usa la descomposici&#243;n de valores singulares (SVD) que tiene una precisi&#243;n num&#233;rica ligeramente mejor comparado con "**princomp**"._
+_Algunos blogs (e.g., 1) recomiendan usar el paquete "**prcomp**" para ejecutar PCA, ya que usa la descomposici&#243;n de valores singulares [(SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition) que tiene una precisi&#243;n num&#233;rica ligeramente mejor comparado con "**princomp**"._
+
+<br/>
+
+#### **Standardization and/or Normalization**
 
 <br/>
 <br/>
