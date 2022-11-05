@@ -19,13 +19,28 @@ _El PCA es una ordenaci&#243;n que se utiliza para reducir un conjunto de datos 
 <br/>
 
 #### **_"prcomp"_ package**
-Some blogs (e.g., 1) recommend using the "**_prcomp_**" package to run PCAs, since it uses the singular value decomposition [(SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition), which has slightly better numerical accuracy compared to other packages like "**_princomp_**".<br>
+Some blogs (e.g., [Blog 1](http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-#princomp/)) recommend using the "**_prcomp_**" package to run PCAs, since it uses the singular value decomposition [(SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition), which has slightly better numerical accuracy compared to other packages like "**_princomp_**".<br>
 
-_Algunos blogs (e.g., 1) recomiendan usar el paquete "**prcomp**" para ejecutar PCA, ya que usa la descomposici&#243;n de valores singulares [(SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition) que tiene una precisi&#243;n num&#233;rica ligeramente mejor comparado con "**princomp**"._
+_Algunos blogs (e.g., [Blog 1](http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-#princomp/)) recomiendan usar el paquete "**prcomp**" para ejecutar PCA, ya que usa la descomposici&#243;n de valores singulares [(SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition) que tiene una precisi&#243;n num&#233;rica ligeramente mejor comparado con "**princomp**"._
 
 <br/>
 
 #### **Standardization and/or Normalization**
+First we will define these two concepts that are fundamental in statistical analysis and modeling:<br>
+**_Standardization_** (or Z-score) refers to making the empirical distribution Y&#8764;N(0,1). That is, make the variables follow a standard normal distribution (mean **_(&#956;)_** = 0 and standard deviation **_(&#963;)_** = 1). <br>
+**_Standardization_** of the samples are calculated as follows: $$z = (x-\mu)/\sigma$$
+
+<br/>
+**_Normalization_** (or Scaling) refers to scaling the variable in a certain range, usually between 0 and 1.
+
+There is more information in this [Blog 2](https://scikit-learn.org/stable/modules/preprocessing.html#normalization)<br>
+
+Thus, we must remember that the main objective of a PCA is to find directions that maximize the variance. If the variance of one variable is greater than that of others, we make the PCA components biased in that direction.<br>
+
+So the best we can do is make the variance of all the variables the same. We do this by **_Standardizing_** all the variables. In contrast, **_Normalization_** does not make all variables have the same variance.<br>
+
+<br/>
+_Primero vamos a definir estos dos conceptos que son fundamentales en an&#225;lisis estad&#237;stico y modelaje:_<br>
 
 <br/>
 <br/>
@@ -219,7 +234,6 @@ ggplot(data, aes(x=PC1,y=PC2)) +
 
 McCune, B., Grace, J. B., & Urban, D. L. (2002). Analysis of ecological communities (Vol. 28). Gleneden Beach, OR: MjM software design.
 
-1. http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/118-principal-component-analysis-in-r-prcomp-vs-#princomp/
 
 <br/>
 <br/>
