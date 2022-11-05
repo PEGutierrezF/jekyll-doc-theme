@@ -27,11 +27,12 @@ _Algunos blogs (e.g., [Blog 1](http://www.sthda.com/english/articles/31-principa
 
 #### **Standardization and/or Normalization**
 First we will define these two concepts that are fundamental in statistical analysis and modeling:<br>
+
 **_Standardization_** (or Z-score) refers to making the empirical distribution Y&#8764;N(0,1). That is, make the variables follow a standard normal distribution (mean **_(&#956;)_** = 0 and standard deviation **_(&#963;)_** = 1). <br>
 **_Standardization_** of the samples are calculated as follows: $$z = (x-\mu)/\sigma$$
 
 <br/>
-**_Normalization_** (or Scaling) refers to scaling the variable in a certain range, usually between 0 and 1.
+**_Normalization_** (or Scaling) refers to scaling the variable in a certain range, usually between 0 and 1.<br>
 
 There is more information in this [Blog 2](https://scikit-learn.org/stable/modules/preprocessing.html#normalization)<br>
 
