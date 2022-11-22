@@ -44,6 +44,10 @@ So the best we can do is make the variance of all the variables the same. We do 
 _Primero vamos a definir estos dos conceptos que son fundamentales en an&#225;lisis estad&#237;stico y modelaje:_<br>
 
 <br/>
+
+#### **Correlation vs Covariance**
+
+<br/>
 <br/>
 
 #### **Step 1**
