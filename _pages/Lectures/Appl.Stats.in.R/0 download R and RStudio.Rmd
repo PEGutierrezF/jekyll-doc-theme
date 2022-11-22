@@ -21,7 +21,7 @@ Go to https://www.r-project.org/
 #### **Step 2**
 In the left hand corner under Download click CRAN.
 <center>
-<img src="/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step1.jpg">
+<img src="D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step1.jpg">
 </center>
 <br/>
 <br/>
@@ -29,7 +29,7 @@ In the left hand corner under Download click CRAN.
 #### **Step 3**
 Select one from this list, and download it using the appropriate link for your computer system.
 <center>
-<img src="/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step3.jpg">
+<img src="D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step3.jpg">
 </center>
 <br/>
 <br/>
@@ -37,7 +37,7 @@ Select one from this list, and download it using the appropriate link for your c
 #### **Step 4**
 Click base.
 <center>
-<img src="/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step4.jpg">
+<img src="D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step4.jpg">
 </center>
 <br/>
 <br/>
@@ -45,7 +45,7 @@ Click base.
 #### **Step 5**
 Download R and follow the typical downloading and installation prompts associated with your computer. system
 <center>
-<img src="/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step5.jpg">
+<img src="D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step5.jpg">
 </center>
 
 <br/>
@@ -63,7 +63,7 @@ Go to https://www.rstudio.com/
 #### **Step 7**
 Scroll down and click on **Download Free Desktop IDE**
 <center>
-<img src="/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step7.jpg">
+<img src="D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step7.jpg">
 </center>
 <br/>
 <br/>
@@ -71,7 +71,7 @@ Scroll down and click on **Download Free Desktop IDE**
 #### **Step 8**
 Pick a version. Free has all of the tools you will need for this course.
 <center>
-<img src="/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step8.jpg">
+<img src="D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step8.jpg">
 </center>
 <br/>
 <br/>
@@ -79,7 +79,7 @@ Pick a version. Free has all of the tools you will need for this course.
 #### **Step 9**
 Select one from this list. Download and install it using the appropriate link for your computer system.
 <center>
-<img src="/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step9.jpg">
+<img src="D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/Appl.Stats.in.R/fig/step9.jpg">
 </center>
 <br/>
 <br/>
