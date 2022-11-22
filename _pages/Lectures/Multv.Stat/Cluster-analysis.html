@@ -371,22 +371,11 @@ pre code {
 
 
 <p><br /> <br /></p>
-<div id="step-1" class="section level4">
-<h4><strong>Step 1</strong></h4>
-<p>Load libraries.<br> <em>Cargar las librerias que necesitas.</em></p>
-<pre class="r"><code>library(vegan)
-library(factoextra)</code></pre>
-<p><br></p>
+<div id="basic-concepts-of-cluster-analysis" class="section level4">
+<h4><strong>Basic concepts of Cluster analysis</strong></h4>
 </div>
-<div id="step-2" class="section level4">
-<h4><strong>Step 2</strong></h4>
-<p>Data<br> <em>Cargar los datos.</em></p>
-<pre class="r"><code>spe.fish  &lt;- read.csv(&quot;D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/Cluster_analysis_fish_PR.csv&quot;, header = TRUE, row.names = 1)
-head(spe.fish)</code></pre>
-<p><br></p>
-</div>
-<div id="cluster-analysis" class="section level2">
-<h2>Cluster analysis</h2>
+<div id="conceptos-básicos-en-análisis-de-conglomerados" class="section level4">
+<h4><strong>Conceptos básicos en Análisis de conglomerados</strong></h4>
 <p>Clustering is a technique, non-parametric (Zelterman 2015, page 287),
 to group similar data points into one group and separate out dissimilar
 observations into different groups or clusters. In Hierarchical
@@ -411,6 +400,7 @@ términos ecológicos (Borcard et al. 2012).</em></p>
 Borcard et al. (2012)<br> <em>Hay al menos 5 familias de metodos de
 agrupación. Mas detalles en Borcard et al. (2012)</em></p>
 <p><br></p>
+</div>
 <div id="wards-minimum-variance-clustering" class="section level4">
 <h4><strong>Ward’s Minimum Variance Clustering</strong></h4>
 <p>This method is based on the linear model criterion of least squares.
@@ -422,8 +412,22 @@ definir grupos de tal manera que se minimice la suma de cuadrados dentro
 del grupo (es decir, el error al cuadrado de ANOVA).</em></p>
 <p><br></p>
 </div>
-<div id="step-1-cluster" class="section level4">
-<h4><strong>Step 1: Cluster</strong></h4>
+<div id="step-1" class="section level4">
+<h4><strong>Step 1</strong></h4>
+<p>Load libraries.<br> <em>Cargar las librerias que necesitas.</em></p>
+<pre class="r"><code>library(vegan)
+library(factoextra)</code></pre>
+<p><br></p>
+</div>
+<div id="step-2" class="section level4">
+<h4><strong>Step 2</strong></h4>
+<p>Data<br> <em>Cargar los datos.</em></p>
+<pre class="r"><code>spe.fish  &lt;- read.csv(&quot;D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/Cluster_analysis_fish_PR.csv&quot;, header = TRUE, row.names = 1)
+head(spe.fish)</code></pre>
+<p><br></p>
+</div>
+<div id="step-1.-cluster" class="section level4">
+<h4><strong>Step 1. Cluster</strong></h4>
 <p><em>Ejecutar el analisis de conglomerados</em></p>
 <pre class="r"><code># Ward Hierarchical Clustering
 # distance matrix.  You need to calculate this before running the cluster analysis.  The most popular distance is # the Euclidean distance (Zelterman 2015, page 293)
@@ -449,8 +453,8 @@ rect.hclust(fish_clust, k = 3, border = 2:6)</code></pre>
 <pre class="r"><code># abline(h = 100, col = &#39;red&#39;)</code></pre>
 <p><br></p>
 </div>
-<div id="step-3-cluster" class="section level4">
-<h4><strong>Step 3: Cluster</strong></h4>
+<div id="step-2.1" class="section level4">
+<h4><strong>Step 2.1</strong></h4>
 <p><em>Identificar a que grupo pertenece cada dato</em></p>
 <pre class="r"><code>cut_avg &lt;- cutree(fish_clust, k = 3)
 cut_avg</code></pre>
@@ -458,8 +462,8 @@ cut_avg</code></pre>
 ##     1     2     1     1     1     1     1     3     3     3     3</code></pre>
 <p><br></p>
 </div>
-<div id="step-4-cluster" class="section level4">
-<h4><strong>Step 4: Cluster</strong></h4>
+<div id="step-2.2" class="section level4">
+<h4><strong>Step 2.2</strong></h4>
 <p><em>Número de observaciones en cada grupo</em></p>
 <pre class="r"><code>table(cut_avg)</code></pre>
 <pre><code>## cut_avg
@@ -508,7 +512,6 @@ criterion?. Journal of classification, 31(3), 274-295.</p>
 <p>Zelterman, D. (2015). Applied multivariate statistics with R.
 Switzerland: Springer International Publishing.</p>
 <p><br /> <br /></p>
-</div>
 </div>
 
 
