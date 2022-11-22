@@ -24,7 +24,7 @@ library(factoextra)
 Data<br>
 _Cargar los datos._
 ```{r, results='hide'}
-spe.fish  <- read.csv("D:/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/Cluster_analysis_fish_PR.csv", header = TRUE, row.names = 1)
+spe.fish  <- read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/Cluster_analysis_fish_PR.csv", header = TRUE, row.names = 1)
 head(spe.fish)
 
 ```
