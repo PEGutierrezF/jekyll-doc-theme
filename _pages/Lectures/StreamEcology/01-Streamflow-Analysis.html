@@ -10,7 +10,7 @@
 
 
 <meta name="author" content="Pablo E. Gutiérrez-Fonseca" />
-<meta name="author" content="28 January, 2023" />
+<meta name="author" content="30 January, 2023" />
 
 
 <title>Streamflow Analysis</title>
@@ -358,12 +358,51 @@ display: none;
 
 <h1 class="title toc-ignore">Streamflow Analysis</h1>
 <h4 class="author">Pablo E. Gutiérrez-Fonseca</h4>
-<h4 class="author">28 January, 2023</h4>
+<h4 class="author">30 January, 2023</h4>
 
 </div>
 
 
 <p><br /> <br /></p>
+<div id="step-1" class="section level4">
+<h4><strong>Step 1</strong></h4>
+<p>Load libraries.<br> <em>Cargar las librerias que necesitas.</em></p>
+<pre class="r"><code>libraries &lt;- c(&#39;hydroTSM&#39;,&#39;dataRetrieval&#39;,&#39;data.table&#39;,&#39;dplyr&#39;,&#39;ggplot2&#39;,&#39;lubridate&#39;,&#39;raster&#39;,&#39;rgdal&#39;,&#39;waterData&#39;,&#39;zoo&#39;)
+
+lapply(libraries, require, character.only = TRUE)</code></pre>
+<pre><code>## [[1]]
+## [1] TRUE
+## 
+## [[2]]
+## [1] TRUE
+## 
+## [[3]]
+## [1] TRUE
+## 
+## [[4]]
+## [1] TRUE
+## 
+## [[5]]
+## [1] TRUE
+## 
+## [[6]]
+## [1] TRUE
+## 
+## [[7]]
+## [1] TRUE
+## 
+## [[8]]
+## [1] TRUE
+## 
+## [[9]]
+## [1] TRUE
+## 
+## [[10]]
+## [1] TRUE</code></pre>
+<p>library(dataRetrieval): USGS package that gets streamflow data direct
+from the USGS website</p>
+<p><br /></p>
+</div>
 
 
 

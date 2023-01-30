@@ -4,8 +4,23 @@ author:
 - "Pablo E. Guti&eacute;rrez-Fonseca"
 - "`r format(Sys.time(), '%d %B, %Y')`"
 layout: default
-permalink: /pages/Lectures/Stream Ecology/Streamflow Analysis/
+permalink:
 output: html_document
 ---
 <br/>
+<br/>
+
+
+#### **Step 1**
+Load libraries.<br>
+_Cargar las librerias que necesitas._
+```{r, warning=FALSE, message=FALSE}
+libraries <- c('hydroTSM','dataRetrieval','data.table','dplyr','ggplot2','lubridate','raster','rgdal','waterData','zoo')
+
+lapply(libraries, require, character.only = TRUE)
+```
+
+library(dataRetrieval): USGS package that gets streamflow data  direct from the USGS website
+
+
 <br/>
