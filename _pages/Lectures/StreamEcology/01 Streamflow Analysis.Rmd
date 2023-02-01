@@ -24,3 +24,128 @@ library(dataRetrieval): USGS package that gets streamflow data  direct from the 
 
 
 <br/>
+
+#### **Step 2**
+Data minning.<br>
+Try the code below with the site.code here, then use the site code for your watershed.
+```{r, warning=FALSE, message=FALSE}
+site.code = "04290500"  #  The USGS streamgage code for Winnoski River at Esses
+```
+
+<br/>
+
+#### **Step 3**
+Download data from the USGS.<br>
+```{r, warning=FALSE, message=FALSE}
+parameter.code = "00060"  # this is the code for stream discharge.
+start.date = "1929-01-01"  # Blanks get all of the data
+end.date = "2022-12-31"
+
+# store data in "winnoski dataframe
+winooski = readNWISdv("04290500", parameter.code, start.date, end.date)
+```
+
+
+<br/>
+
+#### **Step 4**
+Explore date.<br>
+```{r, warning=FALSE, message=FALSE}
+head(winooski)
+tail(winooski)
+```
+
+
+<br/>
+
+#### **Step 5**
+The names for the discharge and QA columns aren't very nice, so rename them:<br>
+```{r, warning=FALSE, message=FALSE}
+names(winooski)[c(4,5)] = c("Q.ft.s","QA")
+head(winooski)
+```
+
+<br/>
+
+#### **Step 6**
+Explore data:<br>
+```{r, warning=FALSE, message=FALSE}
+plot(winooski$Date,winooski$Q.ft.s, type='l')
+```
+
+
+<br/>
+
+#### **Step 7**
+Summarize data and find extreme values.<br>
+```{r, warning=FALSE, message=FALSE}
+summary(winooski)
+winooski[which.max(winooski$Q.ft.s), ] # Identify the maximum flood events in the record
+winooski[which.min(winooski$Q.ft.s), ] # Identify the minimum discharge events in the record
+```
+
+
+<br/>
+
+#### **Step 8**
+Data visualization.<br>
+```{r, warning=FALSE, message=FALSE}
+winooski.df <- winooski %>%
+  mutate(year = factor(year(Date)),     # use year to define separate curves
+         Date = update(Date, year = 1))  # use a constant year for the x-axis
+
+
+p <-  ggplot(winooski.df, aes(Date, Q.ft.s, color = year)) +
+            scale_x_date(date_breaks = "1 month", date_labels = "%b") +
+  theme_bw()
+
+p +  geom_line() + theme(legend.position = "none") # Add the lines. 
+```
+
+<br/>
+
+#### **Step 9**
+Data visualization.<br>
+```{r, warning=FALSE, message=FALSE}
+p +  geom_line(aes(group = year), color = "gray20", alpha = 0.1) +
+            geom_line(data = function(x) filter(x, year == 1936), color='blue' , size = 1) +
+  theme_bw()
+```
+
+
+<br/>
+
+#### **Step 10**
+Contrasting 1936 with the rest of the years.<br>
+```{r, warning=FALSE, message=FALSE}
+year.1936 <- setDT(winooski)[Date %between% c('1936-01-01', '1936-12-31')]
+no.2023   <- setDT(winooski)[(Date < '1936-01-01' | Date > '1936-12-31'),]
+
+summary(year.1936)
+summary(no.2023)
+```
+
+
+<br/>
+
+#### **Step 11.1**
+Calculate cumulative discharge for each year by first grouping by water year.<br>
+```{r, warning=FALSE, message=FALSE}
+cum.data <- addWaterYear(winooski) # Add a new column with Year
+cumulative_dat <- group_by(cum.data, waterYear) %>% # Group by Year
+  mutate(cumulative_dis = cumsum(Q.ft.s), # Sum daily discharge (function cumsum())
+         wy_doy = seq(1:n())) # Add consecutive day
+```
+
+#### **Step 11.1**
+First graph.<br>
+```{r, warning=FALSE, message=FALSE}
+q <- ggplot(cumulative_dat, aes(x = wy_doy, y = cumulative_dis, group = waterYear)) + 
+  geom_line(lwd = 0.6) +
+  xlab("Julian Day") + ylab("Cumulative dischage (ft.s)") +
+  ylim(c(0, 1300000)) +
+  xlim(0,366) +
+  theme_bw() 
+q
+```
+
