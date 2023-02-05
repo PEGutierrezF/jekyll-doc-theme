@@ -149,3 +149,23 @@ q <- ggplot(cumulative_dat, aes(x = wy_doy, y = cumulative_dis, group = waterYea
 q
 ```
 
+
+#### **Step 11.2**
+Highlight the rainiest year
+```{r, warning=FALSE, message=FALSE}
+q + geom_line(data=subset(cumulative_dat, waterYear == "2011"), colour="blue", size=0.9)
+```
+
+
+#### **Step 11.3**
+highlight the driest year
+```{r, warning=FALSE, message=FALSE}
+q + geom_line(data=subset(cumulative_dat, waterYear == "1965"), colour="red", size=0.9) 
+```
+
+
+#### **References**
+
+
+<br/>
+<br/>
