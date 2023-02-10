@@ -10,7 +10,7 @@
 
 
 <meta name="author" content="Pablo E. Gutiérrez-Fonseca" />
-<meta name="author" content="04 February, 2023" />
+<meta name="author" content="09 February, 2023" />
 
 
 <title>Times Series Analysis</title>
@@ -358,7 +358,7 @@ display: none;
 
 <h1 class="title toc-ignore">Times Series Analysis</h1>
 <h4 class="author">Pablo E. Gutiérrez-Fonseca</h4>
-<h4 class="author">04 February, 2023</h4>
+<h4 class="author">09 February, 2023</h4>
 
 </div>
 
@@ -374,6 +374,20 @@ lapply(libraries, require, character.only = TRUE)</code></pre>
 ## 
 ## [[2]]
 ## [1] TRUE</code></pre>
+<p><br /></p>
+</div>
+<div id="step-2" class="section level4">
+<h4><strong>Step 2</strong></h4>
+<pre class="r"><code>rain &lt;- read.csv(&quot;D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/StreamEcology_TS_precipitation.csv&quot;)
+rainEVFS &lt;- rain[,3] # Select colunm 3.  </code></pre>
+</div>
+<div id="step-3" class="section level4">
+<h4><strong>Step 3</strong></h4>
+<pre class="r"><code>rain.ts &lt;- ts(rainEVFS, # Convert &quot;Precipitation&quot; to a time series object.
+                    frequency=12, start=c(1975,1), end=c(2016,12))
+head(rain.ts, n=24) </code></pre>
+<pre><code>##  [1] 301.6  76.1  63.8 189.4 188.9  75.4 201.5 293.9 620.7 431.9 367.0 589.9
+## [13] 158.3 272.8 192.2 134.0 215.9 394.4 179.0 278.7 444.2 368.6 190.1 205.4</code></pre>
 </div>
 
 

@@ -18,5 +18,19 @@ libraries <- c('Kendall', 'trend')
 lapply(libraries, require, character.only = TRUE)
 ```
 
+<br/>
 
+#### **Step 2**
+```{r, warning=FALSE, message=FALSE}
+rain <- read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/StreamEcology_TS_precipitation.csv")
+rainEVFS <- rain[,3] # Select colunm 3.  
+```
+
+
+#### **Step 3**
+```{r, warning=FALSE, message=FALSE}
+rain.ts <- ts(rainEVFS, # Convert "Precipitation" to a time series object.
+                    frequency=12, start=c(1975,1), end=c(2016,12))
+head(rain.ts, n=24) 
+```
 
