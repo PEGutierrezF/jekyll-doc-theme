@@ -26,6 +26,7 @@ rain <- read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal we
 rainEVFS <- rain[,3] # Select colunm 3.  
 ```
 
+<br/>
 
 #### **Step 3**
 ```{r, warning=FALSE, message=FALSE}
@@ -34,3 +35,23 @@ rain.ts <- ts(rainEVFS, # Convert "Precipitation" to a time series object.
 head(rain.ts, n=24) 
 ```
 
+<br/>
+
+#### **Step 4**
+```{r, warning=FALSE, message=FALSE}
+plot(rain.ts, main="Precipitation El Verde")
+```
+
+<br/>
+
+#### **Step 4**
+We can use the Mann-Kendall Trend Test to see if there is a pattern in the data.
+```{r, warning=FALSE, message=FALSE}
+MannKendall(rain.ts)
+# tau is a measure of the strength of the trend
+# p-value for trend is also shown
+```
+
+
+<br/>
+<br/>
