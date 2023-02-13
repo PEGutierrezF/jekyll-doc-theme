@@ -14,7 +14,7 @@ output: html_document
 #### **Step 1**
 Load libraries.<br>
 ```{r, warning=FALSE, message=FALSE}
-libraries <- c('Kendall', 'trend')
+libraries <- c('Kendall', 'trend', 'changepoint')
 lapply(libraries, require, character.only = TRUE)
 ```
 
@@ -44,12 +44,56 @@ plot(rain.ts, main="Precipitation El Verde")
 
 <br/>
 
-#### **Step 4**
+## Mann-Kendall Trend Test
+#### **Step 5**
 We can use the Mann-Kendall Trend Test to see if there is a pattern in the data.
 ```{r, warning=FALSE, message=FALSE}
 MannKendall(rain.ts)
 # tau is a measure of the strength of the trend
 # p-value for trend is also shown
+```
+The test statistic is 0.0301, and the two-sided p-value associated with it is not less than 0.05. We cannot reject the null hypothesis of the test and conclude that no trend exists in the data because the p-value is greater than 0.05.
+
+<br/>
+
+#### **Step 6**
+Plot and trend
+Now we can add a smooth line to visualize the trend.
+```{r, warning=FALSE, message=FALSE}
+plot(rain.ts, main="Precipitation El Verde")
+lines(lowess(time(rain.ts), rain.ts), col='red')
+```
+
+<br/>
+
+## Sen's slope
+#### **Step 7**
+The sens.slope function in the trend package is used with a time series object.  
+The sea.sens.slope function performs the test while taking into account the seasonality of the data.
+```{r, warning=FALSE, message=FALSE}
+sens.slope(rain.ts)
+```
+
+<br/>
+
+## Pettitt's test for change in value 
+#### **Step 8**
+The pettitt.test function in the trend package identifies a point at which the values in the data change.  The results here suggest that the stage values were higher after May 2009 than before.
+```{r, warning=FALSE, message=FALSE}
+pettitt.test(rain.ts)
+rain[244,]
+```
+
+<br/>
+
+## Multiple changes points
+#### **Step 9**
+The next few commands will be used to find a potential change point in the mean. 
+```{r, warning=FALSE, message=FALSE}
+mvalueS = cpt.mean(rain.ts, method="BinSeg", Q=5) # BinSeg Binary Segmentation
+cpts(mvalueS)
+rain[c(7,189,255,420,468),]
+plot(mvalueS, cpt.width = 4)
 ```
 
 
