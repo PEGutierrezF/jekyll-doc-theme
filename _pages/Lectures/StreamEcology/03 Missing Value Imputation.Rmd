@@ -1,5 +1,5 @@
 ---
-title: "Nonparametric Missing Value Imputation Using Random Forest"
+title: "Missing Value Imputation"
 author: 
 - "Pablo E. Guti&eacute;rrez-Fonseca"
 - "`r format(Sys.time(), '%d %B, %Y')`"
