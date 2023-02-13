@@ -1,0 +1,21 @@
+---
+title: "Nonparametric Missing Value Imputation Using Random Forest"
+author: 
+- "Pablo E. Guti&eacute;rrez-Fonseca"
+- "`r format(Sys.time(), '%d %B, %Y')`"
+layout: default
+permalink:
+output: html_document
+---
+<br/>
+<br/>
+
+#### **Step 1**
+Load libraries.<br>
+```{r, warning=FALSE, message=FALSE}
+libraries <- c('missForest')
+lapply(libraries, require, character.only = TRUE)
+```
+
+<br/>
+<br/>
