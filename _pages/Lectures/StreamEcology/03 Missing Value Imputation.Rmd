@@ -18,4 +18,79 @@ lapply(libraries, require, character.only = TRUE)
 ```
 
 <br/>
+
+#### **Step 2**
+```{r, warning=FALSE, message=FALSE}
+discharge.na = read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/StreamEcology_MissingValue.csv")
+head(discharge.na)
+summary(discharge.na)
+```
+
+
+<br/>
+
+#### **Step 3**
+Examine data.
+```{r, warning=FALSE, message=FALSE}
+summary(discharge.na)
+```
+
+<br/>
+
+#### **Step 4**
+Plot data.
+```{r, warning=FALSE, message=FALSE}
+plot(discharge.na$Discharge,type="l", lwd=2.0)
+```
+
+<br/>
+
+#### **Step 5**
+Imputate missing data.
+```{r, warning=FALSE, message=FALSE}
+# ntree number of trees to grow in each forest.
+# maxiter maximum number of iterations to be performed given the stopping criterion is
+# not met beforehand.
+discharge.imp <- missForest(discharge.na, maxiter = 4, ntree = 100,
+                           variablewise = FALSE, decreasing = FALSE, verbose = F, replace = TRUE,
+                           classwt = NULL, cutoff = NULL, strata = NULL,
+                           sampsize = NULL, nodesize = NULL, maxnodes = NULL,
+                           xtrue = NA, parallelize = "no")
+
+discharge.missf <- discharge.imp$ximp
+```
+
+<br/>
+
+#### **Step 6**
+Examine data imputation.
+```{r, warning=FALSE, message=FALSE}
+summary(discharge.missf)
+```
+
+<br/>
+
+#### **Step 7**
+Plot data imputation.
+```{r, warning=FALSE, message=FALSE}
+plot(discharge.missf$Discharge,type="l", lwd=2.0)
+```
+
+
+<br/>
+
+#### **Step 8**
+Comparison of imputed data.
+```{r, warning=FALSE, message=FALSE}
+par(mfrow=c(1,3))
+plot(discharge.na$Discharge,type="l",main="Original Discharge", lwd=2.0)
+abline(h=0.0154, lty=2, lwd=4, col='green')
+plot(discharge.missf$Discharge,type="l",main="Imputated Discharge", lwd=2.0)
+abline(h=0.0154, lty=2, lwd=4, col='red')
+plot(discharge.na$Rain,type="l",main="Rain", lwd=2.0)
+abline(h=10.1, lty=2, lwd=4, col='blue')
+```
+
+
+<br/>
 <br/>
