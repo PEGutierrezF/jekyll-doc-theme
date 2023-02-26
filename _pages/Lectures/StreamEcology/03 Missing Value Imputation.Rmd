@@ -91,6 +91,122 @@ plot(discharge.na$Rain,type="l",main="Rain", lwd=2.0)
 abline(h=10.1, lty=2, lwd=4, col='blue')
 ```
 
+<br/>
+
+#### **Step 9**
+How big are the errors of the imputation?
+```{r, warning=FALSE, message=FALSE}
+# Out Of Bag (OOBerror)= imputation error estimate (normalized root mean squared error)
+# The OOB observations can be used for example for estimating the prediction error of RF.
+
+# The performance is assessed using the normalized root mean squared error (NRMSE)
+# Good performance leads to a value close to 0 and bad performance to a value around 1.
+NRMSE <- discharge.imp$OOBerror
+NRMSE
+
+# How big are the errors of the imputation?
+# Not too bad, around >1%. NRMSE is The normalized root mean squared error, it is defined as:
+# The Normalized Root Mean Square Error (NRMSE) the RMSE facilitates the comparison between models with different scales. 
+
+```
+
+<br/>
+<br/>
+
+## Hmisc
+## Harrell Miscellaneous
+
+<br/>
+
+#### **Step 1**
+```{r, warning=FALSE, message=FALSE}
+# rm(list=ls(all=TRUE)) #give R a blank slate
+```
+
+<br/>
+
+#### **Step 2**
+```{r, warning=FALSE, message=FALSE}
+library("Hmisc")
+```
+
+<br/>
+
+#### **Step 3**
+```{r, warning=FALSE, message=FALSE}
+discharge.na = read.csv("D:/OneDrive - University of Vermont/Curriculum/19_ Personal webpage/TropicalFreshwaterEcology/_pages/Lectures/data/StreamEcology_MissingValue.csv")
+head(discharge.na)
+```
+
+<br/>
+
+#### **Step 4**
+```{r, warning=FALSE, message=FALSE}
+summary(discharge.na)
+plot(discharge.na$Discharge,type="l")
+```
+
+<br/>
+
+#### **Step 5**
+```{r, warning=FALSE, message=FALSE}
+paste('How many missing values?', ' ', length(which(is.na(discharge.na))))
+```
+
+<br/>
+
+#### **Step 6**
+```{r, warning=FALSE, message=FALSE}
+# formula: The ~ Sepal.Length + . argument indicates what formula to use. In this case, we want all variables' missing data to be imputed, so we add each one.
+# data: the data frame with missing data.
+# n.impute: number of multiple imputations. 5 is frequently used, but 10 or more doesn't hurt
+set.seed(1)
+impute_arg <- aregImpute(Discharge ~ Rain , data = discharge.na, n.impute=100)
+
+# print(impute_arg, digits=3)
+# impute_arg$imputed$Discharge
+```
+
+<br/>
+
+#### **Step 7**
+```{r, warning=FALSE, message=FALSE}
+# The R square values indicate the liklihood that the predicted missing values in the 'irt' 
+# dataframe match what we would actually observe if participants had answered all questions. 
+# Higher values are better.
+
+# To use one of the iterations in our original data set, we can use the transcend function:
+completetable <- impute.transcan(impute_arg, imputation=4, data=discharge.na, 
+                                 list.out=TRUE,pr=FALSE, check=FALSE)
+
+# head(completetable)
+```
+
+<br/>
+
+#### **Step 8**
+```{r, warning=FALSE, message=FALSE}
+plot(completetable$Discharge,type="l")
+```
+
+
+<br/>
+<br/>
+
+## Compare methods
+
+<br/>
+
+#### **Step 1**
+```{r, warning=FALSE, message=FALSE}
+# Compare methods 
+windows()
+par(mfrow=c(1,2))
+plot(completetable$Discharge,type="l",main="HMisc")
+abline(h=0.0154, lty=2)
+plot(discharge.missf$Discharge,type="l",main="Missforest")
+abline(h=0.0154, lty=2)
+```
 
 <br/>
 <br/>
