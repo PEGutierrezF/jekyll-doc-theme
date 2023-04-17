@@ -3,19 +3,19 @@
   captions: true
   images:
     - src: /assets/img/StreamEcology8.jpg
-      title: Class 2019
+      title: Class 2023, Potash Brook
       alt:
     - src: /assets/img/StreamEcology9.jpg
-      title:
+      title: Potash Brook
       alt:
     - src: /assets/img/StreamEcology10.jpg
-      title:
+      title: Brown Brook
       alt:
     - src: /assets/img/StreamEcology11.jpg
-      title:
+      title: Brown Brook
       alt:
     - src: /assets/img/StreamEcology12.jpg
-      title:
+      title: Brown Brook
       alt:
   settings:
     height: "'auto'"
