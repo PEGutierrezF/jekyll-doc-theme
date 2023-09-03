@@ -138,16 +138,16 @@
   captions: true
   images:
     - src: /assets/img/sliders/TropEcolo1.jpg
-      title: Gavilán cangrejero negro (Buteogallus anthracinus)
+      title: Winooski River Reservoir
       alt:
     - src: /assets/img/sliders/TropEcolo2.jpg
-      title: Macrobrachium carcinus
+      title: Winooski Falls
       alt:
     - src: /assets/img/sliders/TropEcolo3.jpg
-      title:
+      title: Urban Runoff
       alt:
     - src: /assets/img/sliders/TropEcolo4.jpg
-      title: Summer tanager (Piranga rubra) 
+      title: Urban Runoff
       alt:
   settings:
     height: "'auto'"
