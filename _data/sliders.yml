@@ -131,3 +131,24 @@
   settings:
     height: "'auto'"
     effect: "'fade'"
+    
+    
+- selector: slider8
+  bullets: true
+  captions: true
+  images:
+    - src: /assets/img/sliders/TropEcolo1.jpg
+      title: Winooski River Reservoir
+      alt:
+    - src: /assets/img/sliders/TropEcolo2.jpg
+      title: Winooski Falls
+      alt:
+    - src: /assets/img/sliders/TropEcolo3.jpg
+      title: Urban Runoff
+      alt:
+    - src: /assets/img/sliders/TropEcolo4.jpg
+      title: Urban Runoff
+      alt:
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
