@@ -140,6 +140,9 @@
     - src: /assets/img/sliders/TropEcolo1.jpeg
       title:
       alt:
+    - src: /assets/img/sliders/TropEcolo2.jpeg
+      title:
+      alt:
   settings:
     height: "'auto'"
     effect: "'fade'"
