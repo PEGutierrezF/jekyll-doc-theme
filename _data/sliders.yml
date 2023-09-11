@@ -138,16 +138,7 @@
   captions: true
   images:
     - src: /assets/img/sliders/TropEcolo1.jpeg
-      title: Common black hawk &#40;Buteogallus anthracinus&#41;
-      alt:
-    - src: /assets/img/sliders/TropEcolo2.jpeg
-      title: Freshwater shrimp &#40;Macrobrachium carcinus&#41;
-      alt:
-    - src: /assets/img/sliders/TropEcolo3.jpeg
       title:
-      alt:
-    - src: /assets/img/sliders/TropEcolo4.jpeg
-      title: Summer tanager &#40;piranga rubra&#41;
       alt:
   settings:
     height: "'auto'"
