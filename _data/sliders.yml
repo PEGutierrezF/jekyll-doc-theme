@@ -137,10 +137,10 @@
   bullets: true
   captions: true
   images:
-    - src: /assets/img/sliders/TropEcolo1.jpeg
+    - src: /assets/img/sliders/TropEcolo1.jpg
       title:
       alt:
-    - src: /assets/img/sliders/TropEcolo2.jpeg
+    - src: /assets/img/sliders/TropEcolo2.jpg
       title:
       alt:
   settings:
